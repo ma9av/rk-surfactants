@@ -1,0 +1,205 @@
+{
+  "iter": 6,
+  "final": 7.7,
+  "target": 9.0,
+  "weighted_mean": 7.66,
+  "weakest_dim_score": 6.5,
+  "blockers": [],
+  "incomplete": false,
+  "decision": "STOP_MAX_ITER",
+  "dimensions": {
+    "hierarchy_composition": {
+      "status": "scored",
+      "score": 7.8,
+      "expert_score": 7.8,
+      "anchor": null,
+      "capped_by_audit": false,
+      "votes": [
+        [
+          "art_director",
+          7.8
+        ]
+      ]
+    },
+    "typography": {
+      "status": "scored",
+      "score": 8.2,
+      "expert_score": 8.2,
+      "anchor": 10.0,
+      "capped_by_audit": false,
+      "votes": [
+        [
+          "typographer",
+          8.2
+        ]
+      ]
+    },
+    "color": {
+      "status": "scored",
+      "score": 8.0,
+      "expert_score": 8.0,
+      "anchor": 10.0,
+      "capped_by_audit": false,
+      "votes": [
+        [
+          "systems_designer",
+          8.0
+        ]
+      ]
+    },
+    "spacing_rhythm": {
+      "status": "scored",
+      "score": 8.0,
+      "expert_score": 8.0,
+      "anchor": 10.0,
+      "capped_by_audit": false,
+      "votes": [
+        [
+          "systems_designer",
+          8.0
+        ]
+      ]
+    },
+    "distinctiveness": {
+      "status": "scored",
+      "score": 6.5,
+      "expert_score": 6.5,
+      "anchor": 10.0,
+      "capped_by_audit": false,
+      "votes": [
+        [
+          "skeptic",
+          6.5
+        ]
+      ]
+    },
+    "ux_clarity": {
+      "status": "scored",
+      "score": 7.0,
+      "expert_score": 7.0,
+      "anchor": null,
+      "capped_by_audit": false,
+      "votes": [
+        [
+          "ux_lead",
+          7.0
+        ]
+      ]
+    },
+    "reference_fidelity": {
+      "status": "scored",
+      "score": 7.5,
+      "expert_score": 7.5,
+      "anchor": null,
+      "capped_by_audit": false,
+      "votes": [
+        [
+          "art_director",
+          7.5
+        ]
+      ]
+    },
+    "interaction_motion": {
+      "status": "scored",
+      "score": 7.5,
+      "expert_score": 7.5,
+      "anchor": null,
+      "capped_by_audit": false,
+      "votes": [
+        [
+          "motion_designer",
+          7.5
+        ]
+      ]
+    },
+    "a11y_responsive": {
+      "status": "scored",
+      "score": 8.6,
+      "expert_score": 8.6,
+      "anchor": 10.0,
+      "capped_by_audit": false,
+      "votes": [
+        [
+          "a11y_qa",
+          8.6
+        ]
+      ]
+    }
+  },
+  "fix_queue": [
+    {
+      "priority": 84.0,
+      "severity": "major",
+      "dim": "distinctiveness",
+      "expert": "skeptic",
+      "where": ".pagehead on all inner pages",
+      "problem": "Every inner banner is the same RKSPL tanker crop under the same navy wash.",
+      "fix": "Keep the navy wash. Use lab-900 for Quality, tank-red for Manufacturing, plant-team for About, labsa-beaker for LABSA 90%, yard-drums for Contact."
+    },
+    {
+      "priority": 84.0,
+      "severity": "major",
+      "dim": "distinctiveness",
+      "expert": "skeptic",
+      "where": "index.html #plant second figure",
+      "problem": "Caption reads Barrel filling at the plant; alt is Tata tanker nose and blue barrels. The photo is a parked cab and drums, not filling.",
+      "fix": "Change the home figcaption to Blue barrels and tanker nose in the Gundlav yard."
+    },
+    {
+      "priority": 84.0,
+      "severity": "major",
+      "dim": "distinctiveness",
+      "expert": "skeptic",
+      "where": ".mosaic at max-width 1023px and 767px",
+      "problem": "The signature collage is desktop-only. Tablet hides the lettered tanker; mobile leaves only the grey tank.",
+      "fix": "At 768-1023px keep tank + tanker. At 375px stack two clipped panes (tank and tanker) instead of display:none."
+    },
+    {
+      "priority": 84.0,
+      "severity": "major",
+      "dim": "distinctiveness",
+      "expert": "skeptic",
+      "where": "document CTAs vs contact.html Quantity required (MT)",
+      "problem": "Copy promises sheets with no order; CTAs open the quote form whose quantity field is required MT. PDF links are fine.",
+      "fix": "Point document CTAs to contact.html?intent=docs and unrequire quantity on that path."
+    },
+    {
+      "priority": 79.2,
+      "severity": "major",
+      "dim": "hierarchy_composition",
+      "expert": "art_director",
+      "where": "homepage h2 Barrel-filled at Plot 79/80",
+      "problem": "After the photo mosaic this band is display-size type plus three bullets and no photograph. Later caption Barrel filling at the plant sits on a truck-cab/yard frame, not filling.",
+      "fix": "Put the yard-and-drums pane in this section as a 420px right column. Do not caption a parked truck as barrel filling."
+    },
+    {
+      "priority": 79.2,
+      "severity": "major",
+      "dim": "hierarchy_composition",
+      "expert": "art_director",
+      "where": "inner .pagehead on Quality, Manufacturing, About, LABSA 90%, Contact",
+      "problem": "Every inner fold uses the same RKSPL tanker crop under the same navy wash. First-screen hierarchy does not change by page.",
+      "fix": "Keep the translucent navy recipe. Use the lab on Quality, tank farm on Manufacturing, plant-team on About, tanker on LABSA and Contact."
+    },
+    {
+      "priority": 72.0,
+      "severity": "major",
+      "dim": "ux_clarity",
+      "expert": "ux_lead",
+      "where": "index/quality/labsa document CTAs; contact.html #quantity[required]",
+      "problem": "A buyer asking for TDS/SDS/CoA with no order is sent to the quote form. Quantity required (MT) blocks submit. PDF download is fixed; the document path is not.",
+      "fix": "Point those CTAs to contact.html?need=docs. If need=docs, unrequire quantity, prefill the message, and set the submit label to Send document request."
+    },
+    {
+      "priority": 72.0,
+      "severity": "major",
+      "dim": "ux_clarity",
+      "expert": "ux_lead",
+      "where": "index.html #plant second figure figcaption Barrel filling at the plant",
+      "problem": "The photo is a Tata truck nose and stacked blue drums. Proof does not sit next to the packing claim.",
+      "fix": "Change that figcaption to Tata tanker nose and blue drums in the Gundlav yard. Do not caption a parked truck as barrel filling."
+    }
+  ],
+  "warnings": [],
+  "waivers": {}
+}

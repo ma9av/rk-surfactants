@@ -1,0 +1,46 @@
+{
+  "expert": "motion_designer",
+  "scores": {
+    "interaction_motion": {
+      "score": 7.5,
+      "evidence": "hover.png and focus.png were not captured (skip-link off-canvas). CSS has :focus-visible 3px, hover/active on named controls, 150ms transitions inside prefers-reduced-motion:no-preference, 650ms mosaic entrance, DNA sway gated. Audit: has_motion true, has_reduced_motion_rule true, overshoot_easing false, focus_invisible_count 0. Generic body anchors have no hover.",
+      "strengths": [
+        "3px :focus-visible ring on 25 controls; audit reports 0 invisible focus.",
+        "Motion is opt-in: 150ms control feedback and one 650ms mosaic entrance.",
+        "prefers-reduced-motion gating leaves panes at their settled state."
+      ],
+      "issues": [
+        {
+          "severity": "major",
+          "where": "a (body copy, .reach, .consent, table.spec td)",
+          "problem": "Named .btn/.link/.nav/.foot/.phones controls have hover; generic anchors do not.",
+          "fix": "Add a:hover{color:var(--deep)} a:active{color:var(--void)} and include a in the transition list."
+        },
+        {
+          "severity": "minor",
+          "where": ".btn[disabled] vs .btn:hover",
+          "problem": "Hover can still paint a busy submit deep navy. Button label stays Send quote request.",
+          "fix": "Add .btn[disabled]:hover,.btn[disabled]:active with pointer-events none. Set submit text to Sending while aria-busy."
+        },
+        {
+          "severity": "minor",
+          "where": ".mcol .pane:last-child animation-delay",
+          "problem": "Column delays are overridden by last-child delay, so all three panes enter at 150ms.",
+          "fix": "Delete the last-child delay. Keep nth-child(2) at .12s and nth-child(3) at .24s."
+        },
+        {
+          "severity": "minor",
+          "where": "form.enquiry [aria-invalid]",
+          "problem": "JS sets aria-invalid but CSS has no invalid border.",
+          "fix": "Add input[aria-invalid=true],textarea[aria-invalid=true]{border-color:#a4260c}."
+        },
+        {
+          "severity": "minor",
+          "where": ".contact .btn:hover and :active",
+          "problem": "Pressed equals hover on the navy-band primary.",
+          "fix": "Set .contact .btn:active{background:#c9d3e0;color:var(--void)}."
+        }
+      ]
+    }
+  }
+}

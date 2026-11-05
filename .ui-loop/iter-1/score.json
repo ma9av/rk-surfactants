@@ -1,0 +1,197 @@
+{
+  "iter": 1,
+  "final": 6.6,
+  "target": 9.0,
+  "weighted_mean": 6.62,
+  "weakest_dim_score": 5.5,
+  "blockers": [
+    "5 touch targets under 24px on mobile"
+  ],
+  "incomplete": false,
+  "decision": "CONTINUE",
+  "dimensions": {
+    "hierarchy_composition": {
+      "status": "scored",
+      "score": 6.5,
+      "expert_score": 6.5,
+      "anchor": null,
+      "capped_by_audit": false,
+      "votes": [
+        [
+          "art_director",
+          6.5
+        ]
+      ]
+    },
+    "typography": {
+      "status": "scored",
+      "score": 7.0,
+      "expert_score": 7.0,
+      "anchor": 8.5,
+      "capped_by_audit": false,
+      "votes": [
+        [
+          "typographer",
+          7.0
+        ]
+      ]
+    },
+    "color": {
+      "status": "scored",
+      "score": 7.5,
+      "expert_score": 7.5,
+      "anchor": 10.0,
+      "capped_by_audit": false,
+      "votes": [
+        [
+          "systems_designer",
+          7.5
+        ]
+      ]
+    },
+    "spacing_rhythm": {
+      "status": "scored",
+      "score": 5.5,
+      "expert_score": 5.5,
+      "anchor": 4,
+      "capped_by_audit": false,
+      "votes": [
+        [
+          "systems_designer",
+          5.5
+        ]
+      ]
+    },
+    "distinctiveness": {
+      "status": "scored",
+      "score": 6.5,
+      "expert_score": 6.5,
+      "anchor": 10.0,
+      "capped_by_audit": false,
+      "votes": [
+        [
+          "skeptic",
+          6.5
+        ]
+      ]
+    },
+    "ux_clarity": {
+      "status": "scored",
+      "score": 7.0,
+      "expert_score": 7.0,
+      "anchor": null,
+      "capped_by_audit": false,
+      "votes": [
+        [
+          "ux_lead",
+          7.0
+        ]
+      ]
+    },
+    "reference_fidelity": {
+      "status": "n/a",
+      "reason": "no reference supplied"
+    },
+    "interaction_motion": {
+      "status": "scored",
+      "score": 6.5,
+      "expert_score": 6.5,
+      "anchor": null,
+      "capped_by_audit": false,
+      "votes": [
+        [
+          "motion_designer",
+          6.5
+        ]
+      ]
+    },
+    "a11y_responsive": {
+      "status": "scored",
+      "score": 6.5,
+      "expert_score": 6.5,
+      "anchor": 8.0,
+      "capped_by_audit": false,
+      "votes": [
+        [
+          "a11y_qa",
+          6.5
+        ]
+      ]
+    }
+  },
+  "fix_queue": [
+    {
+      "priority": 1000000.0,
+      "severity": "blocker",
+      "dim": "audit",
+      "where": "audit",
+      "problem": "5 touch targets under 24px on mobile",
+      "fix": "give interactive elements min-height/min-width 44px on mobile (padding, not font size)"
+    },
+    {
+      "priority": 126.0,
+      "severity": "major",
+      "dim": "hierarchy_composition",
+      "expert": "art_director",
+      "where": "hero mosaic vs h1",
+      "problem": "The orange LABSA tank pane wins the squint test over the headline.",
+      "fix": "Desaturate mosaic slightly; keep header CTA as ghost so only hero button is filled."
+    },
+    {
+      "priority": 126.0,
+      "severity": "major",
+      "dim": "hierarchy_composition",
+      "expert": "art_director",
+      "where": "header .btn and .hero .btn",
+      "problem": "Two identical filled Request a quote buttons share the fold.",
+      "fix": "Make header CTA a ghost; leave only hero as filled."
+    },
+    {
+      "priority": 126.0,
+      "severity": "major",
+      "dim": "hierarchy_composition",
+      "expert": "art_director",
+      "where": ".facts strip",
+      "problem": "Five equal columns read as a generic stat bar.",
+      "fix": "Replace with one identity line; put ISO with lab and storage with plant."
+    },
+    {
+      "priority": 126.0,
+      "severity": "major",
+      "dim": "hierarchy_composition",
+      "expert": "art_director",
+      "where": "mobile mosaic",
+      "problem": "Three-column collage at 375px becomes postage stamps.",
+      "fix": "Below 768px show one pane only, the orange LABSA tank."
+    },
+    {
+      "priority": 108.0,
+      "severity": "major",
+      "dim": "spacing_rhythm",
+      "expert": "systems_designer",
+      "where": "section padding and gaps",
+      "problem": "16 distinct spacing values, 41.5% 4px-grid adherence.",
+      "fix": "Replace rem leftovers with --s5/--s7/--s8 only."
+    },
+    {
+      "priority": 108.0,
+      "severity": "major",
+      "dim": "spacing_rhythm",
+      "expert": "systems_designer",
+      "where": "#who",
+      "problem": "Short paragraph in 80px padding produces a large empty field.",
+      "fix": "Give #who the cols grid or drop padding to --s7."
+    },
+    {
+      "priority": 84.0,
+      "severity": "major",
+      "dim": "distinctiveness",
+      "expert": "skeptic",
+      "where": "section.facts",
+      "problem": "Five equal columns is a vanity stat strip.",
+      "fix": "Delete the 5-column dashboard; keep one identity line."
+    }
+  ],
+  "warnings": [],
+  "waivers": {}
+}

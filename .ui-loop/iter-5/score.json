@@ -1,0 +1,196 @@
+{
+  "iter": 5,
+  "final": 7.8,
+  "target": 9.0,
+  "weighted_mean": 7.85,
+  "weakest_dim_score": 7.0,
+  "blockers": [],
+  "incomplete": false,
+  "decision": "STOP_MAX_ITER",
+  "dimensions": {
+    "hierarchy_composition": {
+      "status": "scored",
+      "score": 8.0,
+      "expert_score": 8.0,
+      "anchor": null,
+      "capped_by_audit": false,
+      "votes": [
+        [
+          "art_director",
+          8.0
+        ]
+      ]
+    },
+    "typography": {
+      "status": "scored",
+      "score": 8.0,
+      "expert_score": 8.0,
+      "anchor": 10.0,
+      "capped_by_audit": false,
+      "votes": [
+        [
+          "typographer",
+          8.0
+        ]
+      ]
+    },
+    "color": {
+      "status": "scored",
+      "score": 7.5,
+      "expert_score": 7.5,
+      "anchor": 10.0,
+      "capped_by_audit": false,
+      "votes": [
+        [
+          "systems_designer",
+          7.5
+        ]
+      ]
+    },
+    "spacing_rhythm": {
+      "status": "scored",
+      "score": 8.5,
+      "expert_score": 8.5,
+      "anchor": 10.0,
+      "capped_by_audit": false,
+      "votes": [
+        [
+          "systems_designer",
+          8.5
+        ]
+      ]
+    },
+    "distinctiveness": {
+      "status": "scored",
+      "score": 7.0,
+      "expert_score": 7.0,
+      "anchor": 10.0,
+      "capped_by_audit": false,
+      "votes": [
+        [
+          "skeptic",
+          7.0
+        ]
+      ]
+    },
+    "ux_clarity": {
+      "status": "scored",
+      "score": 7.7,
+      "expert_score": 7.7,
+      "anchor": null,
+      "capped_by_audit": false,
+      "votes": [
+        [
+          "ux_lead",
+          7.7
+        ]
+      ]
+    },
+    "reference_fidelity": {
+      "status": "n/a",
+      "reason": "no reference supplied"
+    },
+    "interaction_motion": {
+      "status": "scored",
+      "score": 7.5,
+      "expert_score": 7.5,
+      "anchor": null,
+      "capped_by_audit": false,
+      "votes": [
+        [
+          "motion_designer",
+          7.5
+        ]
+      ]
+    },
+    "a11y_responsive": {
+      "status": "scored",
+      "score": 8.5,
+      "expert_score": 8.5,
+      "anchor": 10.0,
+      "capped_by_audit": false,
+      "votes": [
+        [
+          "a11y_qa",
+          8.5
+        ]
+      ]
+    }
+  },
+  "fix_queue": [
+    {
+      "priority": 72.0,
+      "severity": "major",
+      "dim": "distinctiveness",
+      "expert": "skeptic",
+      "where": ".mosaic .pane.tank",
+      "problem": "Three unique files, one story: all tank faces under navy multiply.",
+      "fix": "Remove class tank from column 2; crop plant-wide to the yard not a tank face."
+    },
+    {
+      "priority": 72.0,
+      "severity": "major",
+      "dim": "distinctiveness",
+      "expert": "skeptic",
+      "where": "h2#uses packing and plant copy",
+      "problem": "Barrel-filled is claimed repeatedly and never shown.",
+      "fix": "Put a barrel crop in #plant if one exists; otherwise stop repeating barrel-filled in three sections."
+    },
+    {
+      "priority": 72.0,
+      "severity": "major",
+      "dim": "distinctiveness",
+      "expert": "skeptic",
+      "where": "h2#c",
+      "problem": "Tell us the grade and quantity you need is mad-lib; site sells one grade.",
+      "fix": "Retitle to Quote LABSA 90% from Gundlav."
+    },
+    {
+      "priority": 55.2,
+      "severity": "major",
+      "dim": "ux_clarity",
+      "expert": "ux_lead",
+      "where": "document CTAs vs quantity required",
+      "problem": "TDS/SDS/CoA links open a form that will not send without tonnage.",
+      "fix": "Add request-type radios Quote vs Documents; quantity required only for Quote."
+    },
+    {
+      "priority": 50.0,
+      "severity": "major",
+      "dim": "color",
+      "expert": "systems_designer",
+      "where": "--action vs --blue",
+      "problem": "Filled CTA, ghost nav, and links collapse to one hue.",
+      "fix": "Keep --action on filled .btn only. Set links and ghost borders to --deep."
+    },
+    {
+      "priority": 36.0,
+      "severity": "minor",
+      "dim": "hierarchy_composition",
+      "expert": "art_director",
+      "where": "col1 vs col2 clip",
+      "problem": "Left and middle bottoms are 88% vs 86%, almost one shear.",
+      "fix": "Set col1 clip to 78% bottom, col2 to 86%."
+    },
+    {
+      "priority": 28.0,
+      "severity": "minor",
+      "dim": "typography",
+      "expert": "typographer",
+      "where": "h2 vs h1",
+      "problem": "h2 38.4 vs h1 44, too close.",
+      "fix": "Set h2 clamp max to 2rem (32px)."
+    },
+    {
+      "priority": 18.0,
+      "severity": "minor",
+      "dim": "spacing_rhythm",
+      "expert": "systems_designer",
+      "where": "--gut",
+      "problem": "Max 2.5rem is not on the named scale.",
+      "fix": "Set --gut:clamp(var(--s5),4vw,var(--s6))."
+    }
+  ],
+  "warnings": [],
+  "waivers": {}
+}

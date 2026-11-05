@@ -1,0 +1,196 @@
+{
+  "iter": 3,
+  "final": 7.5,
+  "target": 9.0,
+  "weighted_mean": 7.52,
+  "weakest_dim_score": 6.5,
+  "blockers": [],
+  "incomplete": false,
+  "decision": "CONTINUE",
+  "dimensions": {
+    "hierarchy_composition": {
+      "status": "scored",
+      "score": 7.5,
+      "expert_score": 7.5,
+      "anchor": null,
+      "capped_by_audit": false,
+      "votes": [
+        [
+          "art_director",
+          7.5
+        ]
+      ]
+    },
+    "typography": {
+      "status": "scored",
+      "score": 8.0,
+      "expert_score": 8.0,
+      "anchor": 10.0,
+      "capped_by_audit": false,
+      "votes": [
+        [
+          "typographer",
+          8.0
+        ]
+      ]
+    },
+    "color": {
+      "status": "scored",
+      "score": 8.0,
+      "expert_score": 8.0,
+      "anchor": 10.0,
+      "capped_by_audit": false,
+      "votes": [
+        [
+          "systems_designer",
+          8.0
+        ]
+      ]
+    },
+    "spacing_rhythm": {
+      "status": "scored",
+      "score": 7.5,
+      "expert_score": 7.5,
+      "anchor": 10.0,
+      "capped_by_audit": false,
+      "votes": [
+        [
+          "systems_designer",
+          7.5
+        ]
+      ]
+    },
+    "distinctiveness": {
+      "status": "scored",
+      "score": 6.5,
+      "expert_score": 6.5,
+      "anchor": 10.0,
+      "capped_by_audit": false,
+      "votes": [
+        [
+          "skeptic",
+          6.5
+        ]
+      ]
+    },
+    "ux_clarity": {
+      "status": "scored",
+      "score": 7.5,
+      "expert_score": 7.5,
+      "anchor": null,
+      "capped_by_audit": false,
+      "votes": [
+        [
+          "ux_lead",
+          7.5
+        ]
+      ]
+    },
+    "reference_fidelity": {
+      "status": "n/a",
+      "reason": "no reference supplied"
+    },
+    "interaction_motion": {
+      "status": "scored",
+      "score": 6.5,
+      "expert_score": 6.5,
+      "anchor": null,
+      "capped_by_audit": false,
+      "votes": [
+        [
+          "motion_designer",
+          6.5
+        ]
+      ]
+    },
+    "a11y_responsive": {
+      "status": "scored",
+      "score": 8.5,
+      "expert_score": 8.5,
+      "anchor": 10.0,
+      "capped_by_audit": false,
+      "votes": [
+        [
+          "a11y_qa",
+          8.5
+        ]
+      ]
+    }
+  },
+  "fix_queue": [
+    {
+      "priority": 90.0,
+      "severity": "major",
+      "dim": "hierarchy_composition",
+      "expert": "art_director",
+      "where": ".hero .mosaic / desktop_fold.png",
+      "problem": "Collage still wins the squint. Tank overlay at 22% and saturate(.58) quieted rust, but lab panes stay high-key and the 36rem/6fr mass out-luminances the 44px h1.",
+      "fix": "Set .pane.tank::after to background:rgba(1,32,86,.4). Add .pane:not(.tank)::after with background:rgba(1,32,86,.22). Set .shot .pane img filter to saturate(.45) brightness(.86). At min-width:1024px set .mosaic{height:28rem}."
+    },
+    {
+      "priority": 84.0,
+      "severity": "major",
+      "dim": "distinctiveness",
+      "expert": "skeptic",
+      "where": ".mosaic .pane img",
+      "problem": "Six panes from four files. Same LABSA tank and same lab bench reused at two zooms.",
+      "fix": "Give each src to one pane only. Cut to four panes, or fill extras from unused crops of plant-wide-1400.webp and tank-red-900.webp. Never set two pane img src attributes to the same photograph."
+    },
+    {
+      "priority": 84.0,
+      "severity": "major",
+      "dim": "distinctiveness",
+      "expert": "skeptic",
+      "where": "h2#uses",
+      "problem": "Heading Used in detergents and cleaning products still fails cover-the-logo. Lead repeats the list.",
+      "fix": "Retitle to Barrel-filled at Plot 79/80. Delete the lead paragraph. Keep the three plant lines as the only copy in that block."
+    },
+    {
+      "priority": 84.0,
+      "severity": "major",
+      "dim": "distinctiveness",
+      "expert": "skeptic",
+      "where": "section.who",
+      "problem": "Still a text blob. No photograph. Right half of wrap is empty white.",
+      "fix": "Make .who a 2-column wrap: names on the left, plant-wide-800.webp on the right at min 40% width."
+    },
+    {
+      "priority": 60.0,
+      "severity": "major",
+      "dim": "spacing_rhythm",
+      "expert": "systems_designer",
+      "where": ".who",
+      "problem": ".who is not on the 5/6 grid; kicker/h2/p/ul are max-width 62ch, so the right half of the white band is empty.",
+      "fix": "At min-width 1024px set .who .wrap to display:grid; grid-template-columns:5fr 6fr; gap:var(--s7); put the directors list in the second column. Set .who padding-block to var(--s8)."
+    },
+    {
+      "priority": 60.0,
+      "severity": "major",
+      "dim": "ux_clarity",
+      "expert": "ux_lead",
+      "where": "ul.uses li:last-child",
+      "problem": "Uses bullet still says CoA with the quote while spec says no order required.",
+      "fix": "Replace that bullet with: 90 +/- 1 active matter as dispatched. TDS, SDS and a sample CoA on request, no order required."
+    },
+    {
+      "priority": 60.0,
+      "severity": "major",
+      "dim": "ux_clarity",
+      "expert": "ux_lead",
+      "where": "contact.html #quantity",
+      "problem": "Page says send the quantity you need but quantity is optional.",
+      "fix": "Add required on #quantity and treat empty quantity like other required fields. Do not invent drum kg or MOQ."
+    },
+    {
+      "priority": 45.0,
+      "severity": "minor",
+      "dim": "hierarchy_composition",
+      "expert": "art_director",
+      "where": "section[aria-labelledby=uses] .cols",
+      "problem": ".uses max-width:36ch leaves the 6fr column mostly empty next to a 2.4rem h2.",
+      "fix": "Remove max-width on .uses so the three bordered rows fill the 6fr column."
+    }
+  ],
+  "warnings": [],
+  "waivers": {}
+}

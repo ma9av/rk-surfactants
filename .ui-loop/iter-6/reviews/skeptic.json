@@ -1,0 +1,46 @@
+{
+  "expert": "skeptic",
+  "scores": {
+    "distinctiveness": {
+      "score": 6.5,
+      "evidence": "desktop_fold cover-the-logo passes: Entrust your supply to Gundlav, Plot 79/80, mosaic of this plant's tanks, yard, and lettered RKSPL VALSAD tanker. Then undone: every inner page stamps the same tanker crop; CSS hides mosaic col3 below 1024px and all but the grey tank below 768px; Barrel filling caption sits on a parked cab and drums; TDS/SDS still require Quantity (MT). slop_flags empty. Not an 8: a competitor could keep the chrome, swap the H1, and reuse the tanker banner.",
+      "strengths": [
+        "Homepage mosaic uses this plant's tanks, yard with drums/worker, and RKSPL VALSAD lettering.",
+        "Named facts: Plot 79/80, CIN U24297DN2019PTC005589, Binay Chandra Jha, 75 MT/day, 90+/-1; plant team unnamed as demanded.",
+        "Hard-ban list is clean: slop_flags [], no purple primary, no gradient headlines, no three-card row."
+      ],
+      "issues": [
+        {
+          "severity": "major",
+          "where": ".pagehead on all inner pages",
+          "problem": "Every inner banner is the same RKSPL tanker crop under the same navy wash.",
+          "fix": "Keep the navy wash. Use lab-900 for Quality, tank-red for Manufacturing, plant-team for About, labsa-beaker for LABSA 90%, yard-drums for Contact."
+        },
+        {
+          "severity": "major",
+          "where": "index.html #plant second figure",
+          "problem": "Caption reads Barrel filling at the plant; alt is Tata tanker nose and blue barrels. The photo is a parked cab and drums, not filling.",
+          "fix": "Change the home figcaption to Blue barrels and tanker nose in the Gundlav yard."
+        },
+        {
+          "severity": "major",
+          "where": ".mosaic at max-width 1023px and 767px",
+          "problem": "The signature collage is desktop-only. Tablet hides the lettered tanker; mobile leaves only the grey tank.",
+          "fix": "At 768-1023px keep tank + tanker. At 375px stack two clipped panes (tank and tanker) instead of display:none."
+        },
+        {
+          "severity": "major",
+          "where": "document CTAs vs contact.html Quantity required (MT)",
+          "problem": "Copy promises sheets with no order; CTAs open the quote form whose quantity field is required MT. PDF links are fine.",
+          "fix": "Point document CTAs to contact.html?intent=docs and unrequire quantity on that path."
+        },
+        {
+          "severity": "minor",
+          "where": "index.html h2#plant, h2#qc",
+          "problem": "Below the demanded hero, headings are category labels: The plant, Every batch is tested.",
+          "fix": "Rename to Plot 79/80, Gundlav GIDC and Klett, titration and hot-air oven at Gundlav."
+        }
+      ]
+    }
+  }
+}
