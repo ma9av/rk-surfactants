@@ -1,0 +1,39 @@
+{
+  "expert": "systems_designer",
+  "scores": {
+    "color": {
+      "score": 8.2,
+      "evidence": "DESIGN tokens executed. Audit: contrast_fail_count 0 (92 desktop / 89 mobile), distinct_bg_colors 4, dominant hue 225, cta_hues [218,218], purple_primary false. --action vs --blue still read as one hue.",
+      "strengths": [
+        "Blue-tinted mist/paper/navy 60-30-10 with 0 contrast failures.",
+        "Inner pageheads and glass header pick up the tanker/lab wash.",
+        "No purple, no gradient type, no card-shadow palette."
+      ],
+      "issues": [
+        {
+          "severity": "major",
+          "where": ":root --action vs --blue",
+          "problem": "--action #013ea8 and --blue #0154a7 both sample hue 218. Filled Request a quote and heading navy read as the same blue.",
+          "fix": "Keep --blue for headings/links. Set filled .hero .btn background to --deep #012056."
+        }
+      ]
+    },
+    "spacing_rhythm": {
+      "score": 7.8,
+      "evidence": "Audit spacing_grid_adherence 100% on 263 samples; spacing_distinct 8; distinct_radii 1. distinct_shadows 2 are nav-underline and spec-row insets. Split columns still do not share height.",
+      "strengths": [
+        "100% 4px-grid adherence, one 4px radius, no drop shadows.",
+        "Proximity holds in the header, fact strip, spec rows, and form.",
+        "Mosaic 0-radius panes with staggered 8px cuts vs 80px section padding."
+      ],
+      "issues": [
+        {
+          "severity": "major",
+          "where": "quality.html .cols; index .plant; index .spec",
+          "problem": "Split-height system: lab photo fills the left while two short paragraphs leave a tall white void; spec leaves mist under the TDS link beside a 10-row table.",
+          "fix": "Cap the lab figure at max-height 22rem, or restack unbalanced two-column sections."
+        }
+      ]
+    }
+  }
+}

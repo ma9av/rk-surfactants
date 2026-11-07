@@ -1,0 +1,1 @@
+{"expert":"typographer","scores":{"typography":{"score":7.5,"evidence":"Archivo + Plex, six sizes, body 16/1.65. Inner h1s are navy Archivo on mist matching homepage.","strengths":["Same header type on every page","Navy inner titles"],"issues":[{"severity":"major","where":"about.html h1","problem":"Date was wrapping after 16.","fix":"Designed break after Incorporated."}]}}}

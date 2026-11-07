@@ -1,0 +1,1 @@
+{"expert":"a11y_qa","scores":{"a11y_responsive":{"score":8.5,"evidence":"0 contrast fails, 0 blockers after PDF tap-target fix. Navy titles on mist. aria-current on current nav item.","strengths":["Header matches index","375px reflow"],"issues":[{"severity":"minor","where":"footer About","problem":"Under 44px wide.","fix":"min-width 44px."}]}}}

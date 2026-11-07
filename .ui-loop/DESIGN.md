@@ -17,6 +17,9 @@ Fill from the brief and from measured references. Reviewers score against this f
   - footer factory silhouette like the Vico Forge reference (original art, not copied)
   - inner-page banners little translucent with a plant photo behind them
   - do not name the seven workers in the team photograph
+  - remove the number from the header, and give the buttons , matte finish , and I dont want rounded edges in the button , and want it animated and look good
+  - dont remove the translucent banner like you did, as it doesnt look good , just make the change in the navbar, remove number and make the button changes
+  - contact.html: remove the checkbox, just keep the disclaimer, and instead of open in maps, show the map in the webpage
 
 ## References (one line each: file, what to take from it)
 - Vico Forge footer: dark band with a factory silhouette along the bottom. Take the idea only; do not copy logo, copy, crane artwork or colours.
@@ -46,20 +49,25 @@ Header glass: rgba(255,255,255,.86) with 14px blur. Pagehead overlay: rgba(1,22,
 
 ### Space and shape
 - Spacing scale (4px base): 4 / 8 / 12 / 16 / 24 / 32 / 48 / 80
-- Radii (max 3 values): 4px default; 0 on mosaic panes
+- Radii (max 3 values): 0 on buttons and the menu control (user demand: no rounded edges); 4px on photographs; 0 on mosaic panes
 - Shadows (max 3 elevations, or none): none (industrial, flat)
 - Borders: 1px --line for tables, header, fact strip; used to encode structure only
 
 ### Motion
-- Duration tokens (feedback 100-150ms, UI 150-250ms, entrance 500-800ms): feedback 150ms, UI 200ms, mosaic entrance 650ms
+- Duration tokens: --t-feedback 150ms, --t-ui 200ms, --t-enter 650ms, --t-scroll 500ms
 - Easing (ease-out family, no bounce): cubic-bezier(.2,.7,.2,1)
-- The one signature moment: staggered mosaic panes settle in; chemistry field may sway slowly if motion is allowed
+- Signature entrance (one orchestrated moment): mosaic panes settle 650ms at 0 / .12s / .24s. Inner pageheads: title and lead settle 550ms.
+- Scroll (informational, not fade-up on every block): 2px read-progress on the sticky header; mosaic columns parallax at three rates; .place left rule draws; spec rows take a 3px blue inset when in view; uses ticks scale in; header densifies after 8px scroll.
+- Hover / micro: every text link shifts to --deep; mosaic panes restore saturation; plant photos scale inside a clipped figure; nav underline; spec row mist; square matte buttons wipe fill from the left in 200ms (no gloss, no radius); inputs border to --blue.
+- Header bar: no plant phone (user demand). Quote is the only navbar action. Number stays in the footer and the mobile Call bar. Inner-page translucent photo banners stay (user demand: do not remove them).
+- UI changes 200ms: mobile menu fade/slide; form aria-invalid #a4260c; submit label becomes “Sending…” while aria-busy; disabled buttons ignore hover.
+- All of the above lives behind prefers-reduced-motion: no-preference (and html.motion). Reduced-motion renders the settled end state. User demand: scroll, hover, micro and major motion across pages.
 
 ## Layout concept
 - Archetype: industrial manufacturer — left-aligned claim, plant photography on the right, spec tables, place-named contact.
 - Signature move: three-column plant mosaic with straight, staggered diagonal cuts; quiet benzene/helix field in the gutters (not overlapping); inner pages use a photo-backed navy pagehead; footer sits on a plant skyline silhouette (tanks, tanker, drums).
 - Deliberate asymmetry: hero 5/6 columns; mosaic cuts at three different heights so the white seam is not one chevron.
-- Section order and why it serves the argument: claim → plant facts (ISO, storage, place) → what buyers use it for → spec numbers → plant proof (tanker, barrels) → lab/ISO → named leadership + unnamed plant team → call/quote. Inner pages: product, plant, lab, people, quote form.
+- Section order and why it serves the argument: claim → plant facts (ISO, storage, place) → barrel proof with yard photograph → spec numbers → plant proof (tanker, acid tank) → lab/ISO → named leadership + unnamed plant team → call/quote. Inner pages each use a different plant photo under the navy pagehead (beaker, acid tank, lab, plant team, yard).
 
 ## Content rules
 - Headline claim (specific, real number or outcome): “Entrust your supply to Gundlav.” with kicker LABSA 90%. Support with Gundlav GIDC, Valsad, 90 ± 1 active matter, ISO 9001:2015, 75 MT/day (~2,275 MT/month), 450 MT raw / 250 MT finished storage, own RKSPL VALSAD tanker, chairman’s 25 years in detergents and LABSA plants, incorporated 16 November 2019.

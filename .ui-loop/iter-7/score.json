@@ -1,0 +1,205 @@
+{
+  "iter": 7,
+  "final": 7.5,
+  "target": 8.0,
+  "weighted_mean": 7.48,
+  "weakest_dim_score": 6.5,
+  "blockers": [],
+  "incomplete": false,
+  "decision": "STOP_PLATEAU",
+  "dimensions": {
+    "hierarchy_composition": {
+      "status": "scored",
+      "score": 7.5,
+      "expert_score": 7.5,
+      "anchor": null,
+      "capped_by_audit": false,
+      "votes": [
+        [
+          "art_director",
+          7.5
+        ]
+      ]
+    },
+    "typography": {
+      "status": "scored",
+      "score": 7.5,
+      "expert_score": 7.5,
+      "anchor": 10.0,
+      "capped_by_audit": false,
+      "votes": [
+        [
+          "typographer",
+          7.5
+        ]
+      ]
+    },
+    "color": {
+      "status": "scored",
+      "score": 8.2,
+      "expert_score": 8.2,
+      "anchor": 10.0,
+      "capped_by_audit": false,
+      "votes": [
+        [
+          "systems_designer",
+          8.2
+        ]
+      ]
+    },
+    "spacing_rhythm": {
+      "status": "scored",
+      "score": 7.8,
+      "expert_score": 7.8,
+      "anchor": 10.0,
+      "capped_by_audit": false,
+      "votes": [
+        [
+          "systems_designer",
+          7.8
+        ]
+      ]
+    },
+    "distinctiveness": {
+      "status": "scored",
+      "score": 6.5,
+      "expert_score": 6.5,
+      "anchor": 10.0,
+      "capped_by_audit": false,
+      "votes": [
+        [
+          "skeptic",
+          6.5
+        ]
+      ]
+    },
+    "ux_clarity": {
+      "status": "scored",
+      "score": 7.5,
+      "expert_score": 7.5,
+      "anchor": null,
+      "capped_by_audit": false,
+      "votes": [
+        [
+          "ux_lead",
+          7.5
+        ]
+      ]
+    },
+    "reference_fidelity": {
+      "status": "scored",
+      "score": 7.5,
+      "expert_score": 7.5,
+      "anchor": null,
+      "capped_by_audit": false,
+      "votes": [
+        [
+          "art_director",
+          7.5
+        ]
+      ]
+    },
+    "interaction_motion": {
+      "status": "scored",
+      "score": 8.0,
+      "expert_score": 8.0,
+      "anchor": null,
+      "capped_by_audit": false,
+      "votes": [
+        [
+          "motion_designer",
+          8.0
+        ]
+      ]
+    },
+    "a11y_responsive": {
+      "status": "scored",
+      "score": 7.0,
+      "expert_score": 7.0,
+      "anchor": 10.0,
+      "capped_by_audit": false,
+      "votes": [
+        [
+          "a11y_qa",
+          7.0
+        ]
+      ]
+    }
+  },
+  "fix_queue": [
+    {
+      "priority": 90.0,
+      "severity": "major",
+      "dim": "hierarchy_composition",
+      "expert": "art_director",
+      "where": "about.html .pagehead--team (about_fold.png)",
+      "problem": "About pagehead crops plant-team-1400.webp to roof/sky; under the navy wash it reads as the old solid slab.",
+      "fix": "Set .pagehead--team background-position to 50% 62% so the workers and tanker cab read through the wash. Lighten overlay stops to .72/.58/.68."
+    },
+    {
+      "priority": 90.0,
+      "severity": "major",
+      "dim": "hierarchy_composition",
+      "expert": "art_director",
+      "where": ".mosaic .mcol:nth-child(2) at max-width 1023px",
+      "problem": "CSS still sets .mcol:nth-child(2){display:none} below 1024px, so the yard/worker pane is gone on tablet and mobile.",
+      "fix": "Delete display:none on .mcol:nth-child(2). At 375px stack all three .mcol. At 768\u00e2\u20ac\u201c1023px use a 3-column grid."
+    },
+    {
+      "priority": 90.0,
+      "severity": "major",
+      "dim": "hierarchy_composition",
+      "expert": "art_director",
+      "where": "mobile_menu.png .nav.open ul over .hero h1",
+      "problem": "Open menu shows nav links over a ghost of the hero headline.",
+      "fix": "Set .nav ul background to #fff and min-height to cover the hero title block."
+    },
+    {
+      "priority": 84.0,
+      "severity": "major",
+      "dim": "distinctiveness",
+      "expert": "skeptic",
+      "where": ".mosaic / tablet_full / mobile_full",
+      "problem": "The 3-cut collage is still a desktop toy. .mcol:nth-child(2){display:none} under 1024px drops the worker-and-drums pane.",
+      "fix": "Delete display:none on .mcol:nth-child(2). At tablet keep 3 columns. At 375px stack all three .mcol."
+    },
+    {
+      "priority": 84.0,
+      "severity": "major",
+      "dim": "distinctiveness",
+      "expert": "skeptic",
+      "where": "#uses h2 + .pack-shot",
+      "problem": "H2 is still Barrel-filled at Plot 79/80 on a parked Tata cab and drums. No filling is pictured.",
+      "fix": "Retitle to Tanker and barrels in the Gundlav yard. Keep filling language on manufacturing.html."
+    },
+    {
+      "priority": 84.0,
+      "severity": "major",
+      "dim": "distinctiveness",
+      "expert": "skeptic",
+      "where": ".shot .pane img and .pane::after",
+      "problem": "Plant photos are processed into generic industrial stock: saturate(.45) brightness(.86) plus navy multiply.",
+      "fix": "Set .shot .pane img{filter:none} or saturate(.9). Cut .pane::after to rgba(1,32,86,.08)."
+    },
+    {
+      "priority": 84.0,
+      "severity": "major",
+      "dim": "distinctiveness",
+      "expert": "skeptic",
+      "where": "about.html .pagehead--team",
+      "problem": "About crops plant-team at 50% 18%, so the banner is a dark building wall.",
+      "fix": "Change .pagehead--team to background-position 50% 78% so uniforms and the tanker sit in the band."
+    },
+    {
+      "priority": 70.0,
+      "severity": "major",
+      "dim": "typography",
+      "expert": "typographer",
+      "where": "html type scale",
+      "problem": "Nine computed sizes on desktop against a 5\u00e2\u20ac\u201c7 step scale. 14px, 14.4px and 20px are stray.",
+      "fix": "Map every rule to the six DESIGN steps only. Delete 14px, 14.4px, and 20px declarations."
+    }
+  ],
+  "warnings": [],
+  "waivers": {}
+}

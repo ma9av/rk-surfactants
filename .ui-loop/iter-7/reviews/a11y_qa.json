@@ -1,0 +1,28 @@
+{
+  "expert": "a11y_qa",
+  "scores": {
+    "a11y_responsive": {
+      "score": 7.0,
+      "evidence": "Audit: 0 blockers, contrast 0/92 desktop and 0/89 mobile, focus 25/25 visible, tap targets 0 under 44, no overflow at 375, 1 h1, 0 heading skips, 8/8 alts. Remaining: mobile_menu.png translucent nav with ghosted h1 colliding with links; main.js preventDefault+scrollIntoView on hash links does not move focus.",
+      "strengths": [
+        "Measured a11y baseline is clean: 0 contrast fails, 0 invisible focus, 44px targets, landmarks, one h1, alts, lang.",
+        "Hero mosaic no longer covers copy on 375px; panes stack and later sections stay readable.",
+        "Real href anchors throughout; skip link exists; form has visible labels, aria-invalid, and aria-live status."
+      ],
+      "issues": [
+        {
+          "severity": "major",
+          "where": "shots/mobile_menu.png; .nav.open ul, .menu, .bar",
+          "problem": "Open mobile menu is a short frosted panel over live hero copy. Menu label unchanged; main is not inert; focus is not trapped; bar remains active.",
+          "fix": "Give .nav.open ul background:var(--paper), set inert/aria-hidden on main and .bar while open, set button label to Close, trap Tab inside #navlist."
+        },
+        {
+          "severity": "major",
+          "where": "src/assets/js/main.js hash click",
+          "problem": "In-page anchors call preventDefault then scrollIntoView without focusing the target.",
+          "fix": "On hash navigation, set tabindex=-1 on the target and call focus after scroll. Do not preventDefault on .skip."
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "expert": "motion_designer",
+  "scores": {
+    "interaction_motion": {
+      "score": 8.0,
+      "evidence": "hover.png shows hero .btn fill shift to --deep and .link underline; focus.png shows a 3px outline. Tokens --t-feedback:.15s --t-ui:.2s --t-enter:.65s --ease cubic-bezier(.2,.7,.2,1). Audit: has_motion true, has_reduced_motion_rule true, overshoot_easing false, focus_invisible_count 0. Generic anchors, disabled hover, mosaic stagger, aria-invalid border, and Sending… are fixed. One orchestrated entrance per page; scroll is informational.",
+      "strengths": [
+        "Token-timed 150/200/650ms ease-out system, opt-in via prefers-reduced-motion:no-preference and html.motion",
+        "Hover vs focus-visible are distinct in shots; audit focus_invisible_count=0 and overshoot_easing=false",
+        "Scroll/hover/micro explain state: header progress, mosaic saturate-on-hover, spec inset, form Sending…"
+      ],
+      "issues": [
+        {
+          "severity": "minor",
+          "where": "footer .btn:active",
+          "problem": "footer .btn:hover and :active both use background:var(--mist).",
+          "fix": "Set footer .btn:active{background:#c9d3e0;border-color:#c9d3e0;color:var(--void)}."
+        },
+        {
+          "severity": "minor",
+          "where": ".menu / .nav.open .menu",
+          "problem": "Menu toggle stays the idle bordered control while the overlay is open.",
+          "fix": "Add .nav.open .menu{background:var(--mist);border-color:var(--blue);color:var(--deep)}."
+        },
+        {
+          "severity": "minor",
+          "where": "@media (prefers-reduced-motion:reduce) table.spec tr",
+          "problem": "Reduce branch sets box-shadow:none, which is the pre-reveal state.",
+          "fix": "In the reduce block use box-shadow:inset 3px 0 0 var(--blue)."
+        },
+        {
+          "severity": "minor",
+          "where": ".top::before",
+          "problem": "Progress width is transitioned; width is a layout property.",
+          "fix": "Set .top::before{width:100%;transform:scaleX(var(--scrolled));transform-origin:left center}."
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,1 @@
+{"expert":"a11y_qa","scores":{"a11y_responsive":{"score":7.5,"evidence":"0 contrast fails, 0 blockers. Header phone omitted. White type on navy banners kept.","strengths":["Skip, landmarks, named Menu"],"issues":[{"severity":"major","where":"about table mobile","problem":"CIN clips.","fix":"Stack rows below 700px."}]}}}

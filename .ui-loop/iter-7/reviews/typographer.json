@@ -1,0 +1,28 @@
+{
+  "expert": "typographer",
+  "scores": {
+    "typography": {
+      "score": 7.5,
+      "evidence": "Hero set as two Archivo lines at 44px with tight leading, IBM Plex lead at 18px / 1.65, body 16px. Audit: Archivo + IBM Plex Sans; desktop sizes 12.5, 14, 14.4, 16, 18, 20, 24, 38.4, 44 (nine, not 5–7); body 16px; long_line_count 0. Mobile h1 stacks as three lines because of forced <br>.",
+      "strengths": [
+        "Archivo for wordmark/h1–h3/phones and IBM Plex Sans for body/UI is a two-role industrial pairing.",
+        "Hero is deliberately two lines with heading leading ~1.1, 16px body, 0 long lines.",
+        "Display vs body load is clear in the audit and holds across inner pageheads."
+      ],
+      "issues": [
+        {
+          "severity": "major",
+          "where": "html type scale",
+          "problem": "Nine computed sizes on desktop against a 5–7 step scale. 14px, 14.4px and 20px are stray.",
+          "fix": "Map every rule to the six DESIGN steps only. Delete 14px, 14.4px, and 20px declarations."
+        },
+        {
+          "severity": "major",
+          "where": "hero h1 at 375px",
+          "problem": "The desktop <br> after supply plus wrap turns the headline into three stacked lines.",
+          "fix": "Drop the forced break below ~700px so it reads Entrust your supply / to Gundlav."
+        }
+      ]
+    }
+  }
+}

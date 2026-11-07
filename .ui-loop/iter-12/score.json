@@ -1,0 +1,209 @@
+{
+  "iter": 12,
+  "final": 7.5,
+  "target": 8.0,
+  "weighted_mean": 7.47,
+  "weakest_dim_score": 6.5,
+  "blockers": [],
+  "incomplete": false,
+  "decision": "STOP_MAX_ITER",
+  "dimensions": {
+    "hierarchy_composition": {
+      "status": "scored",
+      "score": 7.0,
+      "expert_score": 7.0,
+      "anchor": null,
+      "capped_by_audit": false,
+      "votes": [
+        [
+          "art_director",
+          7.0
+        ]
+      ]
+    },
+    "typography": {
+      "status": "scored",
+      "score": 7.5,
+      "expert_score": 7.5,
+      "anchor": 10.0,
+      "capped_by_audit": false,
+      "votes": [
+        [
+          "typographer",
+          7.5
+        ]
+      ]
+    },
+    "color": {
+      "status": "scored",
+      "score": 8.2,
+      "expert_score": 8.2,
+      "anchor": 10.0,
+      "capped_by_audit": false,
+      "votes": [
+        [
+          "systems_designer",
+          8.2
+        ]
+      ]
+    },
+    "spacing_rhythm": {
+      "status": "scored",
+      "score": 7.8,
+      "expert_score": 7.8,
+      "anchor": 10.0,
+      "capped_by_audit": false,
+      "votes": [
+        [
+          "systems_designer",
+          7.8
+        ]
+      ]
+    },
+    "distinctiveness": {
+      "status": "scored",
+      "score": 6.5,
+      "expert_score": 6.5,
+      "anchor": 10.0,
+      "capped_by_audit": false,
+      "votes": [
+        [
+          "skeptic",
+          6.5
+        ]
+      ]
+    },
+    "ux_clarity": {
+      "status": "scored",
+      "score": 7.5,
+      "expert_score": 7.5,
+      "anchor": null,
+      "capped_by_audit": false,
+      "votes": [
+        [
+          "ux_lead",
+          7.5
+        ]
+      ]
+    },
+    "reference_fidelity": {
+      "status": "scored",
+      "score": 7.5,
+      "expert_score": 7.5,
+      "anchor": null,
+      "capped_by_audit": false,
+      "votes": [
+        [
+          "art_director",
+          7.5
+        ]
+      ]
+    },
+    "interaction_motion": {
+      "status": "scored",
+      "score": 7.5,
+      "expert_score": 7.5,
+      "anchor": null,
+      "capped_by_audit": false,
+      "votes": [
+        [
+          "motion_designer",
+          7.5
+        ]
+      ]
+    },
+    "a11y_responsive": {
+      "status": "scored",
+      "score": 8.5,
+      "expert_score": 8.5,
+      "anchor": 10.0,
+      "capped_by_audit": false,
+      "votes": [
+        [
+          "a11y_qa",
+          8.5
+        ]
+      ]
+    }
+  },
+  "fix_queue": [
+    {
+      "priority": 108.0,
+      "severity": "major",
+      "dim": "hierarchy_composition",
+      "expert": "art_director",
+      "where": "inner .cols",
+      "problem": "Leftover 50/50 columns.",
+      "fix": "Give each section one dominant object."
+    },
+    {
+      "priority": 84.0,
+      "severity": "major",
+      "dim": "distinctiveness",
+      "expert": "skeptic",
+      "where": ".cols",
+      "problem": "Leftover 50/50.",
+      "fix": "Keep 5/6 only on hero and pagehead."
+    },
+    {
+      "priority": 84.0,
+      "severity": "major",
+      "dim": "distinctiveness",
+      "expert": "skeptic",
+      "where": "catalogue h2s",
+      "problem": "Specification, Company details still generic.",
+      "fix": "Retitle with numbers."
+    },
+    {
+      "priority": 84.0,
+      "severity": "major",
+      "dim": "distinctiveness",
+      "expert": "skeptic",
+      "where": "inner h1s",
+      "problem": "Mad-lib from Gundlav.",
+      "fix": "Unique claims per page."
+    },
+    {
+      "priority": 70.0,
+      "severity": "major",
+      "dim": "typography",
+      "expert": "typographer",
+      "where": "about.html h1",
+      "problem": "Date was wrapping after 16.",
+      "fix": "Designed break after Incorporated."
+    },
+    {
+      "priority": 60.0,
+      "severity": "major",
+      "dim": "ux_clarity",
+      "expert": "ux_lead",
+      "where": "contact lead",
+      "problem": "Phone number wrapped.",
+      "fix": "nowrap tel link."
+    },
+    {
+      "priority": 52.8,
+      "severity": "major",
+      "dim": "spacing_rhythm",
+      "expert": "systems_designer",
+      "where": "privacy.html .pagehead",
+      "problem": "Empty 6fr column without a photo.",
+      "fix": "Grid only on pagehead-- variants."
+    },
+    {
+      "priority": 50.0,
+      "severity": "major",
+      "dim": "reference_fidelity",
+      "expert": "art_director",
+      "where": "inner .cols",
+      "problem": "Body layout snaps back to generic manufacturer template.",
+      "fix": "Reuse homepage 5/6 devices below the pagehead."
+    }
+  ],
+  "warnings": [],
+  "waivers": {
+    "header_phone_removed": "user demand: remove the number from the header (number stays in footer and mobile Call bar)",
+    "square_matte_buttons": "user demand: matte finish, no rounded edges, animated",
+    "same_header_as_index": "user demand: use the same header as index.html on every page; navy type not white-on-photo banners"
+  }
+}

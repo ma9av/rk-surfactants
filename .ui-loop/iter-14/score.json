@@ -1,0 +1,211 @@
+{
+  "iter": 14,
+  "final": 7.5,
+  "target": 8.0,
+  "weighted_mean": 7.45,
+  "weakest_dim_score": 6.5,
+  "blockers": [],
+  "incomplete": false,
+  "decision": "STOP_MAX_ITER",
+  "dimensions": {
+    "hierarchy_composition": {
+      "status": "scored",
+      "score": 7.3,
+      "expert_score": 7.3,
+      "anchor": null,
+      "capped_by_audit": false,
+      "votes": [
+        [
+          "art_director",
+          7.3
+        ]
+      ]
+    },
+    "typography": {
+      "status": "scored",
+      "score": 7.5,
+      "expert_score": 7.5,
+      "anchor": 10.0,
+      "capped_by_audit": false,
+      "votes": [
+        [
+          "typographer",
+          7.5
+        ]
+      ]
+    },
+    "color": {
+      "status": "scored",
+      "score": 8.0,
+      "expert_score": 8.0,
+      "anchor": 10.0,
+      "capped_by_audit": false,
+      "votes": [
+        [
+          "systems_designer",
+          8.0
+        ]
+      ]
+    },
+    "spacing_rhythm": {
+      "status": "scored",
+      "score": 7.5,
+      "expert_score": 7.5,
+      "anchor": 10.0,
+      "capped_by_audit": false,
+      "votes": [
+        [
+          "systems_designer",
+          7.5
+        ]
+      ]
+    },
+    "distinctiveness": {
+      "status": "scored",
+      "score": 6.5,
+      "expert_score": 6.5,
+      "anchor": 10.0,
+      "capped_by_audit": false,
+      "votes": [
+        [
+          "skeptic",
+          6.5
+        ]
+      ]
+    },
+    "ux_clarity": {
+      "status": "scored",
+      "score": 7.7,
+      "expert_score": 7.7,
+      "anchor": null,
+      "capped_by_audit": false,
+      "votes": [
+        [
+          "ux_lead",
+          7.7
+        ]
+      ]
+    },
+    "reference_fidelity": {
+      "status": "scored",
+      "score": 7.5,
+      "expert_score": 7.5,
+      "anchor": null,
+      "capped_by_audit": false,
+      "votes": [
+        [
+          "art_director",
+          7.5
+        ]
+      ]
+    },
+    "interaction_motion": {
+      "status": "scored",
+      "score": 7.5,
+      "expert_score": 7.5,
+      "anchor": null,
+      "capped_by_audit": false,
+      "votes": [
+        [
+          "motion_designer",
+          7.5
+        ]
+      ]
+    },
+    "a11y_responsive": {
+      "status": "scored",
+      "score": 8.0,
+      "expert_score": 8.0,
+      "anchor": 10.0,
+      "capped_by_audit": false,
+      "votes": [
+        [
+          "a11y_qa",
+          8.0
+        ]
+      ]
+    }
+  },
+  "fix_queue": [
+    {
+      "priority": 97.2,
+      "severity": "major",
+      "dim": "hierarchy_composition",
+      "expert": "art_director",
+      "where": "contact .wrap.cols.flip",
+      "problem": "Leftover 50/50 not fixed: form and Contact details are equal-weight columns, so the page's job (the form) does not win; maps stretch the row and dump empty paper under Send quote request.",
+      "fix": "Do not use .cols on this section. Stack: form full width, then a full-width maps band. If two columns stay, set grid-template-columns: 1.8fr 1fr, keep only phones/PDF in the rail, and move both iframes below the grid."
+    },
+    {
+      "priority": 97.2,
+      "severity": "major",
+      "dim": "hierarchy_composition",
+      "expert": "art_director",
+      "where": "pagehead h1 and footer h2",
+      "problem": "Inner h1 mad-lib not fixed. Squint shows two climaxes of the same sentence Quote LABSA 90% from Gundlav -- pagehead and footer -- so size is flattened and colour does all the hierarchy.",
+      "fix": "Keep the pagehead as the claim. Change footer h2 to the plant numbers only (already in .phones) or Call Gundlav -- +91 97277 02597. Drop the duplicate Request a quote button on contact.html; leave WhatsApp as the footer action."
+    },
+    {
+      "priority": 84.0,
+      "severity": "major",
+      "dim": "distinctiveness",
+      "expert": "skeptic",
+      "where": "contact.html h1 and footer h2#c",
+      "problem": "Inner-h1 mad-lib from Gundlav is unfixed. Quote LABSA 90% from Gundlav is [verb] [product] from [town]; the footer repeats the same string. Cover the logo and any Valsad chemical seller can wear it.",
+      "fix": "Set the pagehead h1 to a unique claim such as 5 MT is the minimum we price from Plot 79/80. Keep the footer h2 as Plant / sales +91 97277 02597 \u00e2\u20ac\u201d do not clone the pagehead."
+    },
+    {
+      "priority": 84.0,
+      "severity": "major",
+      "dim": "distinctiveness",
+      "expert": "skeptic",
+      "where": "contact.html h2#fm and .reach h2",
+      "problem": "Catalogue h2s unfixed. Your requirement and Contact details are IndiaMART twins and would sit on any RFQ form.",
+      "fix": "Retitle h2#fm to Quantity of LABSA 90% (MT) from Gundlav. Retitle .reach h2 to Plot 79/80 \u00c2\u00b7 +91 97277 02597."
+    },
+    {
+      "priority": 84.0,
+      "severity": "major",
+      "dim": "distinctiveness",
+      "expert": "skeptic",
+      "where": ".contact .wrap.cols.flip",
+      "problem": "Inner .cols leftover 50/50 unfixed. grid-template-columns 6fr 5fr still reads as an even catalogue split of form vs directory.",
+      "fix": "Drop .cols on this section. Make .formcard the only primary column (minmax(40ch, 8fr)); pin .reach as a 3fr rail. Keep 5/6 only on .hero."
+    },
+    {
+      "priority": 70.0,
+      "severity": "major",
+      "dim": "typography",
+      "expert": "typographer",
+      "where": "h1.pagehead + footer h2#c",
+      "problem": "Page opens and closes on the identical display line Quote LABSA 90% from Gundlav. Desktop h1 is 44px, footer h2 is 38.4px (ratio 1.15), so the sitewide CTA title sits in the same optical band as the page title and also matches the two 38.4px section h2s (Your requirement / Contact details). Inner Gundlav formula from last round is still here.",
+      "fix": "Rewrite footer h2 to a quieter line (e.g. Call Gundlav for a LABSA 90% price) and set footer h2 to 1.5rem (24px, lh 1.1, tracking -0.015em) so the 24px Archivo phone numbers are the display climax. Cap .contact h2 at clamp(1.5rem, 2.4vw, 1.75rem) so section titles sit a full step under the 44px h1."
+    },
+    {
+      "priority": 60.0,
+      "severity": "major",
+      "dim": "spacing_rhythm",
+      "expert": "systems_designer",
+      "where": "section.contact .wrap.cols.flip; .place-map",
+      "problem": "Maps in the 5fr sidebar make .reach much taller than .formcard. desktop_full shows ~200-300px of empty paper under Send quote request. 6fr/5fr still looks like leftover 50/50, so the form is not the dominant column.",
+      "fix": "On min-width 1024px set .contact .cols.flip {grid-template-columns:minmax(0,7fr) minmax(22rem,4fr);gap:var(--s7)}. Move both .place-map blocks out of .reach into a full-width maps row under the two-col grid (Factory map | Office map, gap var(--s5), iframe height 16rem). Sidebar then stops at Factory address."
+    },
+    {
+      "priority": 55.2,
+      "severity": "major",
+      "dim": "ux_clarity",
+      "expert": "ux_lead",
+      "where": "contact.html h2#fm and .reach h2",
+      "problem": "Your requirement and Contact details are generic IndiaMART catalogue labels; covering the h1, the form section no longer says LABSA, Gundlav, or MT. Unfixed from the prior catalogue-h2 issue.",
+      "fix": "Set h2#fm to Quantity of LABSA 90% (MT) from Gundlav. Set .reach h2 to Plot 79/80 \u00c2\u00b7 +91 97277 02597."
+    }
+  ],
+  "warnings": [],
+  "waivers": {
+    "header_phone_removed": "user demand: remove the number from the header (stays in footer and mobile Call bar)",
+    "square_matte_buttons": "user demand: matte finish, no rounded edges, animated",
+    "keep_translucent_banners": "user demand: do not remove inner-page photo banners; navbar-only change",
+    "contact_disclaimer_no_checkbox": "user demand: remove the checkbox, keep the disclaimer as text",
+    "contact_inline_maps": "user demand: instead of Open in Maps links, show the map in the webpage"
+  }
+}
