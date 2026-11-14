@@ -1,0 +1,240 @@
+[
+  {
+    "iter": 1,
+    "final": 6.6,
+    "decision": "CONTINUE",
+    "blockers": 1,
+    "dims": {
+      "hierarchy_composition": 6.5,
+      "typography": 7.0,
+      "color": 7.5,
+      "spacing_rhythm": 5.5,
+      "distinctiveness": 6.5,
+      "ux_clarity": 7.0,
+      "reference_fidelity": null,
+      "interaction_motion": 6.5,
+      "a11y_responsive": 6.5
+    }
+  },
+  {
+    "iter": 2,
+    "final": 7.1,
+    "decision": "CONTINUE",
+    "blockers": 0,
+    "dims": {
+      "hierarchy_composition": 6.5,
+      "typography": 7.0,
+      "color": 8.0,
+      "spacing_rhythm": 7.5,
+      "distinctiveness": 6.5,
+      "ux_clarity": 7.5,
+      "reference_fidelity": null,
+      "interaction_motion": 6.5,
+      "a11y_responsive": 7.5
+    }
+  },
+  {
+    "iter": 3,
+    "final": 7.5,
+    "decision": "CONTINUE",
+    "blockers": 0,
+    "dims": {
+      "hierarchy_composition": 7.5,
+      "typography": 8.0,
+      "color": 8.0,
+      "spacing_rhythm": 7.5,
+      "distinctiveness": 6.5,
+      "ux_clarity": 7.5,
+      "reference_fidelity": null,
+      "interaction_motion": 6.5,
+      "a11y_responsive": 8.5
+    }
+  },
+  {
+    "iter": 4,
+    "final": 7.6,
+    "decision": "CONTINUE",
+    "blockers": 0,
+    "dims": {
+      "hierarchy_composition": 7.5,
+      "typography": 7.5,
+      "color": 7.5,
+      "spacing_rhythm": 8.0,
+      "distinctiveness": 6.5,
+      "ux_clarity": 7.8,
+      "reference_fidelity": null,
+      "interaction_motion": 7.5,
+      "a11y_responsive": 8.5
+    }
+  },
+  {
+    "iter": 5,
+    "final": 7.8,
+    "decision": "STOP_MAX_ITER",
+    "blockers": 0,
+    "dims": {
+      "hierarchy_composition": 8.0,
+      "typography": 8.0,
+      "color": 7.5,
+      "spacing_rhythm": 8.5,
+      "distinctiveness": 7.0,
+      "ux_clarity": 7.7,
+      "reference_fidelity": null,
+      "interaction_motion": 7.5,
+      "a11y_responsive": 8.5
+    }
+  },
+  {
+    "iter": 6,
+    "final": 7.7,
+    "decision": "STOP_MAX_ITER",
+    "blockers": 0,
+    "dims": {
+      "hierarchy_composition": 7.8,
+      "typography": 8.2,
+      "color": 8.0,
+      "spacing_rhythm": 8.0,
+      "distinctiveness": 6.5,
+      "ux_clarity": 7.0,
+      "reference_fidelity": 7.5,
+      "interaction_motion": 7.5,
+      "a11y_responsive": 8.6
+    }
+  },
+  {
+    "iter": 7,
+    "final": 7.5,
+    "decision": "STOP_PLATEAU",
+    "blockers": 0,
+    "dims": {
+      "hierarchy_composition": 7.5,
+      "typography": 7.5,
+      "color": 8.2,
+      "spacing_rhythm": 7.8,
+      "distinctiveness": 6.5,
+      "ux_clarity": 7.5,
+      "reference_fidelity": 7.5,
+      "interaction_motion": 8.0,
+      "a11y_responsive": 7.0
+    }
+  },
+  {
+    "iter": 8,
+    "final": 7.5,
+    "decision": "STOP_PLATEAU",
+    "blockers": 0,
+    "dims": {
+      "hierarchy_composition": 7.5,
+      "typography": 7.5,
+      "color": 8.0,
+      "spacing_rhythm": 7.7,
+      "distinctiveness": 6.5,
+      "ux_clarity": 7.5,
+      "reference_fidelity": 7.5,
+      "interaction_motion": 8.0,
+      "a11y_responsive": 8.0
+    }
+  },
+  {
+    "iter": 9,
+    "final": 7.8,
+    "decision": "STOP_PLATEAU",
+    "blockers": 0,
+    "dims": {
+      "hierarchy_composition": 8.0,
+      "typography": 8.0,
+      "color": 7.8,
+      "spacing_rhythm": 7.6,
+      "distinctiveness": 7.0,
+      "ux_clarity": 8.2,
+      "reference_fidelity": 7.5,
+      "interaction_motion": 8.4,
+      "a11y_responsive": 8.6
+    }
+  },
+  {
+    "iter": 10,
+    "final": 7.6,
+    "decision": "STOP_PLATEAU",
+    "blockers": 0,
+    "dims": {
+      "hierarchy_composition": 7.0,
+      "typography": 8.0,
+      "color": 7.8,
+      "spacing_rhythm": 7.6,
+      "distinctiveness": 7.5,
+      "ux_clarity": 7.8,
+      "reference_fidelity": 7.0,
+      "interaction_motion": 8.5,
+      "a11y_responsive": 8.5
+    }
+  },
+  {
+    "iter": 11,
+    "final": 7.5,
+    "decision": "STOP_MAX_ITER",
+    "blockers": 0,
+    "dims": {
+      "hierarchy_composition": 7.5,
+      "typography": 7.5,
+      "color": 7.5,
+      "spacing_rhythm": 7.3,
+      "distinctiveness": 7.0,
+      "ux_clarity": 7.3,
+      "reference_fidelity": 8.0,
+      "interaction_motion": 8.0,
+      "a11y_responsive": 8.3
+    }
+  },
+  {
+    "iter": 12,
+    "final": 7.5,
+    "decision": "STOP_MAX_ITER",
+    "blockers": 0,
+    "dims": {
+      "hierarchy_composition": 7.0,
+      "typography": 7.5,
+      "color": 8.2,
+      "spacing_rhythm": 7.8,
+      "distinctiveness": 6.5,
+      "ux_clarity": 7.5,
+      "reference_fidelity": 7.5,
+      "interaction_motion": 7.5,
+      "a11y_responsive": 8.5
+    }
+  },
+  {
+    "iter": 13,
+    "final": 7.3,
+    "decision": "STOP_MAX_ITER",
+    "blockers": 0,
+    "dims": {
+      "hierarchy_composition": 7.5,
+      "typography": 7.0,
+      "color": 7.4,
+      "spacing_rhythm": 7.5,
+      "distinctiveness": 6.5,
+      "ux_clarity": 7.5,
+      "reference_fidelity": 7.5,
+      "interaction_motion": 7.8,
+      "a11y_responsive": 7.5
+    }
+  },
+  {
+    "iter": 14,
+    "final": 7.5,
+    "decision": "STOP_MAX_ITER",
+    "blockers": 0,
+    "dims": {
+      "hierarchy_composition": 7.3,
+      "typography": 7.5,
+      "color": 8.0,
+      "spacing_rhythm": 7.5,
+      "distinctiveness": 6.5,
+      "ux_clarity": 7.7,
+      "reference_fidelity": 7.5,
+      "interaction_motion": 7.5,
+      "a11y_responsive": 8.0
+    }
+  }
+]

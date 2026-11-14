@@ -1,0 +1,75 @@
+{
+  "expert": "art_director",
+  "scores": {
+    "hierarchy_composition": {
+      "score": 7.8,
+      "evidence": "desktop_fold squint: three staggered mosaic panes (tanks; yard with drums and a worker; RKSPL tanker) dominate the right. Headline Entrust your supply to Gundlav is second. Filled Request a quote is third. Hero is left-aligned on mist. Mosaic col2 is now the yard. Inner folds all open on the same tanker crop so page identity is only the h1 word.",
+      "strengths": [
+        "Hero is a left claim / right three-pane mosaic with straight staggered cuts.",
+        "Primary Request a quote is filled; See specification is a text link.",
+        "Quality page proof sequence (lab photo, then LABSA in a beaker) is specific."
+      ],
+      "issues": [
+        {
+          "severity": "major",
+          "where": "homepage h2 Barrel-filled at Plot 79/80",
+          "problem": "After the photo mosaic this band is display-size type plus three bullets and no photograph. Later caption Barrel filling at the plant sits on a truck-cab/yard frame, not filling.",
+          "fix": "Put the yard-and-drums pane in this section as a 420px right column. Do not caption a parked truck as barrel filling."
+        },
+        {
+          "severity": "major",
+          "where": "inner .pagehead on Quality, Manufacturing, About, LABSA 90%, Contact",
+          "problem": "Every inner fold uses the same RKSPL tanker crop under the same navy wash. First-screen hierarchy does not change by page.",
+          "fix": "Keep the translucent navy recipe. Use the lab on Quality, tank farm on Manufacturing, plant-team on About, tanker on LABSA and Contact."
+        },
+        {
+          "severity": "minor",
+          "where": "homepage below-fold rows",
+          "problem": "Four consecutive left-copy / right-media 50/50 splits after the mosaic.",
+          "fix": "Flip Every batch is tested to photo-left / copy-right and make The plant a full-bleed image strip."
+        },
+        {
+          "severity": "minor",
+          "where": "contact_fold h2 Your requirement vs Contact details",
+          "problem": "Two equal-weight navy h2s split the quote fold.",
+          "fix": "Keep Your requirement at ~38px. Set Contact details to 18px/600 on a #f2f5f8 panel."
+        },
+        {
+          "severity": "minor",
+          "where": "header Request a quote vs hero Request a quote",
+          "problem": "Action #013ea8 and link #0154a7 read as one blue.",
+          "fix": "Keep #013ea8 on filled buttons only. Set nav and body links to #243038 with underline."
+        }
+      ]
+    },
+    "reference_fidelity": {
+      "score": 7.5,
+      "evidence": "No compare.png. Judged from refs/vico-footer.png vs footer_crop.png, and inner photo pageheads vs a flat navy slab. Footer takes the idea: navy void, original shed/tanks/tanker/drums, no cranes, no Vico green. Skyline is mid-navy on #011637 so on squint it is quieter than the reference. Inner pageheads show the tanker through a navy wash instead of a solid slab.",
+      "strengths": [
+        "Footer uses original tank, tanker and drum skyline on a dark band; navy not Vico green.",
+        "Inner pageheads are photo-backed rather than a flat navy slab.",
+        "Pages still use this plant's photos, tables and place names."
+      ],
+      "issues": [
+        {
+          "severity": "major",
+          "where": "footer silhouette vs refs/vico-footer.png",
+          "problem": "RK tanks/tanker/drums are a close navy on #011637, so the signature strip almost disappears on squint.",
+          "fix": "Recolor the silhouette fill to about #4a6a88 with #012056 inner cuts. Vary shed vs tank vs drum heights by at least 40px. Do not add cranes or import Vico green."
+        },
+        {
+          "severity": "minor",
+          "where": "inner .pagehead overlay",
+          "problem": "Overlay near 0.88 keeps the banners feeling like navy slabs with faint tanker texture.",
+          "fix": "Use a left-to-right overlay rgba(1,22,55,0.82) at the title to rgba(1,32,86,0.58) over the tanker."
+        },
+        {
+          "severity": "minor",
+          "where": "inner pagehead photo asset",
+          "problem": "One repeated tanker banner on every inner page.",
+          "fix": "Swap in the lab on Quality, tank farm on Manufacturing, and plant team on About; keep the tanker on LABSA and Contact."
+        }
+      ]
+    }
+  }
+}

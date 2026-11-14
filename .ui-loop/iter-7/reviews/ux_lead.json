@@ -1,0 +1,28 @@
+{
+  "expert": "ux_lead",
+  "scores": {
+    "ux_clarity": {
+      "score": 7.5,
+      "evidence": "Homepage five-second test is clear: LABSA 90% from Gundlav, detergent buyers, Request a quote. Docs CTAs hit contact.html?need=docs; JS unrequires quantity. Figcaption now honest. Mobile mosaic shows tank+tanker. LABSA page still asks for quantity to get TDS. Open mobile menu does not cover the hero.",
+      "strengths": [
+        "Homepage fold states product, place, audience, and next action in one pass.",
+        "Proof sits next to claims: spec numbers, 75 MT/day, own RKSPL tanker, ISO 9001:2015, named directors.",
+        "Quote form asks only what a plant buyer needs and names call/WhatsApp if send fails."
+      ],
+      "issues": [
+        {
+          "severity": "major",
+          "where": "labsa-90.html #dc Data sheets",
+          "problem": "Copy still says name the quantity in MT when you write or call, above Request documents.",
+          "fix": "Replace with: No order is required. Use Request documents, or call +91 97277 02597."
+        },
+        {
+          "severity": "major",
+          "where": "shots/mobile_menu.png — #nav.open over .hero",
+          "problem": "Open menu does not cover or dim the page. Three identical quote CTAs plus bleed-through copy.",
+          "fix": "Give #navlist a solid #fff background and a full-viewport scrim; hide .hero .cta while the menu is open."
+        }
+      ]
+    }
+  }
+}

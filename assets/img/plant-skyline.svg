@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 160" preserveAspectRatio="xMidYMax meet" aria-hidden="true">
+  <g fill="#c9d3e0">
+    <!-- GIDC shed -->
+    <path d="M24 88h210v60H24z"/>
+    <path d="M18 88l111-38 111 38H18z"/>
+    <rect x="48" y="104" width="28" height="44"/>
+    <rect x="92" y="104" width="28" height="44"/>
+    <rect x="136" y="104" width="28" height="44"/>
+    <rect x="180" y="104" width="28" height="44"/>
+    <!-- process house -->
+    <rect x="248" y="62" width="92" height="86"/>
+    <rect x="268" y="42" width="16" height="22"/>
+    <rect x="262" y="78" width="18" height="22"/>
+    <rect x="288" y="78" width="18" height="22"/>
+    <rect x="314" y="78" width="18" height="22"/>
+    <!-- LAB / LABSA / acid tanks -->
+    <rect x="356" y="36" width="58" height="112" rx="29"/>
+    <rect x="368" y="24" width="34" height="16"/>
+    <rect x="428" y="22" width="70" height="126" rx="35"/>
+    <rect x="444" y="8" width="38" height="18"/>
+    <rect x="512" y="44" width="54" height="104" rx="27"/>
+    <rect x="524" y="32" width="30" height="14"/>
+    <!-- catwalk -->
+    <rect x="382" y="58" width="168" height="5"/>
+    <rect x="382" y="58" width="4" height="28"/>
+    <rect x="546" y="58" width="4" height="28"/>
+    <!-- transfer pipe -->
+    <rect x="566" y="92" width="72" height="7"/>
+    <rect x="630" y="72" width="7" height="27"/>
+    <!-- RKSPL tanker -->
+    <path d="M652 86h268c22 0 40 14 40 32v18H708V98c0-8-6-12-14-12H652z"/>
+    <path d="M612 98h48v38h-56l-18-18v-8c0-7 6-12 12-12h14z"/>
+    <rect x="624" y="108" width="22" height="10" fill="#011637"/>
+    <circle cx="648" cy="142" r="14"/>
+    <circle cx="760" cy="142" r="14"/>
+    <circle cx="812" cy="142" r="14"/>
+    <circle cx="864" cy="142" r="14"/>
+    <circle cx="916" cy="142" r="14"/>
+    <circle cx="648" cy="142" r="6" fill="#011637"/>
+    <circle cx="760" cy="142" r="6" fill="#011637"/>
+    <circle cx="812" cy="142" r="6" fill="#011637"/>
+    <circle cx="864" cy="142" r="6" fill="#011637"/>
+    <circle cx="916" cy="142" r="6" fill="#011637"/>
+    <!-- barrel row -->
+    <g>
+      <rect x="980" y="108" width="36" height="40" rx="4"/>
+      <ellipse cx="998" cy="108" rx="18" ry="7"/>
+      <rect x="1024" y="100" width="40" height="48" rx="4"/>
+      <ellipse cx="1044" cy="100" rx="20" ry="7"/>
+      <rect x="1072" y="112" width="32" height="36" rx="4"/>
+      <ellipse cx="1088" cy="112" rx="16" ry="6"/>
+      <rect x="1112" y="104" width="38" height="44" rx="4"/>
+      <ellipse cx="1131" cy="104" rx="19" ry="7"/>
+      <rect x="1158" y="116" width="30" height="32" rx="4"/>
+      <ellipse cx="1173" cy="116" rx="15" ry="6"/>
+    </g>
+    <!-- far tanks -->
+    <rect x="1220" y="48" width="62" height="100" rx="31"/>
+    <rect x="1236" y="36" width="30" height="14"/>
+    <rect x="1294" y="64" width="50" height="84" rx="25"/>
+    <rect x="1306" y="52" width="26" height="14"/>
+    <rect x="1356" y="78" width="44" height="70" rx="22"/>
+    <!-- yard line -->
+    <rect x="0" y="148" width="1440" height="12"/>
+  </g>
+</svg>

@@ -1,0 +1,208 @@
+{
+  "iter": 11,
+  "final": 7.5,
+  "target": 8.0,
+  "weighted_mean": 7.52,
+  "weakest_dim_score": 7.0,
+  "blockers": [],
+  "incomplete": false,
+  "decision": "STOP_MAX_ITER",
+  "dimensions": {
+    "hierarchy_composition": {
+      "status": "scored",
+      "score": 7.5,
+      "expert_score": 7.5,
+      "anchor": null,
+      "capped_by_audit": false,
+      "votes": [
+        [
+          "art_director",
+          7.5
+        ]
+      ]
+    },
+    "typography": {
+      "status": "scored",
+      "score": 7.5,
+      "expert_score": 7.5,
+      "anchor": 10.0,
+      "capped_by_audit": false,
+      "votes": [
+        [
+          "typographer",
+          7.5
+        ]
+      ]
+    },
+    "color": {
+      "status": "scored",
+      "score": 7.5,
+      "expert_score": 7.5,
+      "anchor": 10.0,
+      "capped_by_audit": false,
+      "votes": [
+        [
+          "systems_designer",
+          7.5
+        ]
+      ]
+    },
+    "spacing_rhythm": {
+      "status": "scored",
+      "score": 7.3,
+      "expert_score": 7.3,
+      "anchor": 10.0,
+      "capped_by_audit": false,
+      "votes": [
+        [
+          "systems_designer",
+          7.3
+        ]
+      ]
+    },
+    "distinctiveness": {
+      "status": "scored",
+      "score": 7.0,
+      "expert_score": 7.0,
+      "anchor": 10.0,
+      "capped_by_audit": false,
+      "votes": [
+        [
+          "skeptic",
+          7.0
+        ]
+      ]
+    },
+    "ux_clarity": {
+      "status": "scored",
+      "score": 7.3,
+      "expert_score": 7.3,
+      "anchor": null,
+      "capped_by_audit": false,
+      "votes": [
+        [
+          "ux_lead",
+          7.3
+        ]
+      ]
+    },
+    "reference_fidelity": {
+      "status": "scored",
+      "score": 8.0,
+      "expert_score": 8.0,
+      "anchor": null,
+      "capped_by_audit": false,
+      "votes": [
+        [
+          "art_director",
+          8.0
+        ]
+      ]
+    },
+    "interaction_motion": {
+      "status": "scored",
+      "score": 8.0,
+      "expert_score": 8.0,
+      "anchor": null,
+      "capped_by_audit": false,
+      "votes": [
+        [
+          "motion_designer",
+          8.0
+        ]
+      ]
+    },
+    "a11y_responsive": {
+      "status": "scored",
+      "score": 8.3,
+      "expert_score": 8.3,
+      "anchor": 10.0,
+      "capped_by_audit": false,
+      "votes": [
+        [
+          "a11y_qa",
+          8.3
+        ]
+      ]
+    }
+  },
+  "fix_queue": [
+    {
+      "priority": 90.0,
+      "severity": "major",
+      "dim": "hierarchy_composition",
+      "expert": "art_director",
+      "where": "index.html h2#uses, h2#qc",
+      "problem": "Catalogue headings still name the picture.",
+      "fix": "Rewrite those h2s as claims."
+    },
+    {
+      "priority": 90.0,
+      "severity": "major",
+      "dim": "hierarchy_composition",
+      "expert": "art_director",
+      "where": "quality.html .cols",
+      "problem": "Leftover equal photo|copy columns on inner pages.",
+      "fix": "Drop .cols on quality.html."
+    },
+    {
+      "priority": 72.0,
+      "severity": "major",
+      "dim": "distinctiveness",
+      "expert": "skeptic",
+      "where": "index .cols",
+      "problem": "Leftover 50/50 after the hero.",
+      "fix": "Keep 5/6 only on .hero."
+    },
+    {
+      "priority": 72.0,
+      "severity": "major",
+      "dim": "distinctiveness",
+      "expert": "skeptic",
+      "where": "h2#uses, h2#qc",
+      "problem": "Catalogue-style headings.",
+      "fix": "Retitle with a number or named asset."
+    },
+    {
+      "priority": 72.0,
+      "severity": "major",
+      "dim": "distinctiveness",
+      "expert": "skeptic",
+      "where": "labsa-90 h2#sp",
+      "problem": "Still titled Specification.",
+      "fix": "90 \u00c2\u00b1 1 as dispatched from Gundlav."
+    },
+    {
+      "priority": 70.0,
+      "severity": "major",
+      "dim": "typography",
+      "expert": "typographer",
+      "where": "index.html h2#uses",
+      "problem": "Catalogue caption, not a buyer claim.",
+      "fix": "Replace with Barrel-filled at Plot 79/80."
+    },
+    {
+      "priority": 70.0,
+      "severity": "major",
+      "dim": "typography",
+      "expert": "typographer",
+      "where": "index.html h2#spec",
+      "problem": "Half-width wrap leaves from Gundlav stranded.",
+      "fix": "Designed break after LABSA 90%."
+    },
+    {
+      "priority": 70.0,
+      "severity": "major",
+      "dim": "typography",
+      "expert": "typographer",
+      "where": "index.html h2#qc",
+      "problem": "Batch testing at Gundlav still a photo caption.",
+      "fix": "Rewrite to ISO 9001:2015 at Gundlav."
+    }
+  ],
+  "warnings": [],
+  "waivers": {
+    "header_phone_removed": "user demand: remove the number from the header (number stays in footer and mobile Call bar)",
+    "square_matte_buttons": "user demand: matte finish, no rounded edges, animated"
+  }
+}

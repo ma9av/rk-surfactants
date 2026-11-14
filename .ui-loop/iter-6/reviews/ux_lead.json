@@ -1,0 +1,34 @@
+{
+  "expert": "ux_lead",
+  "scores": {
+    "ux_clarity": {
+      "score": 7.0,
+      "evidence": "desktop_fold five-second test passes: LABSA 90%, Entrust your supply to Gundlav, 90 +/- 1 at Gundlav GIDC, Request a quote, tel +91 97277 02597. Cover-the-logo passes. Mosaic col2 is now yard-drums. Company profile PDF is a real link. Two prior majors remain: document CTAs still open a quote form that requires Quantity (MT); plant figcaption Barrel filling at the plant is a parked truck and drums.",
+      "strengths": [
+        "Fold states product, place, buyer, and next action in one viewport.",
+        "Spec numbers, ISO 9001:2015, CIN, Plot 79/80, and named chairman sit next to the claims they support.",
+        "Quote form has labels, required markers, error/sending/success copy, and a phone fallback."
+      ],
+      "issues": [
+        {
+          "severity": "major",
+          "where": "index/quality/labsa document CTAs; contact.html #quantity[required]",
+          "problem": "A buyer asking for TDS/SDS/CoA with no order is sent to the quote form. Quantity required (MT) blocks submit. PDF download is fixed; the document path is not.",
+          "fix": "Point those CTAs to contact.html?need=docs. If need=docs, unrequire quantity, prefill the message, and set the submit label to Send document request."
+        },
+        {
+          "severity": "major",
+          "where": "index.html #plant second figure figcaption Barrel filling at the plant",
+          "problem": "The photo is a Tata truck nose and stacked blue drums. Proof does not sit next to the packing claim.",
+          "fix": "Change that figcaption to Tata tanker nose and blue drums in the Gundlav yard. Do not caption a parked truck as barrel filling."
+        },
+        {
+          "severity": "minor",
+          "where": "quality.html .pagehead",
+          "problem": "Quality first viewport is the RKSPL tanker, the same banner as Contact/About/LABSA.",
+          "fix": "Keep the translucent navy pagehead. Set the Quality banner image to lab-900.webp."
+        }
+      ]
+    }
+  }
+}

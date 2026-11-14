@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Logo lockup lab</title>
+<link rel="stylesheet" href="assets/css/styles.css?v=20261114b">
+<style>
+body{background:#e9edf2;padding:16px 0}
+.row{background:rgba(255,255,255,.94);border-bottom:1px solid rgba(211,219,227,.7);margin:0 0 14px}
+.row .wrap{display:flex;align-items:center;justify-content:space-between;min-height:80px}
+.tag{font:600 11px var(--body);color:#8a96a3;letter-spacing:.08em;text-transform:uppercase;padding:6px 0 0;width:min(100% - 48px,1180px);margin:0 auto}
+.fake{flex:none;display:flex;gap:16px;font:600 15px var(--body);color:var(--ink);align-items:center}
+.fake b{border:1px solid var(--deep);padding:12px 20px;color:var(--deep)}
+.lk{display:flex;align-items:center;gap:calc(var(--logo)*.2);text-decoration:none;--logo:60px}
+.lk img{height:var(--logo);width:auto}
+.n{display:flex;flex-direction:column}
+.n span{display:block;white-space:nowrap}
+.n span:first-child{font:800 calc(var(--logo)*.56)/.86 var(--head);font-stretch:112%;color:#2f256c;letter-spacing:-.02em}
+.n span:last-child{font:600 calc(var(--logo)*.205)/1 var(--head);font-stretch:125%;color:var(--deep);text-transform:uppercase;margin-top:calc(var(--logo)*.14)}
+.d .n{border-left:1px solid var(--line);padding-left:calc(var(--logo)*.24)}
+.g .n span:first-child{background:linear-gradient(90deg,#2f256c,#0154a7);-webkit-background-clip:text;background-clip:text;color:transparent}
+.out .lk img,.out .n{outline:1px dashed rgba(255,0,0,.35)}
+</style>
+</head>
+<body>
+<div class="tag">R3-A — purple name + navy caps, scaled to logo</div>
+<div class="row"><div class="wrap"><a class="lk"><img src="assets/img/rkspl-logo-mark.png" alt=""><span class="n"><span>Radha Krishna</span><span>Surfactants Pvt. Ltd.</span></span></a><div class="fake"><span>LABSA 90%</span><span>Manufacturing</span><b>Quote</b></div></div></div>
+<div class="tag">R3-A outlined (alignment check)</div>
+<div class="row out"><div class="wrap"><a class="lk"><img src="assets/img/rkspl-logo-mark.png" alt=""><span class="n"><span>Radha Krishna</span><span>Surfactants Pvt. Ltd.</span></span></a><div class="fake"><span>LABSA 90%</span><span>Manufacturing</span><b>Quote</b></div></div></div>
+<div class="tag">R3-B — same + divider</div>
+<div class="row d"><div class="wrap"><a class="lk"><img src="assets/img/rkspl-logo-mark.png" alt=""><span class="n"><span>Radha Krishna</span><span>Surfactants Pvt. Ltd.</span></span></a><div class="fake"><span>LABSA 90%</span><span>Manufacturing</span><b>Quote</b></div></div></div>
+<div class="tag">R3-C — purple→blue gradient name</div>
+<div class="row g"><div class="wrap"><a class="lk"><img src="assets/img/rkspl-logo-mark.png" alt=""><span class="n"><span>Radha Krishna</span><span>Surfactants Pvt. Ltd.</span></span></a><div class="fake"><span>LABSA 90%</span><span>Manufacturing</span><b>Quote</b></div></div></div>
+<script>
+document.fonts.ready.then(()=>{
+  const w=t=>{const r=document.createRange();r.selectNodeContents(t);return r.getBoundingClientRect().width};
+  document.querySelectorAll('.n').forEach(n=>{
+    const [a,b]=n.children; b.style.letterSpacing='0px';
+    const ls=(w(a)-w(b))/b.textContent.length;
+    b.style.letterSpacing=ls+'px'; b.style.marginRight=(-ls)+'px';
+    n.dataset.ls=(ls/parseFloat(getComputedStyle(b).fontSize)).toFixed(3);
+  });
+  document.title='ready';
+});
+</script>
+</body>
+</html>

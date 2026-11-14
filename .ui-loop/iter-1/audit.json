@@ -1,0 +1,193 @@
+{
+  "target": "http://127.0.0.1:8765/index.html",
+  "blockers": [
+    "5 touch targets under 24px on mobile"
+  ],
+  "warnings": [
+    "12 distinct font sizes; use a scale of 5 to 7"
+  ],
+  "slop_flags": [],
+  "allowed_by_user": [],
+  "anchors": {
+    "typography": 8.5,
+    "spacing_rhythm": 4,
+    "color": 10.0,
+    "distinctiveness": 10.0,
+    "a11y_responsive": 8.0
+  },
+  "metrics": {
+    "desktop": {
+      "font_sizes": [
+        11.2,
+        12.5,
+        14.4,
+        15.2,
+        16,
+        16.8,
+        18,
+        18.4,
+        21.6,
+        24,
+        38.4,
+        57.6
+      ],
+      "body_font_px": 16,
+      "font_families": [
+        {
+          "family": "IBM Plex Sans",
+          "chars": 2559
+        },
+        {
+          "family": "Archivo",
+          "chars": 302
+        }
+      ],
+      "text_color_count": 6,
+      "contrast_checked": 75,
+      "contrast_fail_count": 0,
+      "contrast_fail_samples": [],
+      "unknown_bg_count": 12,
+      "long_line_count": 0,
+      "long_line_samples": [],
+      "spacing_samples": 207,
+      "spacing_grid_adherence": 41.5,
+      "spacing_distinct": 16,
+      "distinct_radii": 2,
+      "distinct_shadows": 1,
+      "distinct_bg_colors": 4,
+      "dominant_chromatic_hue": 225,
+      "cta_hues": [
+        218,
+        218,
+        218,
+        218
+      ],
+      "purple_primary": false,
+      "purple_gradient": false,
+      "gradient_text_count": 0,
+      "gradient_count": 7,
+      "emoji_headings": [],
+      "uniform_three_card_rows": 0,
+      "generic_copy_hits": {},
+      "placeholder_text": false,
+      "dead_links": 0,
+      "h1_count": 1,
+      "heading_skips": 0,
+      "img_count": 8,
+      "img_missing_alt": 0,
+      "img_broken": 0,
+      "unnamed_controls": 0,
+      "has_lang": true,
+      "has_title": true,
+      "has_meta_desc": true,
+      "has_viewport_meta": true,
+      "landmarks": {
+        "main": true,
+        "nav": true,
+        "footer": true
+      },
+      "viewport_width": 1440,
+      "horizontal_overflow": false,
+      "overflow_samples": [
+        "img"
+      ],
+      "tap_targets_under_24": 6,
+      "tap_targets_under_44": 2,
+      "has_motion": true,
+      "has_reduced_motion_rule": true,
+      "overshoot_easing": false,
+      "console_errors": [],
+      "failed_requests": [],
+      "focus_checked": 25,
+      "focus_invisible_count": 0,
+      "focus_invisible_samples": []
+    },
+    "mobile": {
+      "font_sizes": [
+        11.2,
+        12.5,
+        14.4,
+        15.2,
+        16,
+        16.8,
+        18,
+        18.4,
+        21.6,
+        24,
+        25.6,
+        33.6
+      ],
+      "body_font_px": 16,
+      "font_families": [
+        {
+          "family": "IBM Plex Sans",
+          "chars": 2511
+        },
+        {
+          "family": "Archivo",
+          "chars": 302
+        }
+      ],
+      "text_color_count": 6,
+      "contrast_checked": 72,
+      "contrast_fail_count": 0,
+      "contrast_fail_samples": [],
+      "unknown_bg_count": 12,
+      "long_line_count": 0,
+      "long_line_samples": [],
+      "spacing_samples": 204,
+      "spacing_grid_adherence": 39.7,
+      "spacing_distinct": 15,
+      "distinct_radii": 2,
+      "distinct_shadows": 1,
+      "distinct_bg_colors": 4,
+      "dominant_chromatic_hue": 225,
+      "cta_hues": [
+        218,
+        218,
+        218,
+        218
+      ],
+      "purple_primary": false,
+      "purple_gradient": false,
+      "gradient_text_count": 0,
+      "gradient_count": 7,
+      "emoji_headings": [],
+      "uniform_three_card_rows": 0,
+      "generic_copy_hits": {},
+      "placeholder_text": false,
+      "dead_links": 0,
+      "h1_count": 1,
+      "heading_skips": 0,
+      "img_count": 8,
+      "img_missing_alt": 0,
+      "img_broken": 0,
+      "unnamed_controls": 0,
+      "has_lang": true,
+      "has_title": true,
+      "has_meta_desc": true,
+      "has_viewport_meta": true,
+      "landmarks": {
+        "main": true,
+        "nav": true,
+        "footer": true
+      },
+      "viewport_width": 375,
+      "horizontal_overflow": false,
+      "overflow_samples": [
+        "g",
+        "g",
+        "use",
+        "g",
+        "g"
+      ],
+      "tap_targets_under_24": 5,
+      "tap_targets_under_44": 2,
+      "has_motion": true,
+      "has_reduced_motion_rule": true,
+      "overshoot_easing": false,
+      "console_errors": [],
+      "failed_requests": []
+    }
+  }
+}

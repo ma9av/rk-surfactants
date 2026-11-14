@@ -1,0 +1,196 @@
+{
+  "iter": 4,
+  "final": 7.6,
+  "target": 9.0,
+  "weighted_mean": 7.55,
+  "weakest_dim_score": 6.5,
+  "blockers": [],
+  "incomplete": false,
+  "decision": "CONTINUE",
+  "dimensions": {
+    "hierarchy_composition": {
+      "status": "scored",
+      "score": 7.5,
+      "expert_score": 7.5,
+      "anchor": null,
+      "capped_by_audit": false,
+      "votes": [
+        [
+          "art_director",
+          7.5
+        ]
+      ]
+    },
+    "typography": {
+      "status": "scored",
+      "score": 7.5,
+      "expert_score": 7.5,
+      "anchor": 10.0,
+      "capped_by_audit": false,
+      "votes": [
+        [
+          "typographer",
+          7.5
+        ]
+      ]
+    },
+    "color": {
+      "status": "scored",
+      "score": 7.5,
+      "expert_score": 7.5,
+      "anchor": 10.0,
+      "capped_by_audit": false,
+      "votes": [
+        [
+          "systems_designer",
+          7.5
+        ]
+      ]
+    },
+    "spacing_rhythm": {
+      "status": "scored",
+      "score": 8.0,
+      "expert_score": 8.0,
+      "anchor": 10.0,
+      "capped_by_audit": false,
+      "votes": [
+        [
+          "systems_designer",
+          8.0
+        ]
+      ]
+    },
+    "distinctiveness": {
+      "status": "scored",
+      "score": 6.5,
+      "expert_score": 6.5,
+      "anchor": 10.0,
+      "capped_by_audit": false,
+      "votes": [
+        [
+          "skeptic",
+          6.5
+        ]
+      ]
+    },
+    "ux_clarity": {
+      "status": "scored",
+      "score": 7.8,
+      "expert_score": 7.8,
+      "anchor": null,
+      "capped_by_audit": false,
+      "votes": [
+        [
+          "ux_lead",
+          7.8
+        ]
+      ]
+    },
+    "reference_fidelity": {
+      "status": "n/a",
+      "reason": "no reference supplied"
+    },
+    "interaction_motion": {
+      "status": "scored",
+      "score": 7.5,
+      "expert_score": 7.5,
+      "anchor": null,
+      "capped_by_audit": false,
+      "votes": [
+        [
+          "motion_designer",
+          7.5
+        ]
+      ]
+    },
+    "a11y_responsive": {
+      "status": "scored",
+      "score": 8.5,
+      "expert_score": 8.5,
+      "anchor": 10.0,
+      "capped_by_audit": false,
+      "votes": [
+        [
+          "a11y_qa",
+          8.5
+        ]
+      ]
+    }
+  },
+  "fix_queue": [
+    {
+      "priority": 90.0,
+      "severity": "major",
+      "dim": "hierarchy_composition",
+      "expert": "art_director",
+      "where": ".mosaic tablet and mobile",
+      "problem": "Below 1023px collage becomes one 16rem rectangle; staggered seams gone.",
+      "fix": "At 768-1023px two-column mosaic height 22rem. At 767 keep one pane with a diagonal clip."
+    },
+    {
+      "priority": 90.0,
+      "severity": "major",
+      "dim": "hierarchy_composition",
+      "expert": "art_director",
+      "where": ".hero .cta .btn / .bar / .contact .btn",
+      "problem": "Hero filled quote hidden below 1023; bar and contact both filled.",
+      "fix": "Delete hero btn display:none. Ghost the contact quote on small screens so bar is the only filled quote."
+    },
+    {
+      "priority": 84.0,
+      "severity": "major",
+      "dim": "distinctiveness",
+      "expert": "skeptic",
+      "where": "#plant img, #qc img, section.who img",
+      "problem": "Body reuses mosaic photographs. Barrel filling is claimed and never shown.",
+      "fix": "Give each photograph one slot. Keep lab only in #qc. Who should not use plant-wide."
+    },
+    {
+      "priority": 84.0,
+      "severity": "major",
+      "dim": "distinctiveness",
+      "expert": "skeptic",
+      "where": "h2#uses plus first li",
+      "problem": "Heading restated as first bullet.",
+      "fix": "Delete the first li. Do not repeat TDS sentence in both list and spec link."
+    },
+    {
+      "priority": 84.0,
+      "severity": "major",
+      "dim": "distinctiveness",
+      "expert": "skeptic",
+      "where": "section.who",
+      "problem": "Directors illustrated with the same rusty yard as mosaic column 2.",
+      "fix": "Replace who photo with a unique crop or drop the photo and put CIN/directors in the second column."
+    },
+    {
+      "priority": 70.0,
+      "severity": "major",
+      "dim": "typography",
+      "expert": "typographer",
+      "where": ".contact .phones a and .lbl",
+      "problem": "inline-flex puts 12.5px labels on the same line as 24px numbers: SALES+91.",
+      "fix": "Set .phones a to flex-direction:column; gap 4px. Space after </span>. Keep .altn on Archivo 1.25rem/700."
+    },
+    {
+      "priority": 52.8,
+      "severity": "major",
+      "dim": "ux_clarity",
+      "expert": "ux_lead",
+      "where": "document CTAs vs contact form quantity",
+      "problem": "TDS/SDS/CoA links open a quote form that requires MT.",
+      "fix": "Add request-type radios Quote vs documents; drop quantity required when documents selected."
+    },
+    {
+      "priority": 50.0,
+      "severity": "major",
+      "dim": "color",
+      "expert": "systems_designer",
+      "where": "--action vs --blue",
+      "problem": "Filled CTA, ghost nav CTA, and text links collapse to one blue.",
+      "fix": "Keep --action for filled buttons. Set links and ghost borders to --deep."
+    }
+  ],
+  "warnings": [],
+  "waivers": {}
+}

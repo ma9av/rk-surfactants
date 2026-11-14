@@ -1,0 +1,205 @@
+{
+  "iter": 8,
+  "final": 7.5,
+  "target": 8.0,
+  "weighted_mean": 7.51,
+  "weakest_dim_score": 6.5,
+  "blockers": [],
+  "incomplete": false,
+  "decision": "STOP_PLATEAU",
+  "dimensions": {
+    "hierarchy_composition": {
+      "status": "scored",
+      "score": 7.5,
+      "expert_score": 7.5,
+      "anchor": null,
+      "capped_by_audit": false,
+      "votes": [
+        [
+          "art_director",
+          7.5
+        ]
+      ]
+    },
+    "typography": {
+      "status": "scored",
+      "score": 7.5,
+      "expert_score": 7.5,
+      "anchor": 10.0,
+      "capped_by_audit": false,
+      "votes": [
+        [
+          "typographer",
+          7.5
+        ]
+      ]
+    },
+    "color": {
+      "status": "scored",
+      "score": 8.0,
+      "expert_score": 8.0,
+      "anchor": 10.0,
+      "capped_by_audit": false,
+      "votes": [
+        [
+          "systems_designer",
+          8.0
+        ]
+      ]
+    },
+    "spacing_rhythm": {
+      "status": "scored",
+      "score": 7.7,
+      "expert_score": 7.7,
+      "anchor": 10.0,
+      "capped_by_audit": false,
+      "votes": [
+        [
+          "systems_designer",
+          7.7
+        ]
+      ]
+    },
+    "distinctiveness": {
+      "status": "scored",
+      "score": 6.5,
+      "expert_score": 6.5,
+      "anchor": 10.0,
+      "capped_by_audit": false,
+      "votes": [
+        [
+          "skeptic",
+          6.5
+        ]
+      ]
+    },
+    "ux_clarity": {
+      "status": "scored",
+      "score": 7.5,
+      "expert_score": 7.5,
+      "anchor": null,
+      "capped_by_audit": false,
+      "votes": [
+        [
+          "ux_lead",
+          7.5
+        ]
+      ]
+    },
+    "reference_fidelity": {
+      "status": "scored",
+      "score": 7.5,
+      "expert_score": 7.5,
+      "anchor": null,
+      "capped_by_audit": false,
+      "votes": [
+        [
+          "art_director",
+          7.5
+        ]
+      ]
+    },
+    "interaction_motion": {
+      "status": "scored",
+      "score": 8.0,
+      "expert_score": 8.0,
+      "anchor": null,
+      "capped_by_audit": false,
+      "votes": [
+        [
+          "motion_designer",
+          8.0
+        ]
+      ]
+    },
+    "a11y_responsive": {
+      "status": "scored",
+      "score": 8.0,
+      "expert_score": 8.0,
+      "anchor": 10.0,
+      "capped_by_audit": false,
+      "votes": [
+        [
+          "a11y_qa",
+          8.0
+        ]
+      ]
+    }
+  },
+  "fix_queue": [
+    {
+      "priority": 90.0,
+      "severity": "major",
+      "dim": "hierarchy_composition",
+      "expert": "art_director",
+      "where": "about.html .pagehead",
+      "problem": "Banner shows a row of shoes and mid-calves; heads and torsos are gone.",
+      "fix": "Set background-position 50% 28% so workers\u00e2\u20ac\u2122 torsos sit in the title band."
+    },
+    {
+      "priority": 90.0,
+      "severity": "major",
+      "dim": "hierarchy_composition",
+      "expert": "art_director",
+      "where": "footer skyline vs links",
+      "problem": "Links sit on top of the tank silhouette.",
+      "fix": "padding-bottom 96px on footer wrap; pin silhouette to the bottom as a ground plane."
+    },
+    {
+      "priority": 84.0,
+      "severity": "major",
+      "dim": "distinctiveness",
+      "expert": "skeptic",
+      "where": "about.html .pagehead--team",
+      "problem": "50% 62% hits knees and pavement. Uniforms never enter the band.",
+      "fix": "background-position 50% 28% so heads, blue shirts and tanker sit behind the title."
+    },
+    {
+      "priority": 84.0,
+      "severity": "major",
+      "dim": "distinctiveness",
+      "expert": "skeptic",
+      "where": "#uses .pack-shot",
+      "problem": "4/3 crop turns the yard photo into a Tata grille. Caption overclaims barrels.",
+      "fix": "aspect-ratio 16/9; object-position 82% 50%."
+    },
+    {
+      "priority": 84.0,
+      "severity": "major",
+      "dim": "distinctiveness",
+      "expert": "skeptic",
+      "where": "about.html Mission and vision / leadership bios",
+      "problem": "Interchangeable LinkedIn blurbs and a stock Mission/Vision block.",
+      "fix": "Delete Mission and vision. Rewrite bios to Gundlav facts."
+    },
+    {
+      "priority": 84.0,
+      "severity": "major",
+      "dim": "distinctiveness",
+      "expert": "skeptic",
+      "where": "quality.html h1",
+      "problem": "Category word Quality under a heavy navy wash.",
+      "fix": "Retitle to Batch testing at Gundlav; lighten overlay."
+    },
+    {
+      "priority": 70.0,
+      "severity": "major",
+      "dim": "typography",
+      "expert": "typographer",
+      "where": "global type scale",
+      "problem": "Nine sizes. Extras are .foot 14px, figcaption 14.4px, .phones .altn 20px.",
+      "fix": "Set figcaption and .foot to .78125rem; set .phones .altn to 1.5rem."
+    },
+    {
+      "priority": 60.0,
+      "severity": "major",
+      "dim": "ux_clarity",
+      "expert": "ux_lead",
+      "where": "contact.html #quantity",
+      "problem": "Label required, hint optional, JS blocks empty on quote path.",
+      "fix": "Default label Quantity (MT) * with hint needed for a price; add a Request documents link."
+    }
+  ],
+  "warnings": [],
+  "waivers": {}
+}

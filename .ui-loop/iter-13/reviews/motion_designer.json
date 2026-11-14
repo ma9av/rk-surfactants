@@ -1,0 +1,1 @@
+{"expert":"motion_designer","scores":{"interaction_motion":{"score":7.8,"evidence":"Square matte 200ms wipe: filled navy to black, ghost outline to deep. Reduced-motion present.","strengths":["Hero and nav wipe match the demand"],"issues":[{"severity":"major","where":"footer .btn mosaic breakpoint","problem":"Footer primary was overridden.","fix":"Deleted those overrides."}]}}}

@@ -1,0 +1,38 @@
+{
+  "target": 8.0,
+  "max_iterations": 14,
+  "profile": "web",
+  "has_reference": true,
+  "waivers": {
+    "header_phone_removed": "user demand: remove the number from the header (stays in footer and mobile Call bar)",
+    "square_matte_buttons": "user demand: matte finish, no rounded edges, animated",
+    "keep_translucent_banners": "user demand: do not remove inner-page photo banners; navbar-only change",
+    "contact_disclaimer_no_checkbox": "user demand: remove the checkbox, keep the disclaimer as text",
+    "contact_inline_maps": "user demand: instead of Open in Maps links, show the map in the webpage"
+  },
+  "plateau_delta": 0.3,
+  "plateau_window": 2,
+  "anchor_slack": 1.5,
+  "demands": [
+    "review the project as a company which produces LABSA 90%, walkthrough the website and make appropriate changes, addition, deletion to make it a good end product for the customer",
+    "keep DNA-like structure sparse (not overlapping) and collage gaps as straight angled lines at staggered positions",
+    "hero headline Entrust your supply to Gundlav — keep it simple and professional, not generic",
+    "sync four new plant photos and provide a link to the company profile PDF; add new facts from that document",
+    "add a footer factory silhouette like the Vico Forge reference, original art not copied",
+    "inner-page header and banner little translucent with a plant photo in the background",
+    "do not name the seven workers in the plant team photograph",
+    "add scroll, interactions, motion, hover all other type of micro and major animations across our webpages review and audit and add appropriate animations till it reach the score of 8",
+    "remove the number from the header, and give the buttons , matte finish , and I dont want rounded edges in the button , and want it animated and look good",
+    "dont remove the translucent banner like you did, as it doesnt look good , just make the change in the navbar, remove number and make the button changes",
+    "contact.html: remove the checkbox, just keep the disclaimer, and instead of open in maps, show the map in the webpage"
+  ],
+  "required_experts": [
+    "art_director",
+    "typographer",
+    "systems_designer",
+    "ux_lead",
+    "motion_designer",
+    "a11y_qa",
+    "skeptic"
+  ]
+}

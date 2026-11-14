@@ -1,0 +1,172 @@
+{
+  "target": "http://127.0.0.1:8765/index.html",
+  "blockers": [],
+  "warnings": [],
+  "slop_flags": [],
+  "allowed_by_user": [],
+  "anchors": {
+    "typography": 10.0,
+    "spacing_rhythm": 10.0,
+    "color": 10.0,
+    "distinctiveness": 10.0,
+    "a11y_responsive": 10.0
+  },
+  "metrics": {
+    "desktop": {
+      "font_sizes": [
+        12.5,
+        16,
+        18,
+        24,
+        38.4,
+        44
+      ],
+      "body_font_px": 16,
+      "font_families": [
+        {
+          "family": "IBM Plex Sans",
+          "chars": 3068
+        },
+        {
+          "family": "Archivo",
+          "chars": 264
+        }
+      ],
+      "text_color_count": 7,
+      "contrast_checked": 87,
+      "contrast_fail_count": 0,
+      "contrast_fail_samples": [],
+      "unknown_bg_count": 8,
+      "long_line_count": 0,
+      "long_line_samples": [],
+      "spacing_samples": 264,
+      "spacing_grid_adherence": 100,
+      "spacing_distinct": 8,
+      "distinct_radii": 1,
+      "distinct_shadows": 2,
+      "distinct_bg_colors": 3,
+      "dominant_chromatic_hue": 225,
+      "cta_hues": [
+        218,
+        218,
+        210
+      ],
+      "purple_primary": false,
+      "purple_gradient": false,
+      "gradient_text_count": 0,
+      "gradient_count": 5,
+      "emoji_headings": [],
+      "uniform_three_card_rows": 0,
+      "generic_copy_hits": {},
+      "placeholder_text": false,
+      "dead_links": 0,
+      "h1_count": 1,
+      "heading_skips": 0,
+      "img_count": 8,
+      "img_missing_alt": 0,
+      "img_broken": 0,
+      "unnamed_controls": 0,
+      "has_lang": true,
+      "has_title": true,
+      "has_meta_desc": true,
+      "has_viewport_meta": true,
+      "landmarks": {
+        "main": true,
+        "nav": true,
+        "footer": true
+      },
+      "viewport_width": 1440,
+      "horizontal_overflow": false,
+      "overflow_samples": [],
+      "tap_targets_under_24": 0,
+      "tap_targets_under_44": 1,
+      "has_motion": true,
+      "has_reduced_motion_rule": true,
+      "overshoot_easing": false,
+      "console_errors": [],
+      "failed_requests": [],
+      "focus_checked": 25,
+      "focus_invisible_count": 0,
+      "focus_invisible_samples": []
+    },
+    "mobile": {
+      "font_sizes": [
+        12.5,
+        16,
+        18,
+        24,
+        33.6
+      ],
+      "body_font_px": 16,
+      "font_families": [
+        {
+          "family": "IBM Plex Sans",
+          "chars": 3042
+        },
+        {
+          "family": "Archivo",
+          "chars": 264
+        }
+      ],
+      "text_color_count": 7,
+      "contrast_checked": 85,
+      "contrast_fail_count": 0,
+      "contrast_fail_samples": [],
+      "unknown_bg_count": 8,
+      "long_line_count": 0,
+      "long_line_samples": [],
+      "spacing_samples": 254,
+      "spacing_grid_adherence": 100,
+      "spacing_distinct": 8,
+      "distinct_radii": 1,
+      "distinct_shadows": 1,
+      "distinct_bg_colors": 3,
+      "dominant_chromatic_hue": 225,
+      "cta_hues": [
+        218,
+        218,
+        218
+      ],
+      "purple_primary": false,
+      "purple_gradient": false,
+      "gradient_text_count": 0,
+      "gradient_count": 5,
+      "emoji_headings": [],
+      "uniform_three_card_rows": 0,
+      "generic_copy_hits": {},
+      "placeholder_text": false,
+      "dead_links": 0,
+      "h1_count": 1,
+      "heading_skips": 0,
+      "img_count": 8,
+      "img_missing_alt": 0,
+      "img_broken": 0,
+      "unnamed_controls": 0,
+      "has_lang": true,
+      "has_title": true,
+      "has_meta_desc": true,
+      "has_viewport_meta": true,
+      "landmarks": {
+        "main": true,
+        "nav": true,
+        "footer": true
+      },
+      "viewport_width": 375,
+      "horizontal_overflow": false,
+      "overflow_samples": [
+        "g",
+        "g",
+        "use",
+        "g",
+        "g"
+      ],
+      "tap_targets_under_24": 0,
+      "tap_targets_under_44": 1,
+      "has_motion": true,
+      "has_reduced_motion_rule": true,
+      "overshoot_easing": false,
+      "console_errors": [],
+      "failed_requests": []
+    }
+  }
+}

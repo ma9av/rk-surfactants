@@ -1,0 +1,1 @@
+{"expert":"motion_designer","scores":{"interaction_motion":{"score":7.5,"evidence":"Solid paper header on every page. Button wipe 200ms. Pagehead still has 550ms title settle.","strengths":["Control states complete"],"issues":[{"severity":"major","where":".pagehead h1","problem":"Second generic entrance.","fix":"Drop pagehead fade-slide."}]}}}

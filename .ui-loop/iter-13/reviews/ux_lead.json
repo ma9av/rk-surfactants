@@ -1,0 +1,1 @@
+{"expert":"ux_lead","scores":{"ux_clarity":{"score":7.5,"evidence":"Homepage fold is clear. No navbar phone. Quote is the only header action. Banners kept.","strengths":["Clear homepage fold","Mobile Call/Quote bar"],"issues":[{"severity":"major","where":"about table mobile","problem":"Legal name clips.","fix":"Stack spec rows."}]}}}

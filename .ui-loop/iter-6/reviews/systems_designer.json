@@ -1,0 +1,69 @@
+{
+  "expert": "systems_designer",
+  "scores": {
+    "color": {
+      "score": 8.0,
+      "evidence": "Tokens match DESIGN.md. Audit contrast_fail_count 0, distinct_bg_colors 5, dominant hue 225, cta_hues [218,218], purple_primary false. --action #013ea8 vs --blue #0154a7 remain 22 G-steps apart, same hue.",
+      "strengths": [
+        "Seven named tokens with blue-tinted mist, not default grey.",
+        "Zero contrast failures; on-dark contact inverts CTAs to paper on --deep.",
+        "One radius, no shadows, no purple/gradient-text palette"
+      ],
+      "issues": [
+        {
+          "severity": "major",
+          "where": ":root --action vs --blue",
+          "problem": "--action #013ea8 and --blue #0154a7 both measure hue 218. Filled quote, outline header CTA, and See specification all read as the same blue.",
+          "fix": "Set --action to #012056 for filled .btn / .bar a+a only; keep --blue #0154a7 for links."
+        },
+        {
+          "severity": "minor",
+          "where": "input, .status.err, footer, pagehead p",
+          "problem": "Named 7-colour system leaks hex: input #5c6b78, error #a4260c, on-dark #c9d3e0.",
+          "fix": "Add --field, --on-dark, --press, --danger to :root and replace those literals."
+        },
+        {
+          "severity": "minor",
+          "where": ".top on inner pageheads",
+          "problem": "Glass is rgba(255,255,255,.78) blur(16px). Over tanker banners the bar still reads as solid paper.",
+          "fix": "On pages with .pagehead, lower alpha to .62 so the tanker wash tints the bar."
+        }
+      ]
+    },
+    "spacing_rhythm": {
+      "score": 8.0,
+      "evidence": "Audit spacing_grid_adherence 100; spacing_distinct 9; distinct_radii 1; distinct_shadows 0. Scale 4/8/12/16/24/32/48/80. Off-scale: footer padding 6.5rem / skyline 7.5rem. quality_fold lab photo taller than copy.",
+      "strengths": [
+        "100% 4px-grid adherence with one 4px radius and no card shadows.",
+        "Consistent s7/s8 section padding and 5/6 column gap.",
+        "Mosaic 8px seams vs 48-80px section gaps; .place 24px band is a real rhythm change."
+      ],
+      "issues": [
+        {
+          "severity": "major",
+          "where": "quality.html .cols In-house laboratory",
+          "problem": "Lab photograph fills the left column; two short paragraphs leave a tall white void under the copy.",
+          "fix": "Cap the photo at max-height 22rem object-fit cover, or move the batch-check table into the text column."
+        },
+        {
+          "severity": "minor",
+          "where": "contact.html h2#fm and .reach h2",
+          "problem": "Your requirement and Contact details use the same 1.5-2.4rem clamp as marketing h2s.",
+          "fix": "Add .formcard h2, .reach h2 {font-size:1.5rem;margin-bottom:var(--s5)}."
+        },
+        {
+          "severity": "minor",
+          "where": "index.html section#uses",
+          "problem": "Left column is a single h2 with no supporting line; right column is three list rows.",
+          "fix": "Set this section to padding-block var(--s6) at 1024px and put a one-line p under the h2."
+        },
+        {
+          "severity": "minor",
+          "where": "footer",
+          "problem": "Footer padding 6.5rem and ::after height 7.5rem are off the 4-80 scale. Privacy sits on the skyline.",
+          "fix": "Change footer to padding var(--s6) 0 var(--s8); footer::after height var(--s8)."
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,1 @@
+{"expert":"ux_lead","scores":{"ux_clarity":{"score":7.5,"evidence":"Homepage fold is clear. Same paper header on every page with current-page underline.","strengths":["Shared nav","Mobile Call/Quote bar"],"issues":[{"severity":"major","where":"contact lead","problem":"Phone number wrapped.","fix":"nowrap tel link."}]}}}

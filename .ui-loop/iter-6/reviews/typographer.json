@@ -1,0 +1,40 @@
+{
+  "expert": "typographer",
+  "scores": {
+    "typography": {
+      "score": 8.2,
+      "evidence": "Archivo 700 stretch 112% for display and IBM Plex Sans 400/600 for body. Audit sizes 12.5/14.4/16/18/20/24/38.4/44px; body 16px/1.65; h1 44px tracking -0.025em; p max-width 62ch; long_line_count 0. Mobile h1 33.6px. Contact h2 is now Quote LABSA 90% from Gundlav. Scale leaks (8 sizes, h3 = lead) keep this below 9.",
+      "strengths": [
+        "Archivo 112% stretch vs IBM Plex Sans is a deliberate industrial pair.",
+        "Body 16px/1.65, 62ch measure, h1 44px with tight tracking, tabular-nums on spec figures.",
+        "Hero locked to two lines; plant/sales phones set as Archivo numerals with tracked labels."
+      ],
+      "issues": [
+        {
+          "severity": "major",
+          "where": "table.spec th on index.html #spec and labsa-90.html",
+          "problem": "50/50 columns wrap labels as (% by / weight) and values as alkyl / benzene.",
+          "fix": "Set table.spec to table-layout:fixed with col 13.5rem 1fr. Put a br before each (% by weight) unit."
+        },
+        {
+          "severity": "minor",
+          "where": "h3, .hero .lead, .pagehead p, .reach h3, figcaption",
+          "problem": "h3 is 18px, the same size as lead. Eight sizes vs the 5-7 step scale.",
+          "fix": "Set h3 to 1.25rem (20px). Restyle .reach h3 to 0.78125rem uppercase. Set figcaption to .78125rem."
+        },
+        {
+          "severity": "minor",
+          "where": "manufacturing.html h2#rm",
+          "problem": "Raw materials and product tanks leaves the widow tanks.",
+          "fix": "Add text-wrap:balance on h1,h2 and a br after Raw materials."
+        },
+        {
+          "severity": "minor",
+          "where": "about.html table td legal name",
+          "problem": "Private Limited wraps so Limited sits alone.",
+          "fix": "Use Private&nbsp;Limited so the legal suffix stays together."
+        }
+      ]
+    }
+  }
+}

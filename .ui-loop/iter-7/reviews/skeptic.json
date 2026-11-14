@@ -1,0 +1,40 @@
+{
+  "expert": "skeptic",
+  "scores": {
+    "distinctiveness": {
+      "score": 6.5,
+      "evidence": "Cover-the-logo on copy passes: Gundlav, LABSA 90%, Plot 79/80, 90 ± 1, RKSPL lettering. Visual cover-the-logo fails at the fold: panes are saturate(.45) brightness(.86) plus navy multiply. Signature mosaic is desktop-only. Inner banners no longer the same tanker except About. slop_flags [].",
+      "strengths": [
+        "Place-locked facts and names (Gundlav GIDC Plot 79/80, 75 MT/day, RKSPL VALSAD, ISO 9001:2015, directors, CIN).",
+        "Real plant photographs in the body, not stock smiles.",
+        "Desktop mosaic with staggered straight clips is a real signature when all three panes show."
+      ],
+      "issues": [
+        {
+          "severity": "major",
+          "where": ".mosaic / tablet_full / mobile_full",
+          "problem": "The 3-cut collage is still a desktop toy. .mcol:nth-child(2){display:none} under 1024px drops the worker-and-drums pane.",
+          "fix": "Delete display:none on .mcol:nth-child(2). At tablet keep 3 columns. At 375px stack all three .mcol."
+        },
+        {
+          "severity": "major",
+          "where": "#uses h2 + .pack-shot",
+          "problem": "H2 is still Barrel-filled at Plot 79/80 on a parked Tata cab and drums. No filling is pictured.",
+          "fix": "Retitle to Tanker and barrels in the Gundlav yard. Keep filling language on manufacturing.html."
+        },
+        {
+          "severity": "major",
+          "where": ".shot .pane img and .pane::after",
+          "problem": "Plant photos are processed into generic industrial stock: saturate(.45) brightness(.86) plus navy multiply.",
+          "fix": "Set .shot .pane img{filter:none} or saturate(.9). Cut .pane::after to rgba(1,32,86,.08)."
+        },
+        {
+          "severity": "major",
+          "where": "about.html .pagehead--team",
+          "problem": "About crops plant-team at 50% 18%, so the banner is a dark building wall.",
+          "fix": "Change .pagehead--team to background-position 50% 78% so uniforms and the tanker sit in the band."
+        }
+      ]
+    }
+  }
+}

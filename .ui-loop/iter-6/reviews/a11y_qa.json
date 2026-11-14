@@ -1,0 +1,40 @@
+{
+  "expert": "a11y_qa",
+  "scores": {
+    "a11y_responsive": {
+      "score": 8.6,
+      "evidence": "Audit: blockers=[], contrast_fail_count 0, focus_invisible_count 0 of 25, tap_targets_under_44 0, img_missing_alt 0, landmarks main/nav/footer true, horizontal_overflow false. Skip is off-canvas and returns on focus at 44px. Mosaic empty alts under role=img. Team alts describe the group not names. mobile_full is a one-column reflow; tablet_full is two-column. Remaining: JS-only mobile nav, unnamed spec tables, 12.5px footer type, form novalidate.",
+      "strengths": [
+        "Clean audit: 0 contrast fails, 0 invisible focus, 0 sub-44 targets, skip + one h1 + landmarks.",
+        "Labeled quote form with aria-invalid and real tel/WhatsApp/PDF anchors.",
+        "375px and tablet reflow; mosaic decorative imgs empty-alt; team photo unnamed as demanded."
+      ],
+      "issues": [
+        {
+          "severity": "minor",
+          "where": ".nav ul below 1024px",
+          "problem": "Nav list is display:none until JS toggles .nav.open.",
+          "fix": "Add a noscript or :target rule so #navlist displays as a column below 1024px without main.js."
+        },
+        {
+          "severity": "minor",
+          "where": "table.spec",
+          "problem": "Data tables use th scope=row but have no caption or aria-label.",
+          "fix": "Add a visually-hidden caption on the spec, plant, and company-details tables."
+        },
+        {
+          "severity": "minor",
+          "where": "footer",
+          "problem": "footer font-size .78125rem (12.5px) is below a 14px low-vision floor.",
+          "fix": "Set footer to font-size 1rem; if CIN must stay quieter, use .875rem on that line only."
+        },
+        {
+          "severity": "minor",
+          "where": "form.enquiry on contact.html",
+          "problem": "novalidate turns off native required when JS is off, and the form has no action URL.",
+          "fix": "Remove novalidate; keep the JS preventDefault path; add a mailto or server action."
+        }
+      ]
+    }
+  }
+}

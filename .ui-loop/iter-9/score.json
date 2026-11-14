@@ -1,0 +1,205 @@
+{
+  "iter": 9,
+  "final": 7.8,
+  "target": 8.0,
+  "weighted_mean": 7.85,
+  "weakest_dim_score": 7.0,
+  "blockers": [],
+  "incomplete": false,
+  "decision": "STOP_PLATEAU",
+  "dimensions": {
+    "hierarchy_composition": {
+      "status": "scored",
+      "score": 8.0,
+      "expert_score": 8.0,
+      "anchor": null,
+      "capped_by_audit": false,
+      "votes": [
+        [
+          "art_director",
+          8.0
+        ]
+      ]
+    },
+    "typography": {
+      "status": "scored",
+      "score": 8.0,
+      "expert_score": 8.0,
+      "anchor": 10.0,
+      "capped_by_audit": false,
+      "votes": [
+        [
+          "typographer",
+          8.0
+        ]
+      ]
+    },
+    "color": {
+      "status": "scored",
+      "score": 7.8,
+      "expert_score": 7.8,
+      "anchor": 10.0,
+      "capped_by_audit": false,
+      "votes": [
+        [
+          "systems_designer",
+          7.8
+        ]
+      ]
+    },
+    "spacing_rhythm": {
+      "status": "scored",
+      "score": 7.6,
+      "expert_score": 7.6,
+      "anchor": 10.0,
+      "capped_by_audit": false,
+      "votes": [
+        [
+          "systems_designer",
+          7.6
+        ]
+      ]
+    },
+    "distinctiveness": {
+      "status": "scored",
+      "score": 7.0,
+      "expert_score": 7.0,
+      "anchor": 10.0,
+      "capped_by_audit": false,
+      "votes": [
+        [
+          "skeptic",
+          7.0
+        ]
+      ]
+    },
+    "ux_clarity": {
+      "status": "scored",
+      "score": 8.2,
+      "expert_score": 8.2,
+      "anchor": null,
+      "capped_by_audit": false,
+      "votes": [
+        [
+          "ux_lead",
+          8.2
+        ]
+      ]
+    },
+    "reference_fidelity": {
+      "status": "scored",
+      "score": 7.5,
+      "expert_score": 7.5,
+      "anchor": null,
+      "capped_by_audit": false,
+      "votes": [
+        [
+          "art_director",
+          7.5
+        ]
+      ]
+    },
+    "interaction_motion": {
+      "status": "scored",
+      "score": 8.4,
+      "expert_score": 8.4,
+      "anchor": null,
+      "capped_by_audit": false,
+      "votes": [
+        [
+          "motion_designer",
+          8.4
+        ]
+      ]
+    },
+    "a11y_responsive": {
+      "status": "scored",
+      "score": 8.6,
+      "expert_score": 8.6,
+      "anchor": 10.0,
+      "capped_by_audit": false,
+      "votes": [
+        [
+          "a11y_qa",
+          8.6
+        ]
+      ]
+    }
+  },
+  "fix_queue": [
+    {
+      "priority": 72.0,
+      "severity": "major",
+      "dim": "hierarchy_composition",
+      "expert": "art_director",
+      "where": ".spec, .plant, about details",
+      "problem": "Repeating 50/50 split with a short left intro beside a tall table or photos.",
+      "fix": "When the left intro is under ~8 lines, stack full-width then table, or add a second left block."
+    },
+    {
+      "priority": 72.0,
+      "severity": "major",
+      "dim": "distinctiveness",
+      "expert": "skeptic",
+      "where": "contact.html .pagehead--yard",
+      "problem": "Quote pagehead shows a Tata wordmark and grille.",
+      "fix": "background-position 82% 50% or swap to tanker-rkspl-1400."
+    },
+    {
+      "priority": 72.0,
+      "severity": "major",
+      "dim": "distinctiveness",
+      "expert": "skeptic",
+      "where": "about/contact/labsa h1",
+      "problem": "Category titles: About Radha Krishna Surfactants, Request a quote, LABSA 90%.",
+      "fix": "Contact h1 Quote LABSA 90% from Gundlav; LABSA h1 LABSA 90% from Gundlav."
+    },
+    {
+      "priority": 72.0,
+      "severity": "major",
+      "dim": "distinctiveness",
+      "expert": "skeptic",
+      "where": "about.html #vals How we work",
+      "problem": "Four-bullet Why-choose-us list.",
+      "fix": "Delete #vals."
+    },
+    {
+      "priority": 57.6,
+      "severity": "major",
+      "dim": "spacing_rhythm",
+      "expert": "systems_designer",
+      "where": "quality.html .cols; index #spec",
+      "problem": "5/6 splits leave 200px empty paper beside short intros.",
+      "fix": "Cap figures at max-height 22rem object-fit cover, or stack intro then full-width table."
+    },
+    {
+      "priority": 56.0,
+      "severity": "major",
+      "dim": "typography",
+      "expert": "typographer",
+      "where": "manufacturing.html h2#rm",
+      "problem": "Heading wraps so tanks sits alone.",
+      "fix": "Insert a designed break: Raw materials<br>and product tanks."
+    },
+    {
+      "priority": 50.0,
+      "severity": "major",
+      "dim": "reference_fidelity",
+      "expert": "art_director",
+      "where": "footer silhouette vs Vico",
+      "problem": "Skyline is ~5.5rem under an 80px ground plane so it reads as a decorative border.",
+      "fix": "Scale SVG to ~140\u00e2\u20ac\u201c180px in the lower 40% of .foot; 24\u00e2\u20ac\u201c32px padding-bottom on the link row."
+    },
+    {
+      "priority": 44.0,
+      "severity": "major",
+      "dim": "color",
+      "expert": "systems_designer",
+      "where": "--action vs --blue",
+      "problem": "Filled CTA, ghost header CTA and See specification all read as one blue.",
+      "fix": "Set filled .btn background to --deep."
+    }
+  ],
+  "warnings": [],
+  "waivers": {}
+}

@@ -1,0 +1,57 @@
+{
+  "expert": "art_director",
+  "scores": {
+    "hierarchy_composition": {
+      "score": 7.5,
+      "evidence": "Desktop fold squint: the three-pane mosaic is the single dominant mass; the eye then hits Entrust your supply to Gundlav, then filled Request a quote versus text-only See specification. Hierarchy uses size, weight and colour together. Layout is a 5/6 split with staggered diagonal clips. Barrel-filled now has the yard photograph beside three bullets (previous no-photo issue: fixed). Not an 8: About pagehead still reads as a navy slab; mosaic hides the middle pane below 1024px; open mobile nav lets the h1 ghost through the links.",
+      "strengths": [
+        "Hero 5/6 split with three staggered-cut plant panes is a real composed focal; primary CTA is filled, secondary is a text link.",
+        "Section order is this factory’s argument: place strip, barrel-yard proof, spec numbers, tanker/acid tank, lab, people, quote.",
+        "Quality, Manufacturing, LABSA 90% and Contact pageheads now open on different plant photographs under the same navy wash."
+      ],
+      "issues": [
+        {
+          "severity": "major",
+          "where": "about.html .pagehead--team (about_fold.png)",
+          "problem": "About pagehead crops plant-team-1400.webp to roof/sky; under the navy wash it reads as the old solid slab.",
+          "fix": "Set .pagehead--team background-position to 50% 62% so the workers and tanker cab read through the wash. Lighten overlay stops to .72/.58/.68."
+        },
+        {
+          "severity": "major",
+          "where": ".mosaic .mcol:nth-child(2) at max-width 1023px",
+          "problem": "CSS still sets .mcol:nth-child(2){display:none} below 1024px, so the yard/worker pane is gone on tablet and mobile.",
+          "fix": "Delete display:none on .mcol:nth-child(2). At 375px stack all three .mcol. At 768–1023px use a 3-column grid."
+        },
+        {
+          "severity": "major",
+          "where": "mobile_menu.png .nav.open ul over .hero h1",
+          "problem": "Open menu shows nav links over a ghost of the hero headline.",
+          "fix": "Set .nav ul background to #fff and min-height to cover the hero title block."
+        }
+      ]
+    },
+    "reference_fidelity": {
+      "score": 7.5,
+      "evidence": "Signature move is there: original tanks/tanker/drums skyline on a navy band; Vico green is not imported. Inner pageheads now use distinct photos except About which still matches the old slab. Skyline is a full-width watermark at opacity .12 under the link row.",
+      "strengths": [
+        "Footer uses original Gundlav tanks/tanker/drums on navy, not Vico cranes or teal.",
+        "Quality, Manufacturing, LABSA 90% and Contact pageheads are photo-backed navy washes.",
+        "Beyond the footer reference the site keeps industrial density: mosaic cuts, spec table, named plot and tanker."
+      ],
+      "issues": [
+        {
+          "severity": "major",
+          "where": "about.html .pagehead--team",
+          "problem": "About still reads as the old solid navy slab because the team photo is cropped to building/sky.",
+          "fix": "Set .pagehead--team background-position 50% 62%; overlay stops .72/.58/.68."
+        },
+        {
+          "severity": "major",
+          "where": "footer::after plant-skyline.svg",
+          "problem": "Skyline is opacity .12, full width, and the link row sits on the tanks.",
+          "fix": "Raise footer::after opacity from .12 to .28–.35, align left/bottom, keep type in a padding-bottom: 96px clear band."
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,205 @@
+{
+  "iter": 10,
+  "final": 7.6,
+  "target": 8.0,
+  "weighted_mean": 7.63,
+  "weakest_dim_score": 7.0,
+  "blockers": [],
+  "incomplete": false,
+  "decision": "STOP_PLATEAU",
+  "dimensions": {
+    "hierarchy_composition": {
+      "status": "scored",
+      "score": 7.0,
+      "expert_score": 7.0,
+      "anchor": null,
+      "capped_by_audit": false,
+      "votes": [
+        [
+          "art_director",
+          7.0
+        ]
+      ]
+    },
+    "typography": {
+      "status": "scored",
+      "score": 8.0,
+      "expert_score": 8.0,
+      "anchor": 10.0,
+      "capped_by_audit": false,
+      "votes": [
+        [
+          "typographer",
+          8.0
+        ]
+      ]
+    },
+    "color": {
+      "status": "scored",
+      "score": 7.8,
+      "expert_score": 7.8,
+      "anchor": 10.0,
+      "capped_by_audit": false,
+      "votes": [
+        [
+          "systems_designer",
+          7.8
+        ]
+      ]
+    },
+    "spacing_rhythm": {
+      "status": "scored",
+      "score": 7.6,
+      "expert_score": 7.6,
+      "anchor": 10.0,
+      "capped_by_audit": false,
+      "votes": [
+        [
+          "systems_designer",
+          7.6
+        ]
+      ]
+    },
+    "distinctiveness": {
+      "status": "scored",
+      "score": 7.5,
+      "expert_score": 7.5,
+      "anchor": 10.0,
+      "capped_by_audit": false,
+      "votes": [
+        [
+          "skeptic",
+          7.5
+        ]
+      ]
+    },
+    "ux_clarity": {
+      "status": "scored",
+      "score": 7.8,
+      "expert_score": 7.8,
+      "anchor": null,
+      "capped_by_audit": false,
+      "votes": [
+        [
+          "ux_lead",
+          7.8
+        ]
+      ]
+    },
+    "reference_fidelity": {
+      "status": "scored",
+      "score": 7.0,
+      "expert_score": 7.0,
+      "anchor": null,
+      "capped_by_audit": false,
+      "votes": [
+        [
+          "art_director",
+          7.0
+        ]
+      ]
+    },
+    "interaction_motion": {
+      "status": "scored",
+      "score": 8.5,
+      "expert_score": 8.5,
+      "anchor": null,
+      "capped_by_audit": false,
+      "votes": [
+        [
+          "motion_designer",
+          8.5
+        ]
+      ]
+    },
+    "a11y_responsive": {
+      "status": "scored",
+      "score": 8.5,
+      "expert_score": 8.5,
+      "anchor": 10.0,
+      "capped_by_audit": false,
+      "votes": [
+        [
+          "a11y_qa",
+          8.5
+        ]
+      ]
+    }
+  },
+  "fix_queue": [
+    {
+      "priority": 108.0,
+      "severity": "major",
+      "dim": "hierarchy_composition",
+      "expert": "art_director",
+      "where": "about .cols, labsa-90 .cols, index .spec",
+      "problem": "Short left intro beside a tall table. Figure cap does not touch tables.",
+      "fix": "Stack heading then full-width table when intro is under 8 lines."
+    },
+    {
+      "priority": 60.0,
+      "severity": "major",
+      "dim": "reference_fidelity",
+      "expert": "art_director",
+      "where": "footer::after",
+      "problem": "Skyline is 5.5rem at 28% opacity under empty navy.",
+      "fix": "Height 140\u00e2\u20ac\u201c180px, opacity ~0.4, lower 40% of footer."
+    },
+    {
+      "priority": 60.0,
+      "severity": "major",
+      "dim": "distinctiveness",
+      "expert": "skeptic",
+      "where": "about.html h1",
+      "problem": "Private limited, Gundlav, 16 November 2019 is a legal telegram.",
+      "fix": "Incorporated 16 November 2019 \u00c2\u00b7 15 - 20 people at Plot 79/80."
+    },
+    {
+      "priority": 60.0,
+      "severity": "major",
+      "dim": "distinctiveness",
+      "expert": "skeptic",
+      "where": "labsa-90.html h2#sp",
+      "problem": "Catalogue title Specification.",
+      "fix": "Retitle to 90 \u00c2\u00b1 1 as dispatched from Gundlav."
+    },
+    {
+      "priority": 60.0,
+      "severity": "major",
+      "dim": "distinctiveness",
+      "expert": "skeptic",
+      "where": "contact.html h2#fm",
+      "problem": "Your requirement and Contact details are IndiaMART twins.",
+      "fix": "Quantity of LABSA 90% (MT) from Gundlav; aside Plot 79/80 \u00c2\u00b7 +91 97277 02597."
+    },
+    {
+      "priority": 57.6,
+      "severity": "major",
+      "dim": "spacing_rhythm",
+      "expert": "systems_designer",
+      "where": "quality.html lab img",
+      "problem": "Wrapped in a div with 4/5 so it misses the cap.",
+      "fix": ".cols img { max-height:22rem }"
+    },
+    {
+      "priority": 56.0,
+      "severity": "major",
+      "dim": "typography",
+      "expert": "typographer",
+      "where": "manufacturing.html h2#rm",
+      "problem": "tanks sits alone on line two.",
+      "fix": "Raw materials<br>and product tanks"
+    },
+    {
+      "priority": 52.8,
+      "severity": "major",
+      "dim": "ux_clarity",
+      "expert": "ux_lead",
+      "where": "mobile_menu.png",
+      "problem": "Menu hides the phone; quote is a ghost matching Close.",
+      "fix": "Add Call and WhatsApp in the menu; keep .bar visible; fill the quote item."
+    }
+  ],
+  "warnings": [],
+  "waivers": {}
+}

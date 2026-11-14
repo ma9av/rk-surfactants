@@ -1,0 +1,196 @@
+{
+  "iter": 2,
+  "final": 7.1,
+  "target": 9.0,
+  "weighted_mean": 7.09,
+  "weakest_dim_score": 6.5,
+  "blockers": [],
+  "incomplete": false,
+  "decision": "CONTINUE",
+  "dimensions": {
+    "hierarchy_composition": {
+      "status": "scored",
+      "score": 6.5,
+      "expert_score": 6.5,
+      "anchor": null,
+      "capped_by_audit": false,
+      "votes": [
+        [
+          "art_director",
+          6.5
+        ]
+      ]
+    },
+    "typography": {
+      "status": "scored",
+      "score": 7.0,
+      "expert_score": 7.0,
+      "anchor": 10.0,
+      "capped_by_audit": false,
+      "votes": [
+        [
+          "typographer",
+          7.0
+        ]
+      ]
+    },
+    "color": {
+      "status": "scored",
+      "score": 8.0,
+      "expert_score": 8.0,
+      "anchor": 10.0,
+      "capped_by_audit": false,
+      "votes": [
+        [
+          "systems_designer",
+          8.0
+        ]
+      ]
+    },
+    "spacing_rhythm": {
+      "status": "scored",
+      "score": 7.5,
+      "expert_score": 7.5,
+      "anchor": 10.0,
+      "capped_by_audit": false,
+      "votes": [
+        [
+          "systems_designer",
+          7.5
+        ]
+      ]
+    },
+    "distinctiveness": {
+      "status": "scored",
+      "score": 6.5,
+      "expert_score": 6.5,
+      "anchor": 10.0,
+      "capped_by_audit": false,
+      "votes": [
+        [
+          "skeptic",
+          6.5
+        ]
+      ]
+    },
+    "ux_clarity": {
+      "status": "scored",
+      "score": 7.5,
+      "expert_score": 7.5,
+      "anchor": null,
+      "capped_by_audit": false,
+      "votes": [
+        [
+          "ux_lead",
+          7.5
+        ]
+      ]
+    },
+    "reference_fidelity": {
+      "status": "n/a",
+      "reason": "no reference supplied"
+    },
+    "interaction_motion": {
+      "status": "scored",
+      "score": 6.5,
+      "expert_score": 6.5,
+      "anchor": null,
+      "capped_by_audit": false,
+      "votes": [
+        [
+          "motion_designer",
+          6.5
+        ]
+      ]
+    },
+    "a11y_responsive": {
+      "status": "scored",
+      "score": 7.5,
+      "expert_score": 7.5,
+      "anchor": 10.0,
+      "capped_by_audit": false,
+      "votes": [
+        [
+          "a11y_qa",
+          7.5
+        ]
+      ]
+    }
+  },
+  "fix_queue": [
+    {
+      "priority": 126.0,
+      "severity": "major",
+      "dim": "hierarchy_composition",
+      "expert": "art_director",
+      "where": ".hero .mosaic .pane img",
+      "problem": "Previous orange-wins-squint issue is only partly fixed. saturate(.86) still leaves the LABSA tank panes as the first-blink mass; the navy h1 is second, not first.",
+      "fix": "Set .shot .pane img{filter:saturate(.58) brightness(.93)}. Add a 22 percent navy overlay on tank panes only."
+    },
+    {
+      "priority": 126.0,
+      "severity": "major",
+      "dim": "hierarchy_composition",
+      "expert": "art_director",
+      "where": "section[aria-labelledby=uses] .cols / ul.uses",
+      "problem": "A 5/6 split with a display h2 on the left and only three short bullets in columns:2 on the right leaves a large empty field.",
+      "fix": "Remove columns:2 on .uses at 768px+. Render the three uses as a single-column list, max-width:36ch, li padding:12px 0, border-top:1px solid var(--line)."
+    },
+    {
+      "priority": 126.0,
+      "severity": "major",
+      "dim": "hierarchy_composition",
+      "expert": "art_director",
+      "where": "section[aria-labelledby=who]",
+      "problem": ".cols puts Chairman Binay Chandra Jha in the left 5 cols and a single Directors link in the right 6 cols, so the band is about 70 percent empty paper.",
+      "fix": "Do not use .cols here. One column, max-width:62ch: kicker Chairman, h2 Binay Chandra Jha, then the body and the about link. Padding-block:var(--s7) only."
+    },
+    {
+      "priority": 126.0,
+      "severity": "major",
+      "dim": "hierarchy_composition",
+      "expert": "art_director",
+      "where": ".mosaic at 768-1023px",
+      "problem": "One-pane collapse only runs at max-width:767px, but .hero .wrap stays one column until 1024px.",
+      "fix": "Move the one-pane rules from max-width:767px to max-width:1023px. Show the 3-column mosaic only when the hero is actually 5/6."
+    },
+    {
+      "priority": 126.0,
+      "severity": "major",
+      "dim": "hierarchy_composition",
+      "expert": "art_director",
+      "where": ".hero .cta .btn + .bar at max-width 1023px",
+      "problem": "The dual-filled-quote issue is fixed on desktop but reincarnated on small screens: in-hero filled Request a quote and the fixed bar filled Request a quote are both visible on the first viewport.",
+      "fix": "@media (max-width:1023px){ .hero .cta .btn{display:none} } Keep See specification. Let .bar be the only filled quote control below the 5/6 breakpoint."
+    },
+    {
+      "priority": 84.0,
+      "severity": "major",
+      "dim": "distinctiveness",
+      "expert": "skeptic",
+      "where": ".mosaic panes in index.html",
+      "problem": "Previous issue not fixed: six panes from four files. lab-900.webp and tank-labsa-900.webp are each used twice. The collage reads as one photo library stretched.",
+      "fix": "Give each src to one pane only. Cut to four panes, or fill remaining panes from unused crops of plant-wide-800.webp and tank-red-900.webp. Never set two .pane img src attributes to the same file."
+    },
+    {
+      "priority": 84.0,
+      "severity": "major",
+      "dim": "distinctiveness",
+      "expert": "skeptic",
+      "where": "#uses ul.uses on index.html and labsa-90.html",
+      "problem": "The three bullets remain a generic end-use list (detergent cake/powder; liquid soap; household and industrial cleaners) any LABSA trader could paste.",
+      "fix": "Delete the three commodity bullets. Replace with 2-3 plant-specific lines only: barrel-filled at Plot 79/80; sold in MT to detergent-cake and powder plants; 90 +/- 1 active matter as dispatched."
+    },
+    {
+      "priority": 84.0,
+      "severity": "major",
+      "dim": "distinctiveness",
+      "expert": "skeptic",
+      "where": "#who chairman section",
+      "problem": "Section is still a text blob. It opens with the interchangeable slogan 25 years in detergents and LABSA plants, names directors as a comma list, and the right column is empty except a link. No plant photo beside the names.",
+      "fix": "Keep the chairman h2 and the 2019 date as the first fact. Move 25 years to a clause after the date. Put plant-wide-800.webp in the empty right column. List Sulekha Binaychandra Jha, Director and Dr. Ravi Jha, Executive Director on two labelled lines."
+    }
+  ],
+  "warnings": [],
+  "waivers": {}
+}
