@@ -68,7 +68,6 @@
     var slides = reel.querySelectorAll(".reel-slide");
     var steps = reel.querySelectorAll(".reel-steps button");
     var track = reel.querySelector(".reel-track");
-    var playBtn = reel.querySelector(".reel-play");
     var cur = 0;
     var leaving = null;
     var leaveTimer;
@@ -118,12 +117,8 @@
     function setStopped(stop) {
       reel.classList.toggle("is-stopped", stop);
       track.setAttribute("aria-live", stop ? "polite" : "off");
-      playBtn.setAttribute("aria-label", stop ? "Start slide rotation" : "Pause slide rotation");
     }
 
-    reel.querySelector(".reel-next").addEventListener("click", function () { show(cur + 1); });
-    reel.querySelector(".reel-prev").addEventListener("click", function () { show(cur - 1, true); });
-    playBtn.addEventListener("click", function () { setStopped(!reel.classList.contains("is-stopped")); });
     steps.forEach(function (b, i) {
       b.addEventListener("click", function () { show(i, i < cur); });
     });
@@ -156,6 +151,158 @@
       if (Math.abs(dx) > 40) show(dx < 0 ? cur + 1 : cur - 1, dx > 0);
     });
     frame.addEventListener("pointercancel", function () { startX = null; });
+
+    setStopped(reduce);
+    sync();
+  }
+
+  document.querySelectorAll(".shot").forEach(function (shot) {
+    var slides = shot.querySelectorAll(".shot-slide");
+    var steps = shot.querySelectorAll(".shot-steps button");
+    if (!slides.length) return;
+    var cur = 0;
+
+    function sync() {
+      slides.forEach(function (s, i) {
+        var on = i === cur;
+        s.classList.toggle("is-active", on);
+        s.toggleAttribute("inert", !on);
+        if (on) s.removeAttribute("aria-hidden");
+        else s.setAttribute("aria-hidden", "true");
+      });
+      steps.forEach(function (b, i) {
+        if (i === cur) b.setAttribute("aria-current", "true");
+        else b.removeAttribute("aria-current");
+      });
+      var fill = shot.querySelector(".shot-steps [aria-current] i");
+      if (fill) {
+        fill.style.animation = "none";
+        void fill.offsetWidth;
+        fill.style.animation = "";
+      }
+    }
+
+    function show(n) {
+      n = (n + slides.length) % slides.length;
+      if (n === cur) return;
+      cur = n;
+      sync();
+    }
+
+    function setStopped(stop) {
+      shot.classList.toggle("is-stopped", stop);
+    }
+
+    steps.forEach(function (b, i) {
+      b.addEventListener("click", function () { show(i); });
+    });
+    var stepsWrap = shot.querySelector(".shot-steps");
+    if (stepsWrap) {
+      stepsWrap.addEventListener("animationend", function (e) {
+        if (e.animationName === "shot-fill") show(cur + 1);
+      });
+    }
+    shot.addEventListener("mouseenter", function () { shot.classList.add("is-held"); });
+    shot.addEventListener("mouseleave", function () {
+      if (!shot.querySelector(":focus-visible")) shot.classList.remove("is-held");
+    });
+    shot.addEventListener("focusin", function (e) {
+      if (e.target.matches(":focus-visible")) shot.classList.add("is-held");
+    });
+    shot.addEventListener("focusout", function (e) {
+      if (!shot.contains(e.relatedTarget) && !shot.matches(":hover")) shot.classList.remove("is-held");
+    });
+    var frame = shot.querySelector(".shot-frame");
+    if (frame) {
+      var startX = null;
+      frame.addEventListener("pointerdown", function (e) { startX = e.clientX; });
+      frame.addEventListener("pointerup", function (e) {
+        if (startX === null) return;
+        var dx = e.clientX - startX;
+        startX = null;
+        if (Math.abs(dx) > 40) show(dx < 0 ? cur + 1 : cur - 1);
+      });
+      frame.addEventListener("pointercancel", function () { startX = null; });
+    }
+
+    setStopped(reduce);
+    sync();
+  });
+
+  var roster = document.querySelector(".roster");
+  if (roster) {
+    var tabs = roster.querySelectorAll('.roster-nav [role="tab"]');
+    var panels = roster.querySelectorAll(".roster-panel");
+    var live = roster.querySelector(".roster-panels");
+    var progress = roster.querySelector(".roster-progress");
+    var cur = 0;
+
+    function sync() {
+      tabs.forEach(function (tab, i) {
+        var on = i === cur;
+        tab.setAttribute("aria-selected", on ? "true" : "false");
+        tab.tabIndex = on ? 0 : -1;
+      });
+      panels.forEach(function (panel, i) {
+        var on = i === cur;
+        panel.classList.toggle("is-active", on);
+        if (on) panel.removeAttribute("hidden");
+        else panel.setAttribute("hidden", "");
+      });
+      if (progress) {
+        var bar = progress.querySelector("i");
+        if (bar) {
+          bar.style.animation = "none";
+          void bar.offsetWidth;
+          bar.style.animation = "";
+        }
+      }
+    }
+
+    function show(n) {
+      n = (n + panels.length) % panels.length;
+      if (n === cur) return;
+      cur = n;
+      sync();
+    }
+
+    function setStopped(stop) {
+      roster.classList.toggle("is-stopped", stop);
+      if (live) live.setAttribute("aria-live", stop ? "polite" : "off");
+      if (progress) {
+        var bar = progress.querySelector("i");
+        if (bar) {
+          bar.style.animation = "none";
+          void bar.offsetWidth;
+          bar.style.animation = "";
+        }
+      }
+    }
+
+    tabs.forEach(function (tab, i) {
+      tab.addEventListener("click", function () { show(i); });
+      tab.addEventListener("keydown", function (e) {
+        if (e.key === "ArrowDown" || e.key === "ArrowRight") { e.preventDefault(); show(cur + 1); tabs[cur].focus(); }
+        else if (e.key === "ArrowUp" || e.key === "ArrowLeft") { e.preventDefault(); show(cur - 1); tabs[cur].focus(); }
+        else if (e.key === "Home") { e.preventDefault(); show(0); tabs[0].focus(); }
+        else if (e.key === "End") { e.preventDefault(); show(panels.length - 1); tabs[cur].focus(); }
+      });
+    });
+    if (progress) {
+      progress.addEventListener("animationend", function (e) {
+        if (e.animationName === "roster-fill") show(cur + 1);
+      });
+    }
+    roster.addEventListener("mouseenter", function () { roster.classList.add("is-held"); });
+    roster.addEventListener("mouseleave", function () {
+      if (!roster.querySelector(":focus-visible")) roster.classList.remove("is-held");
+    });
+    roster.addEventListener("focusin", function (e) {
+      if (e.target.matches(":focus-visible")) roster.classList.add("is-held");
+    });
+    roster.addEventListener("focusout", function (e) {
+      if (!roster.contains(e.relatedTarget) && !roster.matches(":hover")) roster.classList.remove("is-held");
+    });
 
     setStopped(reduce);
     sync();

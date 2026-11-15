@@ -15,12 +15,15 @@ ORIG = '.ui-loop/img-originals'
 SETS = {
     'tank-labsa':        dict(),
     'tank-red':          dict(),
-    'tanker-rkspl':      dict(),
     'plant-team':        dict(wb=.45),
     'plant-wide':        dict(),
     'lab':               dict(target=.55),
+    'lab-titration':     dict(target=.52, wb=.35, src='lab-titration.jpg'),
+    'lab-sample':        dict(target=.55, wb=.4, src='lab-sample-frame.jpg'),
     'process-tanks':     dict(target=.47, wb=.3, src='process-tanks.jpg'),
     'labsa-sample-tube': dict(target=.70, tint=.35, sat=.9, src='labsa-sample-tube.jpg'),
+    'storage-tanks':     dict(target=.52, wb=.4, src='storage-tanks.jpg'),
+    'dispatch-truck':    dict(target=.52, wb=.4, src='dispatch-truck-frame.jpg'),
 }
 
 LUMA = np.array([.2126, .7152, .0722], np.float32)
