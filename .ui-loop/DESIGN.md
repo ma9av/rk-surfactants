@@ -38,7 +38,12 @@ Fill from the brief and from measured references. Reviewers score against this f
 | action | #013ea8 | primary buttons only |
 
 Line: #d3dbe3. Footer void: #011637.
-Header glass: rgba(255,255,255,.86) with 14px blur. Pagehead overlay: rgba(1,22,55,.88) to rgba(1,32,86,.74) over tanker photo.
+Header glass: rgba(255,255,255,.86) with 14px blur. Pagehead overlay (one for every page): 105deg rgba(1,22,55,.9) → rgba(1,32,86,.74) → rgba(1,32,86,.46) plus a bottom fade, over the page photo at saturate(.72); per page only `--ph` / `--ph-pos` change.
+
+### Photography
+- Files are colour-graded once by `.ui-loop/grade_photos.py` (gentle white balance, exposure to a common luma, S-curve, saturation ×0.84, navy shadows / warm highlights). Ungraded originals live in `.ui-loop/img-originals/`; re-run the script after adding a photo.
+- Every content photo is `<figure class="ph">`: 4px radius, navy bottom gradient + 1px inset line, caption with a 14px blue tick. `.ph--tall` = 4:5. No feathered/blended variants (user demand: every photo gets the same framed treatment).
+- Photos: process-tanks (plant hall vessels), labsa-sample-tube, tanker-rkspl, tank-labsa, tank-red, lab, plant-team.
 
 ### Type
 - Display face + role: Archivo (variable, slight stretch 112%) for wordmark, h1–h3, phone numbers
@@ -49,28 +54,29 @@ Header glass: rgba(255,255,255,.86) with 14px blur. Pagehead overlay: rgba(1,22,
 
 ### Space and shape
 - Spacing scale (4px base): 4 / 8 / 12 / 16 / 24 / 32 / 48 / 80
-- Radii (max 3 values): 0 on buttons and the menu control (user demand: no rounded edges); 4px on photographs; 0 on mosaic panes
+- Radii (max 3 values): 0 on buttons and the menu control (user demand: no rounded edges); 4px on photographs; 0 on the hero carousel frame (diagonal 2rem bottom cut)
 - Shadows (max 3 elevations, or none): none (industrial, flat)
 - Borders: 1px --line for tables, header, fact strip; used to encode structure only
 
 ### Motion
 - Duration tokens: --t-feedback 150ms, --t-ui 200ms, --t-enter 650ms, --t-scroll 500ms
 - Easing (ease-out family, no bounce): cubic-bezier(.2,.7,.2,1)
-- Signature entrance (one orchestrated moment): mosaic panes settle 650ms at 0 / .12s / .24s. Inner pageheads: title and lead settle 550ms.
-- Scroll (informational, not fade-up on every block): 2px read-progress on the sticky header; mosaic columns parallax at three rates; .place left rule draws; spec rows take a 3px blue inset when in view; uses ticks scale in; header densifies after 8px scroll.
-- Hover / micro: every text link shifts to --deep; mosaic panes restore saturation; plant photos scale inside a clipped figure; nav underline; spec row mist; square matte buttons wipe fill from the left in 200ms (no gloss, no radius); inputs border to --blue.
+- Signature entrance (one orchestrated moment): hero carousel settles 650ms; slides change by a slanted clip-path wipe (900ms) with a 7s Ken Burns settle and the caption rising after 450ms. Inner pageheads: title and lead settle 550ms.
+- Scroll (informational, not fade-up on every block): 2px read-progress on the sticky header; .place left rule draws; spec rows take a 3px blue inset when in view; uses ticks scale in; header densifies after 8px scroll.
+- Photo reveal: a navy curtain wipes off each `.ph` (900ms) while the image settles from 1.12 to 1 (1.4s); pagehead photos do a 16s Ken Burns settle.
+- Hover / micro: every text link shifts to --deep; plant photos scale to 1.04 and the tint lifts; nav underline; spec row mist; square matte buttons wipe fill from the left in 200ms (no gloss, no radius); inputs border to --blue.
 - Header bar: no plant phone (user demand). Quote is the only navbar action. Number stays in the footer and the mobile Call bar. Inner-page translucent photo banners stay (user demand: do not remove them).
 - UI changes 200ms: mobile menu fade/slide; form aria-invalid #a4260c; submit label becomes “Sending…” while aria-busy; disabled buttons ignore hover.
 - All of the above lives behind prefers-reduced-motion: no-preference (and html.motion). Reduced-motion renders the settled end state. User demand: scroll, hover, micro and major motion across pages.
 
 ## Layout concept
-- Archetype: industrial manufacturer — left-aligned claim, plant photography on the right, spec tables, place-named contact.
-- Signature move: three-column plant mosaic with straight, staggered diagonal cuts; quiet benzene/helix field in the gutters (not overlapping); inner pages use a photo-backed navy pagehead; footer sits on a plant skyline silhouette (tanks, tanker, drums).
-- Deliberate asymmetry: hero 5/6 columns; mosaic cuts at three different heights so the white seam is not one chevron.
-- Section order and why it serves the argument: claim → plant facts (ISO, storage, place) → barrel proof with yard photograph → spec numbers → plant proof (tanker, acid tank) → lab/ISO → named leadership + unnamed plant team → call/quote. Inner pages each use a different plant photo under the navy pagehead (beaker, acid tank, lab, plant team, yard).
+- Desktop rhythm: zigzag with `.cols--swap` (media left on alternate sections), `.cols--media` / `.cols--copy` / `.cols--even` for column weights, and `.band` + full-width table/photo strips to break the two-column habit.`r`n- Photo sizes: landscape 16/10 (max 18rem), feature 4/3 in media columns (max 22rem), tall/portrait fixed height 20–22rem so width fills the column, product 16rem.`r`n- Archetype: industrial manufacturer — left-aligned claim, plant photography on the right, spec tables, place-named contact.
+- Signature move: hero carousel (WAI-ARIA pattern) telling Make → Store → Test → Ship in four plant photos, diagonal-cut frame on an offset blue tint, step-labelled progress bar that autoplays at 6s, pauses on hover / keyboard focus / pause button, never autoplays under reduced motion, swipe on touch; quiet benzene/helix field in the gutters (not overlapping); inner pages use a photo-backed navy pagehead; footer sits on a plant skyline silhouette (tanks, tanker, drums).
+- Deliberate asymmetry: hero 5/6 columns; carousel frame offset block breaks the column edge.
+- Section order and why it serves the argument: claim → plant facts (ISO, storage, place) → barrel proof with yard photograph → spec numbers → plant proof (tanker, acid tank) → lab/ISO → named leadership + unnamed plant team → call/quote. Inner pages each use a different plant photo under the navy pagehead (sample tube, acid tank, lab, plant team, process tanks), each with a 1.5rem diagonal bottom edge matching the hero.
 
 ## Content rules
-- Headline claim (specific, real number or outcome): “Entrust your supply to Gundlav.” with kicker LABSA 90%. Support with Gundlav GIDC, Valsad, 90 ± 1 active matter, ISO 9001:2015, 75 MT/day (~2,275 MT/month), 450 MT raw / 250 MT finished storage, own RKSPL VALSAD tanker, chairman’s 25 years in detergents and LABSA plants, incorporated 16 November 2019.
+- Headline claim (specific, real number or outcome): “LABSA 90%, direct from the maker.” with kicker “Surfactant manufacturer · Gujarat”. Do not lead with Gundlav in headings (user demand); keep it to the factory address. Support with 90 ± 1 active matter, ISO 9001:2015, 75 MT/day (~2,275 MT/month), 300 MT raw / 200 MT finished storage, own RKSPL VALSAD tanker, chairman’s 25 years in detergents and LABSA plants, incorporated 16 November 2019.
 - Real product/people/imagery to show: own tanks, RKSPL tanker, barrel yard, LABSA in a beaker, unnamed plant team, in-house lab, named directors, Plot 79/80 Gundlav, Silvassa registered office, company profile PDF.
 - Banned phrases: leading manufacturer, world-class, cutting-edge, transform your, unmatched quality, synergy, lorem, generic mission-speak without a plant fact. Do not invent packing kg. Do not name the seven workers.
 

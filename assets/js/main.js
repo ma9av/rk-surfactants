@@ -47,7 +47,6 @@
   }
 
   var header = document.querySelector(".top");
-  var mosaic = document.querySelector(".mosaic");
   var ticking = false;
   function onScroll() {
     if (ticking) return;
@@ -58,16 +57,256 @@
       var p = max > 0 ? window.scrollY / max : 0;
       if (!reduce) doc.style.setProperty("--scrolled", p.toFixed(4));
       if (header) header.classList.toggle("is-stuck", window.scrollY > 8);
-      if (mosaic && !reduce) {
-        var r = mosaic.getBoundingClientRect();
-        var par = (window.innerHeight * 0.5 - (r.top + r.height * 0.5)) / window.innerHeight;
-        mosaic.style.setProperty("--par", par.toFixed(3));
-      }
       ticking = false;
     });
   }
   window.addEventListener("scroll", onScroll, { passive: true });
   onScroll();
+
+  var reel = document.querySelector(".reel");
+  if (reel) {
+    var slides = reel.querySelectorAll(".reel-slide");
+    var steps = reel.querySelectorAll(".reel-steps button");
+    var track = reel.querySelector(".reel-track");
+    var cur = 0;
+    var leaving = null;
+    var leaveTimer;
+    var pending = null;
+
+    function sync() {
+      slides.forEach(function (s, i) {
+        var on = i === cur;
+        s.toggleAttribute("inert", !on);
+        if (on) s.removeAttribute("aria-hidden"); else s.setAttribute("aria-hidden", "true");
+      });
+      steps.forEach(function (b, i) {
+        if (i === cur) b.setAttribute("aria-current", "true"); else b.removeAttribute("aria-current");
+      });
+    }
+
+    function show(n, back) {
+      n = (n + slides.length) % slides.length;
+      if (n === cur) return;
+      var prev = slides[cur];
+      if (leaving) leaving.classList.remove("is-leaving");
+      reel.classList.toggle("is-back", !!back);
+      void getComputedStyle(slides[n]).clipPath;
+      prev.classList.remove("is-active");
+      prev.classList.add("is-leaving");
+      leaving = prev;
+      var next = slides[n];
+      next.classList.add("is-active");
+      cur = n;
+      sync();
+      if (pending) pending.el.removeEventListener("transitionend", pending.fn);
+      clearTimeout(leaveTimer);
+      function done(e) {
+        if (e && (e.target !== next || e.propertyName !== "clip-path")) return;
+        next.removeEventListener("transitionend", done);
+        clearTimeout(leaveTimer);
+        pending = null;
+        prev.classList.remove("is-leaving");
+        if (leaving === prev) leaving = null;
+      }
+      if (reduce) { done(); return; }
+      pending = { el: next, fn: done };
+      next.addEventListener("transitionend", done);
+      leaveTimer = setTimeout(done, 2000);
+    }
+
+    function setStopped(stop) {
+      reel.classList.toggle("is-stopped", stop);
+      track.setAttribute("aria-live", stop ? "polite" : "off");
+    }
+
+    steps.forEach(function (b, i) {
+      b.addEventListener("click", function () { show(i, i < cur); });
+    });
+    reel.querySelector(".reel-steps").addEventListener("animationend", function (e) {
+      if (e.animationName === "reel-fill") show(cur + 1);
+    });
+
+    reel.addEventListener("mouseenter", function () { reel.classList.add("is-held"); });
+    reel.addEventListener("mouseleave", function () {
+      if (!reel.querySelector(":focus-visible")) reel.classList.remove("is-held");
+    });
+    reel.addEventListener("focusin", function (e) {
+      if (e.target.matches(":focus-visible")) reel.classList.add("is-held");
+    });
+    reel.addEventListener("focusout", function (e) {
+      if (!reel.contains(e.relatedTarget) && !reel.matches(":hover")) reel.classList.remove("is-held");
+    });
+    reel.addEventListener("keydown", function (e) {
+      if (e.key === "ArrowRight") { e.preventDefault(); show(cur + 1); }
+      else if (e.key === "ArrowLeft") { e.preventDefault(); show(cur - 1, true); }
+    });
+
+    var frame = reel.querySelector(".reel-frame");
+    var startX = null;
+    frame.addEventListener("pointerdown", function (e) { startX = e.clientX; });
+    frame.addEventListener("pointerup", function (e) {
+      if (startX === null) return;
+      var dx = e.clientX - startX;
+      startX = null;
+      if (Math.abs(dx) > 40) show(dx < 0 ? cur + 1 : cur - 1, dx > 0);
+    });
+    frame.addEventListener("pointercancel", function () { startX = null; });
+
+    setStopped(reduce);
+    sync();
+  }
+
+  document.querySelectorAll(".shot").forEach(function (shot) {
+    var slides = shot.querySelectorAll(".shot-slide");
+    var steps = shot.querySelectorAll(".shot-steps button");
+    if (!slides.length) return;
+    var cur = 0;
+
+    function sync() {
+      slides.forEach(function (s, i) {
+        var on = i === cur;
+        s.classList.toggle("is-active", on);
+        s.toggleAttribute("inert", !on);
+        if (on) s.removeAttribute("aria-hidden");
+        else s.setAttribute("aria-hidden", "true");
+      });
+      steps.forEach(function (b, i) {
+        if (i === cur) b.setAttribute("aria-current", "true");
+        else b.removeAttribute("aria-current");
+      });
+      var fill = shot.querySelector(".shot-steps [aria-current] i");
+      if (fill) {
+        fill.style.animation = "none";
+        void fill.offsetWidth;
+        fill.style.animation = "";
+      }
+    }
+
+    function show(n) {
+      n = (n + slides.length) % slides.length;
+      if (n === cur) return;
+      cur = n;
+      sync();
+    }
+
+    function setStopped(stop) {
+      shot.classList.toggle("is-stopped", stop);
+    }
+
+    steps.forEach(function (b, i) {
+      b.addEventListener("click", function () { show(i); });
+    });
+    var stepsWrap = shot.querySelector(".shot-steps");
+    if (stepsWrap) {
+      stepsWrap.addEventListener("animationend", function (e) {
+        if (e.animationName === "shot-fill") show(cur + 1);
+      });
+    }
+    shot.addEventListener("mouseenter", function () { shot.classList.add("is-held"); });
+    shot.addEventListener("mouseleave", function () {
+      if (!shot.querySelector(":focus-visible")) shot.classList.remove("is-held");
+    });
+    shot.addEventListener("focusin", function (e) {
+      if (e.target.matches(":focus-visible")) shot.classList.add("is-held");
+    });
+    shot.addEventListener("focusout", function (e) {
+      if (!shot.contains(e.relatedTarget) && !shot.matches(":hover")) shot.classList.remove("is-held");
+    });
+    var frame = shot.querySelector(".shot-frame");
+    if (frame) {
+      var startX = null;
+      frame.addEventListener("pointerdown", function (e) { startX = e.clientX; });
+      frame.addEventListener("pointerup", function (e) {
+        if (startX === null) return;
+        var dx = e.clientX - startX;
+        startX = null;
+        if (Math.abs(dx) > 40) show(dx < 0 ? cur + 1 : cur - 1);
+      });
+      frame.addEventListener("pointercancel", function () { startX = null; });
+    }
+
+    setStopped(reduce);
+    sync();
+  });
+
+  var roster = document.querySelector(".roster");
+  if (roster) {
+    var tabs = roster.querySelectorAll('.roster-nav [role="tab"]');
+    var panels = roster.querySelectorAll(".roster-panel");
+    var live = roster.querySelector(".roster-panels");
+    var progress = roster.querySelector(".roster-progress");
+    var cur = 0;
+
+    function sync() {
+      tabs.forEach(function (tab, i) {
+        var on = i === cur;
+        tab.setAttribute("aria-selected", on ? "true" : "false");
+        tab.tabIndex = on ? 0 : -1;
+      });
+      panels.forEach(function (panel, i) {
+        var on = i === cur;
+        panel.classList.toggle("is-active", on);
+        if (on) panel.removeAttribute("hidden");
+        else panel.setAttribute("hidden", "");
+      });
+      if (progress) {
+        var bar = progress.querySelector("i");
+        if (bar) {
+          bar.style.animation = "none";
+          void bar.offsetWidth;
+          bar.style.animation = "";
+        }
+      }
+    }
+
+    function show(n) {
+      n = (n + panels.length) % panels.length;
+      if (n === cur) return;
+      cur = n;
+      sync();
+    }
+
+    function setStopped(stop) {
+      roster.classList.toggle("is-stopped", stop);
+      if (live) live.setAttribute("aria-live", stop ? "polite" : "off");
+      if (progress) {
+        var bar = progress.querySelector("i");
+        if (bar) {
+          bar.style.animation = "none";
+          void bar.offsetWidth;
+          bar.style.animation = "";
+        }
+      }
+    }
+
+    tabs.forEach(function (tab, i) {
+      tab.addEventListener("click", function () { show(i); });
+      tab.addEventListener("keydown", function (e) {
+        if (e.key === "ArrowDown" || e.key === "ArrowRight") { e.preventDefault(); show(cur + 1); tabs[cur].focus(); }
+        else if (e.key === "ArrowUp" || e.key === "ArrowLeft") { e.preventDefault(); show(cur - 1); tabs[cur].focus(); }
+        else if (e.key === "Home") { e.preventDefault(); show(0); tabs[0].focus(); }
+        else if (e.key === "End") { e.preventDefault(); show(panels.length - 1); tabs[cur].focus(); }
+      });
+    });
+    if (progress) {
+      progress.addEventListener("animationend", function (e) {
+        if (e.animationName === "roster-fill") show(cur + 1);
+      });
+    }
+    roster.addEventListener("mouseenter", function () { roster.classList.add("is-held"); });
+    roster.addEventListener("mouseleave", function () {
+      if (!roster.querySelector(":focus-visible")) roster.classList.remove("is-held");
+    });
+    roster.addEventListener("focusin", function (e) {
+      if (e.target.matches(":focus-visible")) roster.classList.add("is-held");
+    });
+    roster.addEventListener("focusout", function (e) {
+      if (!roster.contains(e.relatedTarget) && !roster.matches(":hover")) roster.classList.remove("is-held");
+    });
+
+    setStopped(reduce);
+    sync();
+  }
 
   if (!reduce && "IntersectionObserver" in window) {
     var io = new IntersectionObserver(function (entries) {
@@ -75,11 +314,11 @@
         if (e.isIntersecting) e.target.classList.add("is-in");
       });
     }, { threshold: 0.18, rootMargin: "0px 0px -6% 0px" });
-    document.querySelectorAll("main section, .uses, table.spec, .steps, .photos figure, .pack-shot, .who figure").forEach(function (el) {
+    document.querySelectorAll("main section, .uses, table.spec, .steps, .ph").forEach(function (el) {
       io.observe(el);
     });
   } else {
-    document.querySelectorAll("main section, .uses, table.spec, .steps").forEach(function (el) {
+    document.querySelectorAll("main section, .uses, table.spec, .steps, .ph").forEach(function (el) {
       el.classList.add("is-in");
     });
   }

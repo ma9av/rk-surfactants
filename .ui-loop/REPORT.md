@@ -39,7 +39,7 @@ Motion added: mosaic stagger (0 / .12s / .24s, 650ms), DNA/benzene sway, 2px rea
 
 - **hierarchy_composition** about .cols, labsa-90 .cols, index .spec: Short left intro beside a tall table. Figure cap does not touch tables. (fix: Stack heading then full-width table when intro is under 8 lines.)
 - **reference_fidelity** footer::after: Skyline is 5.5rem at 28% opacity under empty navy. (fix: Height 140–180px, opacity ~0.4, lower 40% of footer.)
-- **distinctiveness** about.html h1: Private limited, Gundlav, 16 November 2019 is a legal telegram. (fix: Incorporated 16 November 2019 · 11 to 15 people at Plot 79/80.)
+- **distinctiveness** about.html h1: Private limited, Gundlav, 16 November 2019 is a legal telegram. (fix: Incorporated 16 November 2019 · 15 - 20 people at Plot 79/80.)
 - **distinctiveness** labsa-90.html h2#sp: Catalogue title Specification. (fix: Retitle to 90 ± 1 as dispatched from Gundlav.)
 - **distinctiveness** contact.html h2#fm: Your requirement and Contact details are IndiaMART twins. (fix: Quantity of LABSA 90% (MT) from Gundlav; aside Plot 79/80 · +91 97277 02597.)
 - **spacing_rhythm** quality.html lab img: Wrapped in a div with 4/5 so it misses the cap. (fix: .cols img { max-height:22rem })
