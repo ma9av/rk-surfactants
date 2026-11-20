@@ -1,0 +1,22 @@
+{
+  "expert": "ux_lead",
+  "scores": {
+    "ux_clarity": {
+      "score": 8.0,
+      "evidence": "Five-second test passes: h1 LABSA 90% from Gundlav, 90 +/- 1%, detergent buyers, Request a quote. FAQ answers real objections. Encyclopedia h2 gone. Traits still clone the spec table.",
+      "strengths": [
+        "Fold names product, plant, 90 +/- 1, detergent buyers, and quote",
+        "FAQ answers real objections and offers Request documents with no order",
+        "Quote CTA sits on the applications band; process cites 300 MT / 200 MT"
+      ],
+      "issues": [
+        {
+          "severity": "major",
+          "where": "ul.traits",
+          "problem": "The six arrows restate Active matter, Klett, and metric tonnes from the spec table, while Used in detergents / Industrial applications / Wets and emulsifies are generic.",
+          "fix": "Keep ul.traits. Replace items with dispatch facts the table does not list: Barrel-filled at Plot 79/80; Buyers neutralize on their line; Same CoA for textile agro leather; No consumer pack; Own RKSPL VALSAD tanker; 75 MT per day."
+        }
+      ]
+    }
+  }
+}

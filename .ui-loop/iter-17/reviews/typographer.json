@@ -1,0 +1,28 @@
+{
+  "expert": "typographer",
+  "scores": {
+    "typography": {
+      "score": 8.0,
+      "evidence": "Pagehead h1 now reads LABSA 90% from Gundlav as one line; h2 We sell the acid, not the salt replaced Appearance as dispatched; FAQ summaries 1.125rem/1.35; Archivo 628 vs IBM Plex Sans 4813; body 16px; 0 long lines. Anchor 10.0 does not bind.",
+      "strengths": [
+        "Archivo 112% stretch on headings versus IBM Plex Sans on body",
+        "Heading/body split is consistent: body 16px/1.65, heads 1.1",
+        "Prior bugs gone: h1 space, Appearance widow, cramped FAQ/apps titles"
+      ],
+      "issues": [
+        {
+          "severity": "minor",
+          "where": ".apps article:first-child h3",
+          "problem": "Detergent manufacturing wraps to a second line while the other three h3s stay one line.",
+          "fix": "Shorten the first title to Detergent plants so all four h3s stay one line at four-column width."
+        },
+        {
+          "severity": "minor",
+          "where": ".band--center p",
+          "problem": "Centered process dek ends on a short last line.",
+          "fix": "Left-align the how band (also an empty-space fix)."
+        }
+      ]
+    }
+  }
+}

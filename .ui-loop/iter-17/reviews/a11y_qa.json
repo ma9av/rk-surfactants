@@ -1,0 +1,22 @@
+{
+  "expert": "a11y_qa",
+  "scores": {
+    "a11y_responsive": {
+      "score": 8.5,
+      "evidence": "Audit: 0 blockers, 0/111 contrast fails, 0/19 invisible focus, 1 h1, no 375 overflow, 1 tap under 44. Header phone omitted per demand.",
+      "strengths": [
+        "Skip, labelled nav, one h1, native FAQ details at 48px",
+        "0 contrast fails and visible 3px focus on 19 controls",
+        "375 and tablet reflow; 56px Call/Quote bar"
+      ],
+      "issues": [
+        {
+          "severity": "minor",
+          "where": "ul.traits and ol.flow",
+          "problem": "list-style:none can drop list semantics in WebKit.",
+          "fix": "Add role=list on ul.traits and ol.flow (keep aria-hidden on .flow-n)."
+        }
+      ]
+    }
+  }
+}

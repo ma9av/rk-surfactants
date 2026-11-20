@@ -1,0 +1,22 @@
+{
+  "expert": "ux_lead",
+  "scores": {
+    "ux_clarity": {
+      "score": 8.5,
+      "evidence": "Fold names LABSA 90% from Gundlav, 90 +/- 1, quote. Traits are dispatch facts. Encyclopedia h2 gone.",
+      "strengths": [
+        "Fold names product, plant, 90 +/- 1, and the quote",
+        "Traits are dispatch facts the spec table does not list",
+        "FAQ plus Request documents with no order required"
+      ],
+      "issues": [
+        {
+          "severity": "minor",
+          "where": ".faq details 2 and 6",
+          "problem": "Two FAQs both answer no consumer sizes.",
+          "fix": "Merge into one summary about consumer or personal sizes."
+        }
+      ]
+    }
+  }
+}

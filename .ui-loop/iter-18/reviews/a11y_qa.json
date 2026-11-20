@@ -1,0 +1,22 @@
+{
+  "expert": "a11y_qa",
+  "scores": {
+    "a11y_responsive": {
+      "score": 8.7,
+      "evidence": "0 blockers, 0/110 contrast, 0 invisible focus, 1 h1, role=list on traits and flow, 375 reflow. Header phone omitted per demand.",
+      "strengths": [
+        "Skip, labelled nav, one h1, native FAQ details",
+        "0 contrast fails and 3px focus on 19 controls",
+        "375 and tablet reflow; role=list on traits and flow"
+      ],
+      "issues": [
+        {
+          "severity": "minor",
+          "where": "footer nav a About",
+          "problem": "One tap target under 44px wide.",
+          "fix": "Set .foot nav a min-width 44px."
+        }
+      ]
+    }
+  }
+}

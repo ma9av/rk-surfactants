@@ -20,6 +20,8 @@ Fill from the brief and from measured references. Reviewers score against this f
   - remove the number from the header, and give the buttons , matte finish , and I dont want rounded edges in the button , and want it animated and look good
   - dont remove the translucent banner like you did, as it doesnt look good , just make the change in the navbar, remove number and make the button changes
   - contact.html: remove the checkbox, just keep the disclaimer, and instead of open in maps, show the map in the webpage
+  - labsa-90.html: add more details about LABSA 90 using https://shreeshyamgroup.co/Home/Labsa as a reference and copywrite the same text, with our style, so it looks good, with our styling; keep the old elements of our page
+  - use pasted Shree Shyam layout (tinted application tiles, staggered process cards, intro photo + arrow list) with RK navy/mist/paper; fix overlapping blue lines; fix cramped applications and FAQ text; avoid a lot of empty spaces
 
 ## References (one line each: file, what to take from it)
 - Vico Forge footer: dark band with a factory silhouette along the bottom. Take the idea only; do not copy logo, copy, crane artwork or colours.

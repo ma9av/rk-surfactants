@@ -1,0 +1,22 @@
+{
+  "expert": "typographer",
+  "scores": {
+    "typography": {
+      "score": 8.3,
+      "evidence": "h1 is one line with a space. Appearance value one line. FAQ readable. Detergent plants one line. Body 16px. Anchor 8.5.",
+      "strengths": [
+        "Archivo headings versus IBM Plex Sans body",
+        "Body 16px/1.65, 0 long lines",
+        "Prior h1 space, Appearance widow, cramped FAQ, title wrap gone"
+      ],
+      "issues": [
+        {
+          "severity": "minor",
+          "where": "#intro p",
+          "problem": "90 +/- wraps onto 1%.",
+          "fix": "Wrap 90 +/- 1% in span.nowrap."
+        }
+      ]
+    }
+  }
+}

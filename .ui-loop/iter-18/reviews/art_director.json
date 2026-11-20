@@ -1,0 +1,39 @@
+{
+  "expert": "art_director",
+  "scores": {
+    "hierarchy_composition": {
+      "score": 8.0,
+      "evidence": "Squint on desktop_fold.png: one focal point, navy pagehead and white h1 LABSA 90% from Gundlav. How is left-aligned; flow stretch equal height; overlapping bars, cramped FAQ, missing h1 space fixed. Remaining stall is .chem pale field under the full-width SVG plus ghost ::after.",
+      "strengths": [
+        "Navy pagehead h1 is the single squint focal point",
+        "Section order is a chemical-buyer argument",
+        "How and FAQ are left-aligned; process cards stretch"
+      ],
+      "issues": [
+        {
+          "severity": "major",
+          "where": ".chem .fig and .chem::after",
+          "problem": "Full-width SVG plus a 7% ghost leave a pale field under the strokes.",
+          "fix": "Cap .chem .fig img at max-width 28rem. Set .chem::after {content:none}."
+        }
+      ]
+    },
+    "reference_fidelity": {
+      "score": 8.2,
+      "evidence": "Intro is photo left plus 2-col chevron list. Four RK-tint app tiles. Process 01-04 with odd/even 4px bars, no overlap. Flat 2x2 waived so empty space stays tight.",
+      "strengths": [
+        "Intro is photo-left plus a 2-col chevron list",
+        "Four equal app tiles use RK navy tints",
+        "Process cards keep numbered badges and side bars"
+      ],
+      "issues": [
+        {
+          "severity": "minor",
+          "where": ".chem::after",
+          "problem": "A 7% duplicate of structure.svg is decorative wallpaper the reference does not use.",
+          "fix": "Remove .chem::after. Keep the real .fig diagram only."
+        }
+      ]
+    }
+  }
+}

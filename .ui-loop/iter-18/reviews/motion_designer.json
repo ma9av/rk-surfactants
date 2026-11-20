@@ -1,0 +1,22 @@
+{
+  "expert": "motion_designer",
+  "scores": {
+    "interaction_motion": {
+      "score": 8.0,
+      "evidence": "Square ghost nav CTA fills on hover; 3px focus. Tokens 150/200/650ms. Dual reduced-motion gate.",
+      "strengths": [
+        "Square ghost CTA rest, filled hover, 3px focus",
+        "Duration tokens 150/200/650ms ease-out",
+        "Dual gate: no-preference plus html.motion"
+      ],
+      "issues": [
+        {
+          "severity": "minor",
+          "where": ".faq details / summary::after",
+          "problem": "Opening snaps height; plus/minus is a content swap.",
+          "fix": "Rotate summary::after 45deg on open over 200ms."
+        }
+      ]
+    }
+  }
+}

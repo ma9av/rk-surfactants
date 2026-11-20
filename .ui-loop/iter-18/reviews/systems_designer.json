@@ -1,0 +1,39 @@
+{
+  "expert": "systems_designer",
+  "scores": {
+    "color": {
+      "score": 8.0,
+      "evidence": "Paper/mist/deep. 0/110 contrast fails. Four RK tints. Ghost structure overlaps the schematic.",
+      "strengths": [
+        "Paper/mist/deep split; 0 contrast fails",
+        "App tiles stay RK navy tints",
+        "Square navy CTAs; no purple gradient"
+      ],
+      "issues": [
+        {
+          "severity": "major",
+          "where": ".chem::after vs .chem .fig img",
+          "problem": "Ghost structure sits on the solid schematic as overlapping blue lines.",
+          "fix": "Set .pack .chem::after{content:none}."
+        }
+      ]
+    },
+    "spacing_rhythm": {
+      "score": 8.0,
+      "evidence": "99.1% 4px grid. Pack padding 24px. Prior min-height, indent, flow holes, centered how void gone. Remaining hole under the 16rem beaker vs taller right column.",
+      "strengths": [
+        "99.1% spacing grid; pack 24px without 11rem holes",
+        "Process 2x2 stretch; bars do not overlap",
+        "How intro is left-aligned"
+      ],
+      "issues": [
+        {
+          "severity": "major",
+          "where": "section.chem .cols--top / .ph--product",
+          "problem": "Beaker is shorter than heading plus full-width schematic, leaving a mist hole under the photo.",
+          "fix": "Cap the schematic at 28rem and stretch the photo column, or drop the ghost."
+        }
+      ]
+    }
+  }
+}

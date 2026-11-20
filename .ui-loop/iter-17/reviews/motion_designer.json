@@ -1,0 +1,22 @@
+{
+  "expert": "motion_designer",
+  "scores": {
+    "interaction_motion": {
+      "score": 8.0,
+      "evidence": "hover.png fills navbar Request a quote solid navy; focus.png adds 3px outline. Tokens 150/200/650ms ease-out. Dual gate reduced-motion plus html.motion. Square matte wipe is a user demand.",
+      "strengths": [
+        "Square ghost CTA rest vs filled hover and 3px focus",
+        "Duration tokens 150/200/650ms ease-out; no bounce",
+        "Dual gate: reduced-motion media plus html.motion"
+      ],
+      "issues": [
+        {
+          "severity": "minor",
+          "where": ".faq details / summary::after",
+          "problem": "Native details snap height; plus/minus is a content swap with no rotation.",
+          "fix": "Animate summary::after with transform:rotate(45deg) instead of swapping + and en-dash."
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "expert": "skeptic",
+  "scores": {
+    "distinctiveness": {
+      "score": 7.0,
+      "evidence": "Cover-the-logo passes on Gundlav, CoA numbers, 700-800 MT, 75 MT/day, acid-not-salt. Fails on three trait slogans, glossary FAQ, and interchangeable industry cards.",
+      "strengths": [
+        "Acid-not-salt heading with the plant sample tube",
+        "Detergent card names 700-800 MT and six states",
+        "Process lede has 75 MT/day, 2275 MT/month, RKSPL VALSAD tanker"
+      ],
+      "issues": [
+        {
+          "severity": "major",
+          "where": "ul.traits right column",
+          "problem": "Used in detergents, Industrial applications, and Wets and emulsifies are interchangeable slogans.",
+          "fix": "Keep all six chevrons. Replace those three with: 98% H2SO4 feed, barrel-filled at Plot 79/80, waste acid sold to fertilizer plants."
+        },
+        {
+          "severity": "major",
+          "where": ".faq first details",
+          "problem": "What does LABSA stand for? is encyclopedia copy.",
+          "fix": "Drop the acronym question. Ask a desk question: minimum MT, CoA with the lot, or drum vs tanker."
+        },
+        {
+          "severity": "major",
+          "where": ".apps article:nth-child(2), (3), (4)",
+          "problem": "Textile, Agriculture, and Leather only repeat not a separate grade.",
+          "fix": "Keep four tiles. Give each mill type one plant constraint: textile same 20-25 Klett lots; agro MT-only no 50 kg pack; leather free-acid 5.5-6.5."
+        }
+      ]
+    }
+  }
+}

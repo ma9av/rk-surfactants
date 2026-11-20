@@ -1,0 +1,213 @@
+{
+  "iter": 17,
+  "final": 7.9,
+  "target": 8.0,
+  "weighted_mean": 7.86,
+  "weakest_dim_score": 7.0,
+  "blockers": [],
+  "incomplete": false,
+  "decision": "STOP_PLATEAU",
+  "dimensions": {
+    "hierarchy_composition": {
+      "status": "scored",
+      "score": 7.6,
+      "expert_score": 7.6,
+      "anchor": null,
+      "capped_by_audit": false,
+      "votes": [
+        [
+          "art_director",
+          7.6
+        ]
+      ]
+    },
+    "typography": {
+      "status": "scored",
+      "score": 8.0,
+      "expert_score": 8.0,
+      "anchor": 10.0,
+      "capped_by_audit": false,
+      "votes": [
+        [
+          "typographer",
+          8.0
+        ]
+      ]
+    },
+    "color": {
+      "status": "scored",
+      "score": 8.5,
+      "expert_score": 8.5,
+      "anchor": 10.0,
+      "capped_by_audit": false,
+      "votes": [
+        [
+          "systems_designer",
+          8.5
+        ]
+      ]
+    },
+    "spacing_rhythm": {
+      "status": "scored",
+      "score": 8.0,
+      "expert_score": 8.0,
+      "anchor": 10.0,
+      "capped_by_audit": false,
+      "votes": [
+        [
+          "systems_designer",
+          8.0
+        ]
+      ]
+    },
+    "distinctiveness": {
+      "status": "scored",
+      "score": 7.0,
+      "expert_score": 7.0,
+      "anchor": 10.0,
+      "capped_by_audit": false,
+      "votes": [
+        [
+          "skeptic",
+          7.0
+        ]
+      ]
+    },
+    "ux_clarity": {
+      "status": "scored",
+      "score": 8.0,
+      "expert_score": 8.0,
+      "anchor": null,
+      "capped_by_audit": false,
+      "votes": [
+        [
+          "ux_lead",
+          8.0
+        ]
+      ]
+    },
+    "reference_fidelity": {
+      "status": "scored",
+      "score": 7.7,
+      "expert_score": 7.7,
+      "anchor": null,
+      "capped_by_audit": false,
+      "votes": [
+        [
+          "art_director",
+          7.7
+        ]
+      ]
+    },
+    "interaction_motion": {
+      "status": "scored",
+      "score": 8.0,
+      "expert_score": 8.0,
+      "anchor": null,
+      "capped_by_audit": false,
+      "votes": [
+        [
+          "motion_designer",
+          8.0
+        ]
+      ]
+    },
+    "a11y_responsive": {
+      "status": "scored",
+      "score": 8.5,
+      "expert_score": 8.5,
+      "anchor": 10.0,
+      "capped_by_audit": false,
+      "votes": [
+        [
+          "a11y_qa",
+          8.5
+        ]
+      ]
+    }
+  },
+  "fix_queue": [
+    {
+      "priority": 86.4,
+      "severity": "major",
+      "dim": "hierarchy_composition",
+      "expert": "art_director",
+      "where": ".band--center #how",
+      "problem": "How it is made at Gundlav is the only centered heading-plus-lead on a left-aligned page, so desktop_s03.png reads as a mist void between the app row and the process cards.",
+      "fix": "Remove .band--center from the how section. Left-align #how like #use and #faq, keep .band max-width at 42rem, keep pack section padding-block at 24px."
+    },
+    {
+      "priority": 86.4,
+      "severity": "major",
+      "dim": "hierarchy_composition",
+      "expert": "art_director",
+      "where": ".flow at min-width 768px",
+      "problem": "align-items:start plus short copy in 02 and 03 leaves ragged holes beside taller neighbors.",
+      "fix": "Set .flow {align-items:stretch} so row partners share height. Do not restore large margin-top stagger (user asked to avoid empty space)."
+    },
+    {
+      "priority": 72.0,
+      "severity": "major",
+      "dim": "distinctiveness",
+      "expert": "skeptic",
+      "where": "ul.traits right column",
+      "problem": "Used in detergents, Industrial applications, and Wets and emulsifies are interchangeable slogans.",
+      "fix": "Keep all six chevrons. Replace those three with: 98% H2SO4 feed, barrel-filled at Plot 79/80, waste acid sold to fertilizer plants."
+    },
+    {
+      "priority": 72.0,
+      "severity": "major",
+      "dim": "distinctiveness",
+      "expert": "skeptic",
+      "where": ".faq first details",
+      "problem": "What does LABSA stand for? is encyclopedia copy.",
+      "fix": "Drop the acronym question. Ask a desk question: minimum MT, CoA with the lot, or drum vs tanker."
+    },
+    {
+      "priority": 72.0,
+      "severity": "major",
+      "dim": "distinctiveness",
+      "expert": "skeptic",
+      "where": ".apps article:nth-child(2), (3), (4)",
+      "problem": "Textile, Agriculture, and Leather only repeat not a separate grade.",
+      "fix": "Keep four tiles. Give each mill type one plant constraint: textile same 20-25 Klett lots; agro MT-only no 50 kg pack; leather free-acid 5.5-6.5."
+    },
+    {
+      "priority": 48.0,
+      "severity": "major",
+      "dim": "spacing_rhythm",
+      "expert": "systems_designer",
+      "where": ".flow at min-width 768px",
+      "problem": "align-items:start leaves 03 shorter than 04; row bottoms and the 4px end bars do not line up.",
+      "fix": "Set .flow { align-items: stretch; } and do not add min-height."
+    },
+    {
+      "priority": 48.0,
+      "severity": "major",
+      "dim": "ux_clarity",
+      "expert": "ux_lead",
+      "where": "ul.traits",
+      "problem": "The six arrows restate Active matter, Klett, and metric tonnes from the spec table, while Used in detergents / Industrial applications / Wets and emulsifies are generic.",
+      "fix": "Keep ul.traits. Replace items with dispatch facts the table does not list: Barrel-filled at Plot 79/80; Buyers neutralize on their line; Same CoA for textile agro leather; No consumer pack; Own RKSPL VALSAD tanker; 75 MT per day."
+    },
+    {
+      "priority": 46.0,
+      "severity": "major",
+      "dim": "reference_fidelity",
+      "expert": "art_director",
+      "where": ".flow li:nth-child(even)",
+      "problem": "Reference asked for staggered numbered process cards. Current 2x2 has tops aligned. Large stagger was dropped to clear empty gaps (user demand: avoid empty space).",
+      "fix": "At min-width 768px use a modest transform:translateY(1.25rem) on even items plus matching padding-bottom, not a large margin-top gap."
+    }
+  ],
+  "warnings": [],
+  "waivers": {
+    "header_phone_removed": "user demand: remove the number from the header (stays in footer and mobile Call bar)",
+    "square_matte_buttons": "user demand: matte finish, no rounded edges, animated",
+    "keep_translucent_banners": "user demand: do not remove inner-page photo banners; navbar-only change",
+    "contact_disclaimer_no_checkbox": "user demand: remove the checkbox, keep the disclaimer as text",
+    "contact_inline_maps": "user demand: instead of Open in Maps links, show the map in the webpage",
+    "labsa_copy_from_reference": "user demand: use shreeshyamgroup.co/Home/Labsa as a content reference; rewrite in RK voice, keep our styling and existing page elements. Do not copy their visual system.",
+    "labsa_ref_layout": "user demand: use pasted reference images for layout (tinted cards, process steps, intro split) with our theme colors; fix overlapping blue lines and FAQ/apps text; avoid empty space"
+  }
+}

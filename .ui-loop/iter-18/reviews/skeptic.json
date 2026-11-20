@@ -1,0 +1,34 @@
+{
+  "expert": "skeptic",
+  "scores": {
+    "distinctiveness": {
+      "score": 7.5,
+      "evidence": "Trait slogans rewritten with Plot 79/80 facts. Industry cards carry Klett and free-acid numbers. Fails on empty dispatch heading, Wikipedia lede, leftover glossary FAQ.",
+      "strengths": [
+        "Trait list names barrel fill, 98% sulphuric feed, RKSPL tanker, 75 MT a day",
+        "Detergent tile names 700-800 MT and six states",
+        "Acid-not-salt sits on a real plant sample tube"
+      ],
+      "issues": [
+        {
+          "severity": "major",
+          "where": ".faq details biodegradable feedstock",
+          "problem": "Still encyclopedia copy.",
+          "fix": "Replace with Do you send a CoA and SDS before the first order?"
+        },
+        {
+          "severity": "major",
+          "where": "#intro h2",
+          "problem": "As we dispatch it is an empty heading; lede still opens with a definition.",
+          "fix": "Retitle to Barrel-filled at Plot 79/80 and start at At Plot 79/80 we sulphonate..."
+        },
+        {
+          "severity": "major",
+          "where": ".faq cosmetics and personal use",
+          "problem": "Two FAQ rows answer the same no consumer pack.",
+          "fix": "Keep one personal-size question; replace the other with What is on the CoA."
+        }
+      ]
+    }
+  }
+}

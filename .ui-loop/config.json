@@ -1,6 +1,6 @@
 {
   "target": 8.0,
-  "max_iterations": 14,
+  "max_iterations": 18,
   "profile": "web",
   "has_reference": true,
   "waivers": {
@@ -8,7 +8,9 @@
     "square_matte_buttons": "user demand: matte finish, no rounded edges, animated",
     "keep_translucent_banners": "user demand: do not remove inner-page photo banners; navbar-only change",
     "contact_disclaimer_no_checkbox": "user demand: remove the checkbox, keep the disclaimer as text",
-    "contact_inline_maps": "user demand: instead of Open in Maps links, show the map in the webpage"
+    "contact_inline_maps": "user demand: instead of Open in Maps links, show the map in the webpage",
+    "labsa_copy_from_reference": "user demand: use shreeshyamgroup.co/Home/Labsa as a content reference; rewrite in RK voice, keep our styling and existing page elements. Do not copy their visual system.",
+    "labsa_ref_layout": "user demand: use pasted reference images for layout (tinted cards, process steps, intro split) with our theme colors; fix overlapping blue lines and FAQ/apps text; avoid empty space"
   },
   "plateau_delta": 0.3,
   "plateau_window": 2,
@@ -24,7 +26,10 @@
     "add scroll, interactions, motion, hover all other type of micro and major animations across our webpages review and audit and add appropriate animations till it reach the score of 8",
     "remove the number from the header, and give the buttons , matte finish , and I dont want rounded edges in the button , and want it animated and look good",
     "dont remove the translucent banner like you did, as it doesnt look good , just make the change in the navbar, remove number and make the button changes",
-    "contact.html: remove the checkbox, just keep the disclaimer, and instead of open in maps, show the map in the webpage"
+    "contact.html: remove the checkbox, just keep the disclaimer, and instead of open in maps, show the map in the webpage",
+    "labsa-90.html: add more details about LABSA 90 using https://shreeshyamgroup.co/Home/Labsa as a reference and copywrite the same text, with our style, so it looks good, with our styling; keep the old elements of our page",
+    "these are images for reference, use this styling with our theme colors and styles, also blue lines are overlapping, text here in the section and FAQs please fix it",
+    "also please avoid a lot of empty spaces"
   ],
   "required_experts": [
     "art_director",

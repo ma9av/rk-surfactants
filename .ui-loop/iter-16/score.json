@@ -1,0 +1,212 @@
+{
+  "iter": 16,
+  "final": 7.8,
+  "target": 8.0,
+  "weighted_mean": 7.77,
+  "weakest_dim_score": 7.0,
+  "blockers": [],
+  "incomplete": false,
+  "decision": "STOP_MAX_ITER",
+  "dimensions": {
+    "hierarchy_composition": {
+      "status": "scored",
+      "score": 7.4,
+      "expert_score": 7.4,
+      "anchor": null,
+      "capped_by_audit": false,
+      "votes": [
+        [
+          "art_director",
+          7.4
+        ]
+      ]
+    },
+    "typography": {
+      "status": "scored",
+      "score": 7.5,
+      "expert_score": 7.5,
+      "anchor": 10.0,
+      "capped_by_audit": false,
+      "votes": [
+        [
+          "typographer",
+          7.5
+        ]
+      ]
+    },
+    "color": {
+      "status": "scored",
+      "score": 8.0,
+      "expert_score": 8.0,
+      "anchor": 10.0,
+      "capped_by_audit": false,
+      "votes": [
+        [
+          "systems_designer",
+          8.0
+        ]
+      ]
+    },
+    "spacing_rhythm": {
+      "status": "scored",
+      "score": 7.5,
+      "expert_score": 7.5,
+      "anchor": 10.0,
+      "capped_by_audit": false,
+      "votes": [
+        [
+          "systems_designer",
+          7.5
+        ]
+      ]
+    },
+    "distinctiveness": {
+      "status": "scored",
+      "score": 7.0,
+      "expert_score": 7.0,
+      "anchor": 10.0,
+      "capped_by_audit": false,
+      "votes": [
+        [
+          "skeptic",
+          7.0
+        ]
+      ]
+    },
+    "ux_clarity": {
+      "status": "scored",
+      "score": 8.4,
+      "expert_score": 8.4,
+      "anchor": null,
+      "capped_by_audit": false,
+      "votes": [
+        [
+          "ux_lead",
+          8.4
+        ]
+      ]
+    },
+    "reference_fidelity": {
+      "status": "scored",
+      "score": 8.2,
+      "expert_score": 8.2,
+      "anchor": null,
+      "capped_by_audit": false,
+      "votes": [
+        [
+          "art_director",
+          8.2
+        ]
+      ]
+    },
+    "interaction_motion": {
+      "status": "scored",
+      "score": 8.2,
+      "expert_score": 8.2,
+      "anchor": null,
+      "capped_by_audit": false,
+      "votes": [
+        [
+          "motion_designer",
+          8.2
+        ]
+      ]
+    },
+    "a11y_responsive": {
+      "status": "scored",
+      "score": 8.7,
+      "expert_score": 8.7,
+      "anchor": 10.0,
+      "capped_by_audit": false,
+      "votes": [
+        [
+          "a11y_qa",
+          8.7
+        ]
+      ]
+    }
+  },
+  "fix_queue": [
+    {
+      "priority": 93.6,
+      "severity": "major",
+      "dim": "hierarchy_composition",
+      "expert": "art_director",
+      "where": ".apps Leather processing",
+      "problem": "Three minority topics on a 2-column grid left an empty cell.",
+      "fix": "Put textile, agro and leather on a 3-column row."
+    },
+    {
+      "priority": 72.0,
+      "severity": "major",
+      "dim": "distinctiveness",
+      "expert": "skeptic",
+      "where": "ul.traits",
+      "problem": "Three-up repeats facts the spec table already carries. User asked for property highlights from the reference.",
+      "fix": "Keep the strip; do not delete (user demand for those topics). Tighten so it does not clone the table verbatim."
+    },
+    {
+      "priority": 72.0,
+      "severity": "major",
+      "dim": "distinctiveness",
+      "expert": "skeptic",
+      "where": "h2#intro",
+      "problem": "What LABSA 90% is is an encyclopedia heading.",
+      "fix": "A plant claim would be stronger; user also asked to keep old page voice."
+    },
+    {
+      "priority": 72.0,
+      "severity": "major",
+      "dim": "distinctiveness",
+      "expert": "skeptic",
+      "where": "h2#ap",
+      "problem": "Section reprints 700-800 MT.",
+      "fix": "Retitled to dispatch; tanker fact stays once in that list."
+    },
+    {
+      "priority": 70.0,
+      "severity": "major",
+      "dim": "typography",
+      "expert": "typographer",
+      "where": "h2#look",
+      "problem": "Second line is only dispatched.",
+      "fix": "Break after Appearance so line two has two words."
+    },
+    {
+      "priority": 60.0,
+      "severity": "major",
+      "dim": "spacing_rhythm",
+      "expert": "systems_designer",
+      "where": ".apps-lead padding-left",
+      "problem": "Detergent text sat 16px inside the other columns.",
+      "fix": "Remove padding-left; keep a ::before bar."
+    },
+    {
+      "priority": 40.0,
+      "severity": "major",
+      "dim": "color",
+      "expert": "systems_designer",
+      "where": ".apps-lead",
+      "problem": "Blue inset plus padding-left misaligned the detergent copy.",
+      "fix": "Use a 4px bar without extra text indent."
+    },
+    {
+      "priority": 19.2,
+      "severity": "minor",
+      "dim": "ux_clarity",
+      "expert": "ux_lead",
+      "where": "section#ap h2",
+      "problem": "Who orders reads as a second buyer list.",
+      "fix": "Retitle to How lots leave Plot 79/80."
+    }
+  ],
+  "warnings": [],
+  "waivers": {
+    "header_phone_removed": "user demand: remove the number from the header (stays in footer and mobile Call bar)",
+    "square_matte_buttons": "user demand: matte finish, no rounded edges, animated",
+    "keep_translucent_banners": "user demand: do not remove inner-page photo banners; navbar-only change",
+    "contact_disclaimer_no_checkbox": "user demand: remove the checkbox, keep the disclaimer as text",
+    "contact_inline_maps": "user demand: instead of Open in Maps links, show the map in the webpage",
+    "labsa_copy_from_reference": "user demand: use shreeshyamgroup.co/Home/Labsa as a content reference; rewrite in RK voice, keep our styling and existing page elements. Do not copy their visual system."
+  }
+}

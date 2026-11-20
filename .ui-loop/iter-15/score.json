@@ -1,0 +1,212 @@
+{
+  "iter": 15,
+  "final": 7.8,
+  "target": 8.0,
+  "weighted_mean": 7.75,
+  "weakest_dim_score": 6.5,
+  "blockers": [],
+  "incomplete": false,
+  "decision": "STOP_PLATEAU",
+  "dimensions": {
+    "hierarchy_composition": {
+      "status": "scored",
+      "score": 7.5,
+      "expert_score": 7.5,
+      "anchor": null,
+      "capped_by_audit": false,
+      "votes": [
+        [
+          "art_director",
+          7.5
+        ]
+      ]
+    },
+    "typography": {
+      "status": "scored",
+      "score": 8.0,
+      "expert_score": 8.0,
+      "anchor": 10.0,
+      "capped_by_audit": false,
+      "votes": [
+        [
+          "typographer",
+          8.0
+        ]
+      ]
+    },
+    "color": {
+      "status": "scored",
+      "score": 8.0,
+      "expert_score": 8.0,
+      "anchor": 10.0,
+      "capped_by_audit": false,
+      "votes": [
+        [
+          "systems_designer",
+          8.0
+        ]
+      ]
+    },
+    "spacing_rhythm": {
+      "status": "scored",
+      "score": 8.0,
+      "expert_score": 8.0,
+      "anchor": 10.0,
+      "capped_by_audit": false,
+      "votes": [
+        [
+          "systems_designer",
+          8.0
+        ]
+      ]
+    },
+    "distinctiveness": {
+      "status": "scored",
+      "score": 6.5,
+      "expert_score": 6.5,
+      "anchor": 10.0,
+      "capped_by_audit": false,
+      "votes": [
+        [
+          "skeptic",
+          6.5
+        ]
+      ]
+    },
+    "ux_clarity": {
+      "status": "scored",
+      "score": 8.0,
+      "expert_score": 8.0,
+      "anchor": null,
+      "capped_by_audit": false,
+      "votes": [
+        [
+          "ux_lead",
+          8.0
+        ]
+      ]
+    },
+    "reference_fidelity": {
+      "status": "scored",
+      "score": 8.1,
+      "expert_score": 8.1,
+      "anchor": null,
+      "capped_by_audit": false,
+      "votes": [
+        [
+          "art_director",
+          8.1
+        ]
+      ]
+    },
+    "interaction_motion": {
+      "status": "scored",
+      "score": 7.5,
+      "expert_score": 7.5,
+      "anchor": null,
+      "capped_by_audit": false,
+      "votes": [
+        [
+          "motion_designer",
+          7.5
+        ]
+      ]
+    },
+    "a11y_responsive": {
+      "status": "scored",
+      "score": 8.5,
+      "expert_score": 8.5,
+      "anchor": 10.0,
+      "capped_by_audit": false,
+      "votes": [
+        [
+          "a11y_qa",
+          8.5
+        ]
+      ]
+    }
+  },
+  "fix_queue": [
+    {
+      "priority": 90.0,
+      "severity": "major",
+      "dim": "hierarchy_composition",
+      "expert": "art_director",
+      "where": ".apps 2x2",
+      "problem": "Four articles share equal width even though most tonnage is detergent cakes and powders.",
+      "fix": "Make the detergent article span both columns with a 3px blue left inset. Keep the other three as a single row."
+    },
+    {
+      "priority": 90.0,
+      "severity": "major",
+      "dim": "hierarchy_composition",
+      "expert": "art_director",
+      "where": "section#look .cols",
+      "problem": "The tube photo vs one-sentence copy still reads even and hollow.",
+      "fix": "Add cols--top, cap the product photo, align copy to the photo top edge."
+    },
+    {
+      "priority": 84.0,
+      "severity": "major",
+      "dim": "distinctiveness",
+      "expert": "skeptic",
+      "where": ".apps 2x2",
+      "problem": "Four equal cells is the interchangeable applications grid. User demanded these four topics stay.",
+      "fix": "Keep the four topics but make detergent full-width and collapse the other three to shorter plant-locked lines."
+    },
+    {
+      "priority": 84.0,
+      "severity": "major",
+      "dim": "distinctiveness",
+      "expert": "skeptic",
+      "where": "ul.traits",
+      "problem": "Middle card is surfactant 101 with no plant fact.",
+      "fix": "Replace the middle trait with Klett 20-25 as dispatched."
+    },
+    {
+      "priority": 84.0,
+      "severity": "major",
+      "dim": "distinctiveness",
+      "expert": "skeptic",
+      "where": "h2#st Why the molecule cleans",
+      "problem": "Why-X heading plus repeated amphiphile lesson.",
+      "fix": "Retitle to We sell the acid, not the salt."
+    },
+    {
+      "priority": 48.0,
+      "severity": "major",
+      "dim": "spacing_rhythm",
+      "expert": "systems_designer",
+      "where": ".traits vs .apps",
+      "problem": "Same ruled-cell language, two specs.",
+      "fix": "At 768px set both to padding s5 0, title margin s2, column-gap s7."
+    },
+    {
+      "priority": 48.0,
+      "severity": "major",
+      "dim": "ux_clarity",
+      "expert": "ux_lead",
+      "where": "section#ap",
+      "problem": "After applications, the next block restates tonnes and 90 +/- 1 with no quote control.",
+      "fix": "Delete the first two #ap bullets. Add a quote CTA under apps."
+    },
+    {
+      "priority": 28.0,
+      "severity": "minor",
+      "dim": "typography",
+      "expert": "typographer",
+      "where": "#intro second paragraph",
+      "problem": "The line ends on a stranded a before reformulation.",
+      "fix": "Rewrite so the article a is gone."
+    }
+  ],
+  "warnings": [],
+  "waivers": {
+    "header_phone_removed": "user demand: remove the number from the header (stays in footer and mobile Call bar)",
+    "square_matte_buttons": "user demand: matte finish, no rounded edges, animated",
+    "keep_translucent_banners": "user demand: do not remove inner-page photo banners; navbar-only change",
+    "contact_disclaimer_no_checkbox": "user demand: remove the checkbox, keep the disclaimer as text",
+    "contact_inline_maps": "user demand: instead of Open in Maps links, show the map in the webpage",
+    "labsa_copy_from_reference": "user demand: use shreeshyamgroup.co/Home/Labsa as a content reference; rewrite in RK voice, keep our styling and existing page elements. Do not copy their visual system."
+  }
+}

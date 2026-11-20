@@ -1,0 +1,57 @@
+{
+  "expert": "art_director",
+  "scores": {
+    "hierarchy_composition": {
+      "score": 7.6,
+      "evidence": "Squint on desktop_fold.png: one focal point, the navy pagehead and white h1 LABSA 90% from Gundlav; eye goes next to the tank photo, then to LABSA 90% as we dispatch it. Hierarchy uses size, navy/white contrast, and a tracked kicker. Spec pairs a filled Request a quote with a quieter PDF text link. Pack padding-block is 24px and adjacent .alt bands collapse. Remaining hole: #how is the only centered stack, and .flow is align-items:start so 03 sits as a short island beside 04. Previous overlapping blue lines, cramped FAQ/apps type, .apps-lead indent, hanging Appearance widow, and LABSA 90%from missing space are fixed.",
+      "strengths": [
+        "Navy pagehead h1 is the single squint focal point on desktop_fold.png",
+        "Section order is a chemical-buyer argument, not a SaaS template",
+        "Spec pairs a filled Request a quote with a quieter PDF text link"
+      ],
+      "issues": [
+        {
+          "severity": "major",
+          "where": ".band--center #how",
+          "problem": "How it is made at Gundlav is the only centered heading-plus-lead on a left-aligned page, so desktop_s03.png reads as a mist void between the app row and the process cards.",
+          "fix": "Remove .band--center from the how section. Left-align #how like #use and #faq, keep .band max-width at 42rem, keep pack section padding-block at 24px."
+        },
+        {
+          "severity": "major",
+          "where": ".flow at min-width 768px",
+          "problem": "align-items:start plus short copy in 02 and 03 leaves ragged holes beside taller neighbors.",
+          "fix": "Set .flow {align-items:stretch} so row partners share height. Do not restore large margin-top stagger (user asked to avoid empty space)."
+        },
+        {
+          "severity": "minor",
+          "where": "h1 then #intro",
+          "problem": "Two display lines both open with LABSA 90%.",
+          "fix": "Keep the pagehead h1. Change #intro to As we dispatch it so the second title does not repeat LABSA 90%."
+        }
+      ]
+    },
+    "reference_fidelity": {
+      "score": 7.7,
+      "evidence": "No compare.png. Intro is photo left, kicker, heading, body, 2-col chevron list. Apps are four equal tiles in RK tints, not competitor purple/green. Process has 01-04 badges with odd/even 4px bars but a flat 2x2. Spec table, sample tube, structure, Gundlav pagehead, square matte buttons, no header phone kept.",
+      "strengths": [
+        "Intro is photo-left plus a 2-col chevron list",
+        "Four equal app tiles use RK navy tints, not competitor purple or green",
+        "Process cards keep numbered badges and odd/even 4px side bars"
+      ],
+      "issues": [
+        {
+          "severity": "major",
+          "where": ".flow li:nth-child(even)",
+          "problem": "Reference asked for staggered numbered process cards. Current 2x2 has tops aligned. Large stagger was dropped to clear empty gaps (user demand: avoid empty space).",
+          "fix": "At min-width 768px use a modest transform:translateY(1.25rem) on even items plus matching padding-bottom, not a large margin-top gap."
+        },
+        {
+          "severity": "minor",
+          "where": ".band--center",
+          "problem": "The how block is a centered default.",
+          "fix": "Left-align the how band to match #use and the intro copy column."
+        }
+      ]
+    }
+  }
+}

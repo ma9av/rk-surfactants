@@ -236,5 +236,73 @@
       "interaction_motion": 7.5,
       "a11y_responsive": 8.0
     }
+  },
+  {
+    "iter": 15,
+    "final": 7.8,
+    "decision": "STOP_PLATEAU",
+    "blockers": 0,
+    "dims": {
+      "hierarchy_composition": 7.5,
+      "typography": 8.0,
+      "color": 8.0,
+      "spacing_rhythm": 8.0,
+      "distinctiveness": 6.5,
+      "ux_clarity": 8.0,
+      "reference_fidelity": 8.1,
+      "interaction_motion": 7.5,
+      "a11y_responsive": 8.5
+    }
+  },
+  {
+    "iter": 16,
+    "final": 7.8,
+    "decision": "STOP_MAX_ITER",
+    "blockers": 0,
+    "dims": {
+      "hierarchy_composition": 7.4,
+      "typography": 7.5,
+      "color": 8.0,
+      "spacing_rhythm": 7.5,
+      "distinctiveness": 7.0,
+      "ux_clarity": 8.4,
+      "reference_fidelity": 8.2,
+      "interaction_motion": 8.2,
+      "a11y_responsive": 8.7
+    }
+  },
+  {
+    "iter": 17,
+    "final": 7.9,
+    "decision": "STOP_PLATEAU",
+    "blockers": 0,
+    "dims": {
+      "hierarchy_composition": 7.6,
+      "typography": 8.0,
+      "color": 8.5,
+      "spacing_rhythm": 8.0,
+      "distinctiveness": 7.0,
+      "ux_clarity": 8.0,
+      "reference_fidelity": 7.7,
+      "interaction_motion": 8.0,
+      "a11y_responsive": 8.5
+    }
+  },
+  {
+    "iter": 18,
+    "final": 8.1,
+    "decision": "PASS",
+    "blockers": 0,
+    "dims": {
+      "hierarchy_composition": 8.0,
+      "typography": 8.3,
+      "color": 8.0,
+      "spacing_rhythm": 8.0,
+      "distinctiveness": 7.5,
+      "ux_clarity": 8.5,
+      "reference_fidelity": 8.2,
+      "interaction_motion": 8.0,
+      "a11y_responsive": 8.7
+    }
   }
 ]

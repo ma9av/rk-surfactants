@@ -1,0 +1,51 @@
+{
+  "expert": "systems_designer",
+  "scores": {
+    "color": {
+      "score": 8.5,
+      "evidence": "Paper/mist/deep bands. Audit 0/111 contrast fails. Four RK-blue app tints. Square navy CTAs. Wordmark uses --brand #2f256c.",
+      "strengths": [
+        "Paper/mist/deep bands match DESIGN 60/30 split",
+        "Zero contrast failures on 111 checks",
+        "App tiles stay RK navy tints, not competitor purple"
+      ],
+      "issues": [
+        {
+          "severity": "minor",
+          "where": ".apps article:nth-child(4)",
+          "problem": "Leather tile fill is raw #e8eef6, outside the named set.",
+          "fix": "Replace #e8eef6 with color-mix(in srgb, var(--blue) 8%, var(--mist))."
+        }
+      ]
+    },
+    "spacing_rhythm": {
+      "score": 8.0,
+      "evidence": "Audit 99.1% 4px grid. .pack section padding is s5 (24px). Prior overlapping bars, 11rem min-height, and stagger margin-top are gone. .flow is 2x2 with align-items:start; card 03 shorter than 04.",
+      "strengths": [
+        "99.1% spacing grid adherence on a 4px scale",
+        "s5 pack padding without 11rem empty card holes",
+        "Process left/right 4px bars do not overlap"
+      ],
+      "issues": [
+        {
+          "severity": "major",
+          "where": ".flow at min-width 768px",
+          "problem": "align-items:start leaves 03 shorter than 04; row bottoms and the 4px end bars do not line up.",
+          "fix": "Set .flow { align-items: stretch; } and do not add min-height."
+        },
+        {
+          "severity": "minor",
+          "where": ".apps article, .flow li",
+          "problem": "Content tiles use 4px radius. DESIGN limits 4px to photographs.",
+          "fix": "Set border-radius: 0 on .apps article and .flow li."
+        },
+        {
+          "severity": "minor",
+          "where": ".chem .fig img",
+          "problem": "Schematic is max-width 22rem, leaving a paper hole beside it.",
+          "fix": "Set .chem .fig img { max-width: none; width: 100%; }."
+        }
+      ]
+    }
+  }
+}
