@@ -1,0 +1,39 @@
+{
+  "expert": "systems_designer",
+  "scores": {
+    "color": {
+      "score": 8.3,
+      "evidence": "Paper/mist/deep. 0/104 contrast fails.",
+      "strengths": [
+        "Paper/mist/deep split with 0 contrast fails",
+        "Blue as a rare signature",
+        "Square CTAs stay navy"
+      ],
+      "issues": [
+        {
+          "severity": "minor",
+          "where": ".apps fills",
+          "problem": "Tiles still one pale slab.",
+          "fix": "Steepen color-mix 32/20/10/4."
+        }
+      ]
+    },
+    "spacing_rhythm": {
+      "score": 8.2,
+      "evidence": "99% 4px grid. 48/80px pack padding as demanded.",
+      "strengths": [
+        "48/80px pack section padding",
+        "Process stagger with non-overlapping bars",
+        "One 4px photo radius"
+      ],
+      "issues": [
+        {
+          "severity": "minor",
+          "where": ".apps at 1024",
+          "problem": "Detergent tile taller than the others.",
+          "fix": "Keep facts; shorten the h3 so the row height matches better."
+        }
+      ]
+    }
+  }
+}

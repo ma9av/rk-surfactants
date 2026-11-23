@@ -1,0 +1,22 @@
+{
+  "expert": "typographer",
+  "scores": {
+    "typography": {
+      "score": 7.8,
+      "evidence": "Archivo vs IBM Plex, body 16px, 0 long lines. Four-up apps wrap Detergent to 5-6 ragged lines. 9 computed sizes.",
+      "strengths": [
+        "Archivo headings vs IBM Plex Sans body",
+        "Body 16px/1.65, 0 long lines",
+        "h1 tracking tight; mobile h1 two lines"
+      ],
+      "issues": [
+        {
+          "severity": "major",
+          "where": ".apps at 1024px",
+          "problem": "Four columns leave about 25ch; Detergent wraps to 5-6 lines.",
+          "fix": "Keep 4 columns. Shorten Detergent body to two lines with state abbreviations."
+        }
+      ]
+    }
+  }
+}

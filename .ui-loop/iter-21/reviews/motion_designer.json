@@ -1,0 +1,22 @@
+{
+  "expert": "motion_designer",
+  "scores": {
+    "interaction_motion": {
+      "score": 8.2,
+      "evidence": "Ghost quote fills on hover; 3px focus. Tokens 150/200/650ms. Dual reduced-motion.",
+      "strengths": [
+        "Ghost square quote vs filled hover vs 3px focus",
+        "150/200/650ms ease-out",
+        "Dual reduced-motion gate"
+      ],
+      "issues": [
+        {
+          "severity": "minor",
+          "where": ".faq details",
+          "problem": "FAQ snaps open.",
+          "fix": "Rotate plus 45deg on open."
+        }
+      ]
+    }
+  }
+}

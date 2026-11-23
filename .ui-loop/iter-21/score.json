@@ -1,0 +1,214 @@
+{
+  "iter": 21,
+  "final": 7.9,
+  "target": 9.0,
+  "weighted_mean": 7.94,
+  "weakest_dim_score": 6.8,
+  "blockers": [],
+  "incomplete": false,
+  "decision": "STOP_PLATEAU",
+  "dimensions": {
+    "hierarchy_composition": {
+      "status": "scored",
+      "score": 8.0,
+      "expert_score": 8.0,
+      "anchor": null,
+      "capped_by_audit": false,
+      "votes": [
+        [
+          "art_director",
+          8.0
+        ]
+      ]
+    },
+    "typography": {
+      "status": "scored",
+      "score": 7.5,
+      "expert_score": 7.5,
+      "anchor": 10.0,
+      "capped_by_audit": false,
+      "votes": [
+        [
+          "typographer",
+          7.5
+        ]
+      ]
+    },
+    "color": {
+      "status": "scored",
+      "score": 8.3,
+      "expert_score": 8.3,
+      "anchor": 10.0,
+      "capped_by_audit": false,
+      "votes": [
+        [
+          "systems_designer",
+          8.3
+        ]
+      ]
+    },
+    "spacing_rhythm": {
+      "status": "scored",
+      "score": 8.2,
+      "expert_score": 8.2,
+      "anchor": 10.0,
+      "capped_by_audit": false,
+      "votes": [
+        [
+          "systems_designer",
+          8.2
+        ]
+      ]
+    },
+    "distinctiveness": {
+      "status": "scored",
+      "score": 6.8,
+      "expert_score": 6.8,
+      "anchor": 10.0,
+      "capped_by_audit": false,
+      "votes": [
+        [
+          "skeptic",
+          6.8
+        ]
+      ]
+    },
+    "ux_clarity": {
+      "status": "scored",
+      "score": 8.2,
+      "expert_score": 8.2,
+      "anchor": null,
+      "capped_by_audit": false,
+      "votes": [
+        [
+          "ux_lead",
+          8.2
+        ]
+      ]
+    },
+    "reference_fidelity": {
+      "status": "scored",
+      "score": 8.2,
+      "expert_score": 8.2,
+      "anchor": null,
+      "capped_by_audit": false,
+      "votes": [
+        [
+          "art_director",
+          8.2
+        ]
+      ]
+    },
+    "interaction_motion": {
+      "status": "scored",
+      "score": 8.2,
+      "expert_score": 8.2,
+      "anchor": null,
+      "capped_by_audit": false,
+      "votes": [
+        [
+          "motion_designer",
+          8.2
+        ]
+      ]
+    },
+    "a11y_responsive": {
+      "status": "scored",
+      "score": 8.6,
+      "expert_score": 8.6,
+      "anchor": 10.0,
+      "capped_by_audit": false,
+      "votes": [
+        [
+          "a11y_qa",
+          8.6
+        ]
+      ]
+    }
+  },
+  "fix_queue": [
+    {
+      "priority": 76.8,
+      "severity": "major",
+      "dim": "distinctiveness",
+      "expert": "skeptic",
+      "where": "spec Packing / flow 04 / FAQ",
+      "problem": "Barrel-filled restated in process and FAQ.",
+      "fix": "Keep packing in the spec row. Process 04 lab checks and 200 MT tanks. FAQ 1 unit and tanker."
+    },
+    {
+      "priority": 76.8,
+      "severity": "major",
+      "dim": "distinctiveness",
+      "expert": "skeptic",
+      "where": ".apps Textile Agriculture Leather",
+      "problem": "Openings are generic use-cases.",
+      "fix": "Keep four tiles. Keep plant constraints (same CoA, no 50 kg, free-acid lot)."
+    },
+    {
+      "priority": 72.0,
+      "severity": "major",
+      "dim": "hierarchy_composition",
+      "expert": "art_director",
+      "where": ".apps article:first-child",
+      "problem": "Detergent manufacturing wraps to two title lines and a long body vs shorter tiles.",
+      "fix": "Rename h3 to Detergent plants. Keep the 700-800 MT and six-state facts."
+    },
+    {
+      "priority": 70.0,
+      "severity": "major",
+      "dim": "typography",
+      "expert": "typographer",
+      "where": ".apps 4-col",
+      "problem": "Detergent manufacturing wraps; Leather splits 5.5-6.5.",
+      "fix": "Rename h3 to Detergent plants. Wrap 5.5-6.5 in nowrap. Keep the facts."
+    },
+    {
+      "priority": 38.4,
+      "severity": "minor",
+      "dim": "distinctiveness",
+      "expert": "skeptic",
+      "where": "#intro p",
+      "problem": "Intro restates appearance already in the spec table.",
+      "fix": "Keep the Plot 79/80 sulphonation sentence; table keeps appearance."
+    },
+    {
+      "priority": 21.6,
+      "severity": "minor",
+      "dim": "spacing_rhythm",
+      "expert": "systems_designer",
+      "where": ".apps at 1024",
+      "problem": "Detergent tile taller than the others.",
+      "fix": "Keep facts; shorten the h3 so the row height matches better."
+    },
+    {
+      "priority": 21.6,
+      "severity": "minor",
+      "dim": "ux_clarity",
+      "expert": "ux_lead",
+      "where": "FAQ 1 and 3",
+      "problem": "Both repeat barrel vs tanker.",
+      "fix": "Keep dispatch path in FAQ 1. FAQ 3 storage only."
+    },
+    {
+      "priority": 18.0,
+      "severity": "minor",
+      "dim": "reference_fidelity",
+      "expert": "art_director",
+      "where": ".apps fills",
+      "problem": "Four tints still read as one pale bar.",
+      "fix": "Steepen mixes to 32/20/10/4 percent blue on mist."
+    }
+  ],
+  "warnings": [],
+  "waivers": {
+    "header_phone_removed": "user demand: remove the number from the header (stays in footer and mobile Call bar)",
+    "square_matte_buttons": "user demand: matte finish, no rounded edges, animated",
+    "keep_translucent_banners": "user demand: do not remove inner-page photo banners; navbar-only change",
+    "contact_disclaimer_no_checkbox": "user demand: remove the checkbox, keep the disclaimer as text",
+    "contact_inline_maps": "user demand: instead of Open in Maps links, show the map in the webpage",
+    "labsa_copy_from_reference": "user demand: use shreeshyamgroup.co/Home/Labsa as a content reference; rewrite in RK voice, keep our styling and existing page elements. Do not copy their visual system.",
+    "labsa_ref_layout": "user demand: use pasted reference images for layout (tinted cards, process steps, intro split) with our theme colors; fix overlapping blue lines and FAQ/apps text",
+    "labsa_lean_copy": "user demand: remove unnecessary text and repeated Request a quote, not the good information; remove unnecessary subheadings; retrieve necessary plant facts; keep designed section breaks"
+  }
+}

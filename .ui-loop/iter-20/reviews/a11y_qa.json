@@ -1,0 +1,22 @@
+{
+  "expert": "a11y_qa",
+  "scores": {
+    "a11y_responsive": {
+      "score": 8.7,
+      "evidence": "0 blockers, 0 contrast fails, 0 taps under 44px after footer min-width.",
+      "strengths": [
+        "0 contrast fails, 23/23 visible focus, 0 taps under 44px",
+        "Skip, one h1, native FAQ",
+        "375 and tablet reflow"
+      ],
+      "issues": [
+        {
+          "severity": "minor",
+          "where": "div.bar",
+          "problem": "Call bar is outside a landmark.",
+          "fix": "Wrap in nav aria-label Get a quote."
+        }
+      ]
+    }
+  }
+}

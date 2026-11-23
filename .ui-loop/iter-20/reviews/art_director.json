@@ -1,0 +1,39 @@
+{
+  "expert": "art_director",
+  "scores": {
+    "hierarchy_composition": {
+      "score": 8.3,
+      "evidence": "Squint: navy pagehead h1. Quote in chrome only. Intro hole gone. 80px pack padding.",
+      "strengths": [
+        "Navy pagehead h1 is the single squint focal point",
+        "Section order is a buyer argument",
+        "Paper/mist bands with 80px pack padding"
+      ],
+      "issues": [
+        {
+          "severity": "minor",
+          "where": ".apps article:first-child",
+          "problem": "Detergent still wraps to four body lines.",
+          "fix": "Two lines: 700-800 MT cake and powder in Gujarat, MH, CG, MP, TN, Kerala."
+        }
+      ]
+    },
+    "reference_fidelity": {
+      "score": 8.5,
+      "evidence": "Intro photo-left plus chevrons; four tiles; staggered 01-04. Quote not in spec/apps/FAQ.",
+      "strengths": [
+        "Intro split matches photo-left plus chevron list",
+        "Four app tiles and 01-04 stagger",
+        "RK navy pagehead, square buttons, tube, structure, spec stay"
+      ],
+      "issues": [
+        {
+          "severity": "minor",
+          "where": ".apps fills",
+          "problem": "Four tints still collapse to one pale bar.",
+          "fix": "Steepen fills to 22/14/8/16 percent blue on mist."
+        }
+      ]
+    }
+  }
+}

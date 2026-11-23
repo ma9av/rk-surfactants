@@ -1,0 +1,34 @@
+{
+  "expert": "skeptic",
+  "scores": {
+    "distinctiveness": {
+      "score": 6.8,
+      "evidence": "Plant facts pass cover-the-logo. Catalog H2s Specification/Applications/How it is made are a user demand (restore necessary section titles, not cute subheads). Four tiles and chrome quote not penalised.",
+      "strengths": [
+        "Plot 79/80, 75 MT a day, RKSPL tanker, ISO 9001:2015",
+        "Acid-not-salt on a plant sample tube",
+        "Detergent tile names 700-800 MT and six states"
+      ],
+      "issues": [
+        {
+          "severity": "major",
+          "where": "spec Packing / flow 04 / FAQ",
+          "problem": "Barrel-filled restated in process and FAQ.",
+          "fix": "Keep packing in the spec row. Process 04 lab checks and 200 MT tanks. FAQ 1 unit and tanker."
+        },
+        {
+          "severity": "major",
+          "where": ".apps Textile Agriculture Leather",
+          "problem": "Openings are generic use-cases.",
+          "fix": "Keep four tiles. Keep plant constraints (same CoA, no 50 kg, free-acid lot)."
+        },
+        {
+          "severity": "minor",
+          "where": "#intro p",
+          "problem": "Intro restates appearance already in the spec table.",
+          "fix": "Keep the Plot 79/80 sulphonation sentence; table keeps appearance."
+        }
+      ]
+    }
+  }
+}

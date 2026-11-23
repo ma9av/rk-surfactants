@@ -13,8 +13,8 @@ ORIG = '.ui-loop/img-originals'
 
 # per-photo overrides: target mean luma, white-balance strength, shadow tint strength
 SETS = {
-    'tank-labsa':        dict(),
-    'tank-red':          dict(),
+    'tank-labsa':        dict(target=.52, wb=.35, src='tank-labsa.jpg'),
+    'tank-red':          dict(target=.52, wb=.35, src='tank-red.jpg'),
     'plant-team':        dict(wb=.45),
     'plant-wide':        dict(),
     'lab':               dict(target=.55),

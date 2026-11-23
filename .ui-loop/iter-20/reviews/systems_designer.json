@@ -1,0 +1,39 @@
+{
+  "expert": "systems_designer",
+  "scores": {
+    "color": {
+      "score": 8.5,
+      "evidence": "Paper/mist/deep. 0/96 contrast fails.",
+      "strengths": [
+        "Paper/mist/deep bands; 0 contrast fails",
+        "Blue reserved for links and rules",
+        "Flat navy CTAs"
+      ],
+      "issues": [
+        {
+          "severity": "minor",
+          "where": ".apps fills",
+          "problem": "Tiles still read as one pale slab.",
+          "fix": "Steepen color-mix 28/18/10/6 percent."
+        }
+      ]
+    },
+    "spacing_rhythm": {
+      "score": 8.3,
+      "evidence": "98.9% 4px grid. 48/80px pack padding as designed breaks. Photo taller than copy.",
+      "strengths": [
+        "98.9% 4px grid; 48/80px pack padding",
+        "Process stagger with non-overlapping bars",
+        "One 4px radius"
+      ],
+      "issues": [
+        {
+          "severity": "minor",
+          "where": ".apps at 1024",
+          "problem": "Detergent tile taller than the other three.",
+          "fix": "Shorten Detergent copy so heights match."
+        }
+      ]
+    }
+  }
+}

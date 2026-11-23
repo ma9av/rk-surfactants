@@ -1,0 +1,34 @@
+{
+  "expert": "skeptic",
+  "scores": {
+    "distinctiveness": {
+      "score": 7.2,
+      "evidence": "Cover-the-logo passes on Plot 79/80, tanker, 75 MT, six states. Fails on catalog H2s As dispatched, Where it is specified, How it is made. Intro still a chemistry definition.",
+      "strengths": [
+        "Plant-locked proof: Plot 79/80, RKSPL tanker, 75 MT, 700-800 MT to named states",
+        "Acid-not-salt sits on a plant sample tube",
+        "FAQ asks desk questions, not encyclopedia"
+      ],
+      "issues": [
+        {
+          "severity": "major",
+          "where": "#intro h2 and intro p",
+          "problem": "As dispatched is empty; lede is a chemistry definition.",
+          "fix": "Retitle to Barrel-filled at Plot 79/80. One dispatch fact the table does not carry."
+        },
+        {
+          "severity": "major",
+          "where": "h2#use and h2#how",
+          "problem": "Catalog Mad Libs. Gundlav stripped from process title.",
+          "fix": "Rename use to Cake plants in six states. Rename how to Four vessels at Plot 79/80."
+        },
+        {
+          "severity": "major",
+          "where": "intro vs spec vs #st",
+          "problem": "Light brown / neutralize restated.",
+          "fix": "Cut intro to one Plot 79/80 sentence. Neutralize only under acid-not-salt."
+        }
+      ]
+    }
+  }
+}

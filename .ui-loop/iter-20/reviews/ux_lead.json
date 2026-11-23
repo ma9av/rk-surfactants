@@ -1,0 +1,22 @@
+{
+  "expert": "ux_lead",
+  "scores": {
+    "ux_clarity": {
+      "score": 7.5,
+      "evidence": "Fold clear. Quote chrome only. Packing still five times including intro h2.",
+      "strengths": [
+        "Fold names product, 90 +/- 1, Gundlav, quote",
+        "Quote is header, footer, mobile bar only",
+        "Acid-not-salt plus 700-800 MT"
+      ],
+      "issues": [
+        {
+          "severity": "major",
+          "where": "intro h2 / spec Packing / flow 04 / FAQ",
+          "problem": "Barrel/MT still stated five times. Intro h2 is Barrel-filled next to a tank photo.",
+          "fix": "Rename intro h2 to the 75 MT/day claim. Keep packing only in the spec table. Delete FAQ."
+        }
+      ]
+    }
+  }
+}

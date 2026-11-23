@@ -1,0 +1,39 @@
+{
+  "expert": "systems_designer",
+  "scores": {
+    "color": {
+      "score": 8.5,
+      "evidence": "Paper/mist/deep. 0/102 contrast fails. Ghost overlay gone.",
+      "strengths": [
+        "Paper/mist/deep split; 0 contrast fails",
+        "Process and spec use navy tints",
+        "Blue reserved for links and table rule"
+      ],
+      "issues": [
+        {
+          "severity": "minor",
+          "where": ".apps article fills",
+          "problem": "Four tints read as one pale slab.",
+          "fix": "Step color-mix of --blue on --mist 18/12/8/4%."
+        }
+      ]
+    },
+    "spacing_rhythm": {
+      "score": 8.5,
+      "evidence": "99% 4px grid. Pack s7/s8 as designed breaks. Process stagger. Intro photo taller than traits.",
+      "strengths": [
+        "99% 4px grid; 48/80px pack padding as band breaks",
+        "Process stagger with non-overlapping bars",
+        "Chem pair heights match; ghost gone"
+      ],
+      "issues": [
+        {
+          "severity": "minor",
+          "where": "intro .cols--top",
+          "problem": "Photo taller than copy, paper rag under traits.",
+          "fix": "Push .traits to margin-top:auto in a flex copy column."
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "expert": "motion_designer",
+  "scores": {
+    "interaction_motion": {
+      "score": 8.0,
+      "evidence": "Settled photos show no leftover curtain. CSS: translucent color-mix wash not opaque --deep. Directions: RTL default, tall rise/drop, product clip, portrait iris, grid floor, pack-shot slant. Reduced-motion skips overlay. audit has_motion true, overshoot_easing false.",
+      "strengths": [
+        "Translucent washes with picture-specific directions instead of one opaque LTR curtain.",
+        "Reduced-motion skip is double-gated."
+      ],
+      "issues": [
+        {
+          "severity": "minor",
+          "where": "html.motion .ph::before",
+          "problem": "Overlay 0.95s and image 1.4s over the 500-800ms entrance cap.",
+          "fix": "Overlay 700ms; image transform 650ms."
+        },
+        {
+          "severity": "minor",
+          "where": ".ph--product.is-in::before",
+          "problem": "inset(100% 0 0 0) peels from the top. Fill-from-bottom was the intent.",
+          "fix": "inset(0 0 100% 0) so the wash recedes upward."
+        },
+        {
+          "severity": "minor",
+          "where": ".ph::before easing",
+          "problem": "cubic-bezier(.7,0,.2,1) is ease-in weighted.",
+          "fix": "Use var(--ease)."
+        },
+        {
+          "severity": "minor",
+          "where": ".photos even stills",
+          "problem": "Even grid stills collapse axis-aligned; slant exists only on pack-shot.",
+          "fix": "Give even grid stills the pack-shot polygon."
+        }
+      ]
+    }
+  }
+}

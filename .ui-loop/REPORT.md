@@ -1,6 +1,6 @@
 # UI review loop report
 
-Target: 8.0  |  Profile: web
+Target: 9.0  |  Profile: web
 
 | Iter | Final | Blockers | Decision |
 |---|---|---|---|
@@ -22,29 +22,33 @@ Target: 8.0  |  Profile: web
 | 16 | 7.8 | 0 | STOP_MAX_ITER |
 | 17 | 7.9 | 0 | STOP_PLATEAU |
 | 18 | 8.1 | 0 | PASS |
+| 19 | 8.1 | 0 | STOP_PLATEAU |
+| 20 | 8.1 | 0 | STOP_PLATEAU |
+| 21 | 7.9 | 0 | STOP_PLATEAU |
+| 22 | 7.8 | 0 | STOP_PLATEAU |
 
 ## Final dimension scores
 
 | Dimension | Score | Note |
 |---|---|---|
-| hierarchy_composition | 8.0 |  |
-| typography | 8.3 |  |
-| color | 8.0 |  |
-| spacing_rhythm | 8.0 |  |
-| distinctiveness | 7.5 |  |
-| ux_clarity | 8.5 |  |
-| reference_fidelity | 8.2 |  |
+| hierarchy_composition | 7.5 |  |
+| typography | 8.0 |  |
+| color | 8.2 |  |
+| spacing_rhythm | 8.3 |  |
+| distinctiveness | 6.6 |  |
+| ux_clarity | 7.5 |  |
+| reference_fidelity | 8.0 |  |
 | interaction_motion | 8.0 |  |
 | a11y_responsive | 8.7 |  |
 
 ## Still open
 
-- **hierarchy_composition** .chem .fig and .chem::after: Full-width SVG plus a 7% ghost leave a pale field under the strokes. (fix: Cap .chem .fig img at max-width 28rem. Set .chem::after {content:none}.)
-- **distinctiveness** .faq details biodegradable feedstock: Still encyclopedia copy. (fix: Replace with Do you send a CoA and SDS before the first order?)
-- **distinctiveness** #intro h2: As we dispatch it is an empty heading; lede still opens with a definition. (fix: Retitle to Barrel-filled at Plot 79/80 and start at At Plot 79/80 we sulphonate...)
-- **distinctiveness** .faq cosmetics and personal use: Two FAQ rows answer the same no consumer pack. (fix: Keep one personal-size question; replace the other with What is on the CoA.)
-- **spacing_rhythm** section.chem .cols--top / .ph--product: Beaker is shorter than heading plus full-width schematic, leaving a mist hole under the photo. (fix: Cap the schematic at 28rem and stretch the photo column, or drop the ghost.)
-- **color** .chem::after vs .chem .fig img: Ghost structure sits on the solid schematic as overlapping blue lines. (fix: Set .pack .chem::after{content:none}.)
+- **hierarchy_composition** desktop_fold.png / .pagehead + intro figure.ph: Fold squint fails the one-focal test. Two similar industrial stills stacked. (fix: Point .pagehead--beaker at the sample-tube still. Leave storage-tanks only on the intro figure.)
+- **hierarchy_composition** .apps 4-up: Four equal tiles flatten the 700-800 MT detergent story. (fix: Make the first article grid-column span 2. Keep four tiles.)
+- **distinctiveness** pagehead h1 and lead: Headline is a category SKU. Gundlav, Valsad, Gujarat not in the hero. (fix: Lead: 90 +/- 1 from Gundlav, Valsad, Gujarat.)
+- **distinctiveness** .apps Textile Agriculture Leather: Openings are generic use-cases. (fix: Lead with plant constraints.)
+- **distinctiveness** intro spec flow FAQ: Same plant numbers restated. (fix: Keep packing in spec; FAQ tanker only.)
+- **ux_clarity** .pagehead p: Subhead says made at Plot 79/80. City and state not in the fold. (fix: Lead with Gundlav, Valsad, Gujarat. Plot only in the footer.)
 
 ## Waived at the user's request
 
@@ -54,4 +58,6 @@ Target: 8.0  |  Profile: web
 - contact_disclaimer_no_checkbox: user demand: remove the checkbox, keep the disclaimer as text
 - contact_inline_maps: user demand: instead of Open in Maps links, show the map in the webpage
 - labsa_copy_from_reference: user demand: use shreeshyamgroup.co/Home/Labsa as a content reference; rewrite in RK voice, keep our styling and existing page elements. Do not copy their visual system.
-- labsa_ref_layout: user demand: use pasted reference images for layout (tinted cards, process steps, intro split) with our theme colors; fix overlapping blue lines and FAQ/apps text; avoid empty space
+- labsa_ref_layout: user demand: use pasted reference images for layout (tinted cards, process steps, intro split) with our theme colors; fix overlapping blue lines and FAQ/apps text
+- labsa_lean_copy: user demand: remove unnecessary text and repeated Request a quote, not the good information; remove unnecessary subheadings; retrieve necessary plant facts; keep designed section breaks
+- photo_reveal_translucent_varied: user demand: different image animations, not all left-to-right; translucent overlay instead of opaque

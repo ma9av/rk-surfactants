@@ -1,0 +1,215 @@
+{
+  "iter": 22,
+  "final": 7.8,
+  "target": 9.0,
+  "weighted_mean": 7.79,
+  "weakest_dim_score": 6.6,
+  "blockers": [],
+  "incomplete": false,
+  "decision": "STOP_PLATEAU",
+  "dimensions": {
+    "hierarchy_composition": {
+      "status": "scored",
+      "score": 7.5,
+      "expert_score": 7.5,
+      "anchor": null,
+      "capped_by_audit": false,
+      "votes": [
+        [
+          "art_director",
+          7.5
+        ]
+      ]
+    },
+    "typography": {
+      "status": "scored",
+      "score": 8.0,
+      "expert_score": 8.0,
+      "anchor": 10.0,
+      "capped_by_audit": false,
+      "votes": [
+        [
+          "typographer",
+          8.0
+        ]
+      ]
+    },
+    "color": {
+      "status": "scored",
+      "score": 8.2,
+      "expert_score": 8.2,
+      "anchor": 10.0,
+      "capped_by_audit": false,
+      "votes": [
+        [
+          "systems_designer",
+          8.2
+        ]
+      ]
+    },
+    "spacing_rhythm": {
+      "status": "scored",
+      "score": 8.3,
+      "expert_score": 8.3,
+      "anchor": 10.0,
+      "capped_by_audit": false,
+      "votes": [
+        [
+          "systems_designer",
+          8.3
+        ]
+      ]
+    },
+    "distinctiveness": {
+      "status": "scored",
+      "score": 6.6,
+      "expert_score": 6.6,
+      "anchor": 10.0,
+      "capped_by_audit": false,
+      "votes": [
+        [
+          "skeptic",
+          6.6
+        ]
+      ]
+    },
+    "ux_clarity": {
+      "status": "scored",
+      "score": 7.5,
+      "expert_score": 7.5,
+      "anchor": null,
+      "capped_by_audit": false,
+      "votes": [
+        [
+          "ux_lead",
+          7.5
+        ]
+      ]
+    },
+    "reference_fidelity": {
+      "status": "scored",
+      "score": 8.0,
+      "expert_score": 8.0,
+      "anchor": null,
+      "capped_by_audit": false,
+      "votes": [
+        [
+          "art_director",
+          8.0
+        ]
+      ]
+    },
+    "interaction_motion": {
+      "status": "scored",
+      "score": 8.0,
+      "expert_score": 8.0,
+      "anchor": null,
+      "capped_by_audit": false,
+      "votes": [
+        [
+          "motion_designer",
+          8.0
+        ]
+      ]
+    },
+    "a11y_responsive": {
+      "status": "scored",
+      "score": 8.7,
+      "expert_score": 8.7,
+      "anchor": 10.0,
+      "capped_by_audit": false,
+      "votes": [
+        [
+          "a11y_qa",
+          8.7
+        ]
+      ]
+    }
+  },
+  "fix_queue": [
+    {
+      "priority": 90.0,
+      "severity": "major",
+      "dim": "hierarchy_composition",
+      "expert": "art_director",
+      "where": "desktop_fold.png / .pagehead + intro figure.ph",
+      "problem": "Fold squint fails the one-focal test. Two similar industrial stills stacked.",
+      "fix": "Point .pagehead--beaker at the sample-tube still. Leave storage-tanks only on the intro figure."
+    },
+    {
+      "priority": 90.0,
+      "severity": "major",
+      "dim": "hierarchy_composition",
+      "expert": "art_director",
+      "where": ".apps 4-up",
+      "problem": "Four equal tiles flatten the 700-800 MT detergent story.",
+      "fix": "Make the first article grid-column span 2. Keep four tiles."
+    },
+    {
+      "priority": 81.6,
+      "severity": "major",
+      "dim": "distinctiveness",
+      "expert": "skeptic",
+      "where": "pagehead h1 and lead",
+      "problem": "Headline is a category SKU. Gundlav, Valsad, Gujarat not in the hero.",
+      "fix": "Lead: 90 +/- 1 from Gundlav, Valsad, Gujarat."
+    },
+    {
+      "priority": 81.6,
+      "severity": "major",
+      "dim": "distinctiveness",
+      "expert": "skeptic",
+      "where": ".apps Textile Agriculture Leather",
+      "problem": "Openings are generic use-cases.",
+      "fix": "Lead with plant constraints."
+    },
+    {
+      "priority": 81.6,
+      "severity": "major",
+      "dim": "distinctiveness",
+      "expert": "skeptic",
+      "where": "intro spec flow FAQ",
+      "problem": "Same plant numbers restated.",
+      "fix": "Keep packing in spec; FAQ tanker only."
+    },
+    {
+      "priority": 60.0,
+      "severity": "major",
+      "dim": "ux_clarity",
+      "expert": "ux_lead",
+      "where": ".pagehead p",
+      "problem": "Subhead says made at Plot 79/80. City and state not in the fold.",
+      "fix": "Lead with Gundlav, Valsad, Gujarat. Plot only in the footer."
+    },
+    {
+      "priority": 30.0,
+      "severity": "minor",
+      "dim": "ux_clarity",
+      "expert": "ux_lead",
+      "where": ".apps Textile Agriculture Leather",
+      "problem": "Open with category-use lines; plant constraints buried.",
+      "fix": "Lead with plant-specific sentence then the use."
+    },
+    {
+      "priority": 28.0,
+      "severity": "minor",
+      "dim": "typography",
+      "expert": "typographer",
+      "where": ".apps article:nth-child(4) p",
+      "problem": "nowrap keeps 5.5-6.5 intact but the token still drops a line.",
+      "fix": "Wrap 'Same free-acid 5.5-6.5' in nowrap."
+    }
+  ],
+  "warnings": [],
+  "waivers": {
+    "header_phone_removed": "user demand: remove the number from the header (stays in footer and mobile Call bar)",
+    "square_matte_buttons": "user demand: matte finish, no rounded edges, animated",
+    "keep_translucent_banners": "user demand: do not remove inner-page photo banners; navbar-only change",
+    "contact_disclaimer_no_checkbox": "user demand: remove the checkbox, keep the disclaimer as text",
+    "contact_inline_maps": "user demand: instead of Open in Maps links, show the map in the webpage",
+    "labsa_copy_from_reference": "user demand: use shreeshyamgroup.co/Home/Labsa as a content reference; rewrite in RK voice, keep our styling and existing page elements. Do not copy their visual system.",
+    "labsa_ref_layout": "user demand: use pasted reference images for layout (tinted cards, process steps, intro split) with our theme colors; fix overlapping blue lines and FAQ/apps text",
+    "labsa_lean_copy": "user demand: remove unnecessary text and repeated Request a quote, not the good information; remove unnecessary subheadings; retrieve necessary plant facts; keep designed section breaks",
+    "photo_reveal_translucent_varied": "user demand: different image animations, not all left-to-right; translucent overlay instead of opaque"
+  }
+}

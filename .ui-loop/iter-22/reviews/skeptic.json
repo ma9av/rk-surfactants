@@ -1,0 +1,33 @@
+{
+  "expert": "skeptic",
+  "scores": {
+    "distinctiveness": {
+      "score": 6.6,
+      "evidence": "Fold h1 is the SKU LABSA 90%. Scroll has 75 MT/day, RKSPL VALSAD, 700-800 MT, acid-not-salt. Catalog headings are user demands. Textile/Agriculture/Leather still encyclopedia openings.",
+      "strengths": [
+        "Acid-not-salt with sample tube",
+        "Detergent tile names 700-800 MT"
+      ],
+      "issues": [
+        {
+          "severity": "major",
+          "where": "pagehead h1 and lead",
+          "problem": "Headline is a category SKU. Gundlav, Valsad, Gujarat not in the hero.",
+          "fix": "Lead: 90 +/- 1 from Gundlav, Valsad, Gujarat."
+        },
+        {
+          "severity": "major",
+          "where": ".apps Textile Agriculture Leather",
+          "problem": "Openings are generic use-cases.",
+          "fix": "Lead with plant constraints."
+        },
+        {
+          "severity": "major",
+          "where": "intro spec flow FAQ",
+          "problem": "Same plant numbers restated.",
+          "fix": "Keep packing in spec; FAQ tanker only."
+        }
+      ]
+    }
+  }
+}

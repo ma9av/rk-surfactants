@@ -1,0 +1,27 @@
+{
+  "expert": "typographer",
+  "scores": {
+    "typography": {
+      "score": 8.0,
+      "evidence": "Archivo 700 stretch 112% vs IBM Plex Sans. Body 16px/1.65; h1 44px tracking -0.025em. Detergent plants is one line. Leather 5.5-6.5 still drops to its own line after free-acid.",
+      "strengths": [
+        "Archivo vs IBM Plex with distinct roles.",
+        "Body 16px/1.65, 0 long lines."
+      ],
+      "issues": [
+        {
+          "severity": "minor",
+          "where": ".apps article:nth-child(4) p",
+          "problem": "nowrap keeps 5.5-6.5 intact but the token still drops a line.",
+          "fix": "Wrap 'Same free-acid 5.5-6.5' in nowrap."
+        },
+        {
+          "severity": "minor",
+          "where": ".pagehead p",
+          "problem": "Lead wraps so Plot 79/80 sits alone on line two.",
+          "fix": "nowrap the place phrase."
+        }
+      ]
+    }
+  }
+}

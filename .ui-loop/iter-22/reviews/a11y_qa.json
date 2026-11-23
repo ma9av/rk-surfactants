@@ -1,0 +1,21 @@
+{
+  "expert": "a11y_qa",
+  "scores": {
+    "a11y_responsive": {
+      "score": 8.7,
+      "evidence": "Audit 0 blockers; 0 contrast fails; 0 taps under 44; no 375 overflow; 21/21 focus. Photo wash gated by html.motion and prefers-reduced-motion.",
+      "strengths": [
+        "Audit clean",
+        "Layout reflows desktop to mobile"
+      ],
+      "issues": [
+        {
+          "severity": "minor",
+          "where": "ol.flow .flow-n",
+          "problem": "Visible 01-04 badges are aria-hidden.",
+          "fix": "Remove aria-hidden from .flow-n."
+        }
+      ]
+    }
+  }
+}

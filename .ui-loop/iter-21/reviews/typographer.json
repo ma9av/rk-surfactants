@@ -1,0 +1,22 @@
+{
+  "expert": "typographer",
+  "scores": {
+    "typography": {
+      "score": 7.5,
+      "evidence": "Archivo vs Plex, 16px body, kickers gone. Detergent h3 two lines; body ragged in 4-col.",
+      "strengths": [
+        "Archivo heads vs IBM Plex Sans body",
+        "Body 16px/1.65, 0 long lines",
+        "Kickers removed"
+      ],
+      "issues": [
+        {
+          "severity": "major",
+          "where": ".apps 4-col",
+          "problem": "Detergent manufacturing wraps; Leather splits 5.5-6.5.",
+          "fix": "Rename h3 to Detergent plants. Wrap 5.5-6.5 in nowrap. Keep the facts."
+        }
+      ]
+    }
+  }
+}

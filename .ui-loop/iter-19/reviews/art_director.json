@@ -1,0 +1,39 @@
+{
+  "expert": "art_director",
+  "scores": {
+    "hierarchy_composition": {
+      "score": 8.4,
+      "evidence": "Squint on desktop_fold.png: one dominant mass, navy pagehead and white h1. Quote only in header and footer. Pack padding 80px from 1024. Process 2-col stagger, bars do not overlap.",
+      "strengths": [
+        "Navy pagehead h1 is the single squint focal point",
+        "Section order is a buyer argument",
+        "Paper/mist bands plus 80px pack padding read as designed breaks"
+      ],
+      "issues": [
+        {
+          "severity": "minor",
+          "where": ".apps article",
+          "problem": "Detergent tile is 5 lines; the other three are 2, so stretch leaves empty tint.",
+          "fix": "Shorten Detergent to two lines so all four tiles fill evenly."
+        }
+      ]
+    },
+    "reference_fidelity": {
+      "score": 8.5,
+      "evidence": "Intro photo-left plus chevron list; four RK-tint tiles; numbered process with stagger. Quote in chrome only.",
+      "strengths": [
+        "Intro split matches photo-left plus chevron list",
+        "Four app tiles and 01-04 process keep the reference signature",
+        "RK navy pagehead and footer silhouette stay"
+      ],
+      "issues": [
+        {
+          "severity": "minor",
+          "where": ".apps article fills",
+          "problem": "Four tints collapse to one pale bar at squint.",
+          "fix": "Step fills 16%, 10%, 6%, 12% of --blue on --mist."
+        }
+      ]
+    }
+  }
+}

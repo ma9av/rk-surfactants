@@ -1,0 +1,39 @@
+{
+  "expert": "art_director",
+  "scores": {
+    "hierarchy_composition": {
+      "score": 8.0,
+      "evidence": "Squint: navy pagehead h1. Quote chrome-only. Plant facts restored. Detergent tile taller than the other three.",
+      "strengths": [
+        "Navy pagehead h1 is the single squint focal point",
+        "Buyer section order",
+        "Photo-left intro and staggered process"
+      ],
+      "issues": [
+        {
+          "severity": "major",
+          "where": ".apps article:first-child",
+          "problem": "Detergent manufacturing wraps to two title lines and a long body vs shorter tiles.",
+          "fix": "Rename h3 to Detergent plants. Keep the 700-800 MT and six-state facts."
+        }
+      ]
+    },
+    "reference_fidelity": {
+      "score": 8.2,
+      "evidence": "Intro photo-left plus chevrons; four tiles; staggered 01-04; spec, tube, structure, banners, square buttons. Quote chrome-only.",
+      "strengths": [
+        "Intro split matches photo-left plus chevron list",
+        "Four tiles and 01-04 stagger",
+        "RK pagehead, tube, structure, spec kept"
+      ],
+      "issues": [
+        {
+          "severity": "minor",
+          "where": ".apps fills",
+          "problem": "Four tints still read as one pale bar.",
+          "fix": "Steepen mixes to 32/20/10/4 percent blue on mist."
+        }
+      ]
+    }
+  }
+}

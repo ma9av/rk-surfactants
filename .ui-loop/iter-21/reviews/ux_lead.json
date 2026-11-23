@@ -1,0 +1,22 @@
+{
+  "expert": "ux_lead",
+  "scores": {
+    "ux_clarity": {
+      "score": 8.2,
+      "evidence": "Fold names grade, 90 +/- 1, plant, quote. Spec, 75 MT, 700-800 MT, process, FAQ restored. Quote chrome-only. Kickers gone.",
+      "strengths": [
+        "Fold names the grade, spec, plant, and next action",
+        "Spec, 75 MT/day, 700-800 MT, process, and FAQ are back",
+        "Request a quote is header, footer, and mobile bar only"
+      ],
+      "issues": [
+        {
+          "severity": "minor",
+          "where": "FAQ 1 and 3",
+          "problem": "Both repeat barrel vs tanker.",
+          "fix": "Keep dispatch path in FAQ 1. FAQ 3 storage only."
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,214 @@
+{
+  "iter": 19,
+  "final": 8.1,
+  "target": 9.0,
+  "weighted_mean": 8.14,
+  "weakest_dim_score": 7.2,
+  "blockers": [],
+  "incomplete": false,
+  "decision": "STOP_PLATEAU",
+  "dimensions": {
+    "hierarchy_composition": {
+      "status": "scored",
+      "score": 8.4,
+      "expert_score": 8.4,
+      "anchor": null,
+      "capped_by_audit": false,
+      "votes": [
+        [
+          "art_director",
+          8.4
+        ]
+      ]
+    },
+    "typography": {
+      "status": "scored",
+      "score": 7.8,
+      "expert_score": 7.8,
+      "anchor": 10.0,
+      "capped_by_audit": false,
+      "votes": [
+        [
+          "typographer",
+          7.8
+        ]
+      ]
+    },
+    "color": {
+      "status": "scored",
+      "score": 8.5,
+      "expert_score": 8.5,
+      "anchor": 10.0,
+      "capped_by_audit": false,
+      "votes": [
+        [
+          "systems_designer",
+          8.5
+        ]
+      ]
+    },
+    "spacing_rhythm": {
+      "status": "scored",
+      "score": 8.5,
+      "expert_score": 8.5,
+      "anchor": 10.0,
+      "capped_by_audit": false,
+      "votes": [
+        [
+          "systems_designer",
+          8.5
+        ]
+      ]
+    },
+    "distinctiveness": {
+      "status": "scored",
+      "score": 7.2,
+      "expert_score": 7.2,
+      "anchor": 10.0,
+      "capped_by_audit": false,
+      "votes": [
+        [
+          "skeptic",
+          7.2
+        ]
+      ]
+    },
+    "ux_clarity": {
+      "status": "scored",
+      "score": 8.0,
+      "expert_score": 8.0,
+      "anchor": null,
+      "capped_by_audit": false,
+      "votes": [
+        [
+          "ux_lead",
+          8.0
+        ]
+      ]
+    },
+    "reference_fidelity": {
+      "status": "scored",
+      "score": 8.5,
+      "expert_score": 8.5,
+      "anchor": null,
+      "capped_by_audit": false,
+      "votes": [
+        [
+          "art_director",
+          8.5
+        ]
+      ]
+    },
+    "interaction_motion": {
+      "status": "scored",
+      "score": 8.0,
+      "expert_score": 8.0,
+      "anchor": null,
+      "capped_by_audit": false,
+      "votes": [
+        [
+          "motion_designer",
+          8.0
+        ]
+      ]
+    },
+    "a11y_responsive": {
+      "status": "scored",
+      "score": 8.5,
+      "expert_score": 8.5,
+      "anchor": 10.0,
+      "capped_by_audit": false,
+      "votes": [
+        [
+          "a11y_qa",
+          8.5
+        ]
+      ]
+    }
+  },
+  "fix_queue": [
+    {
+      "priority": 67.2,
+      "severity": "major",
+      "dim": "distinctiveness",
+      "expert": "skeptic",
+      "where": "#intro h2 and intro p",
+      "problem": "As dispatched is empty; lede is a chemistry definition.",
+      "fix": "Retitle to Barrel-filled at Plot 79/80. One dispatch fact the table does not carry."
+    },
+    {
+      "priority": 67.2,
+      "severity": "major",
+      "dim": "distinctiveness",
+      "expert": "skeptic",
+      "where": "h2#use and h2#how",
+      "problem": "Catalog Mad Libs. Gundlav stripped from process title.",
+      "fix": "Rename use to Cake plants in six states. Rename how to Four vessels at Plot 79/80."
+    },
+    {
+      "priority": 67.2,
+      "severity": "major",
+      "dim": "distinctiveness",
+      "expert": "skeptic",
+      "where": "intro vs spec vs #st",
+      "problem": "Light brown / neutralize restated.",
+      "fix": "Cut intro to one Plot 79/80 sentence. Neutralize only under acid-not-salt."
+    },
+    {
+      "priority": 61.6,
+      "severity": "major",
+      "dim": "typography",
+      "expert": "typographer",
+      "where": ".apps at 1024px",
+      "problem": "Four columns leave about 25ch; Detergent wraps to 5-6 lines.",
+      "fix": "Keep 4 columns. Shorten Detergent body to two lines with state abbreviations."
+    },
+    {
+      "priority": 48.0,
+      "severity": "major",
+      "dim": "ux_clarity",
+      "expert": "ux_lead",
+      "where": "traits / spec / apps / FAQ packing",
+      "problem": "Metric tonnes / barrel / no consumer stated five times.",
+      "fix": "Keep packing only in the spec table. Drop Industrial MT trait. Merge FAQ 1 and 3. Cut FAQ documents duplicate."
+    },
+    {
+      "priority": 28.8,
+      "severity": "minor",
+      "dim": "hierarchy_composition",
+      "expert": "art_director",
+      "where": ".apps article",
+      "problem": "Detergent tile is 5 lines; the other three are 2, so stretch leaves empty tint.",
+      "fix": "Shorten Detergent to two lines so all four tiles fill evenly."
+    },
+    {
+      "priority": 18.0,
+      "severity": "minor",
+      "dim": "spacing_rhythm",
+      "expert": "systems_designer",
+      "where": "intro .cols--top",
+      "problem": "Photo taller than copy, paper rag under traits.",
+      "fix": "Push .traits to margin-top:auto in a flex copy column."
+    },
+    {
+      "priority": 15.0,
+      "severity": "minor",
+      "dim": "reference_fidelity",
+      "expert": "art_director",
+      "where": ".apps article fills",
+      "problem": "Four tints collapse to one pale bar at squint.",
+      "fix": "Step fills 16%, 10%, 6%, 12% of --blue on --mist."
+    }
+  ],
+  "warnings": [],
+  "waivers": {
+    "header_phone_removed": "user demand: remove the number from the header (stays in footer and mobile Call bar)",
+    "square_matte_buttons": "user demand: matte finish, no rounded edges, animated",
+    "keep_translucent_banners": "user demand: do not remove inner-page photo banners; navbar-only change",
+    "contact_disclaimer_no_checkbox": "user demand: remove the checkbox, keep the disclaimer as text",
+    "contact_inline_maps": "user demand: instead of Open in Maps links, show the map in the webpage",
+    "labsa_copy_from_reference": "user demand: use shreeshyamgroup.co/Home/Labsa as a content reference; rewrite in RK voice, keep our styling and existing page elements. Do not copy their visual system.",
+    "labsa_ref_layout": "user demand: use pasted reference images for layout (tinted cards, process steps, intro split) with our theme colors; fix overlapping blue lines and FAQ/apps text",
+    "labsa_lean_copy": "user demand: a lot of unnecessary repeated text, with request a quote again and again it looks you are very scared, minimum possible text to convey maximum potential info, do not repeat information, and make it look good with breaking spaces between section and nicely use white spaces to make it look good"
+  }
+}

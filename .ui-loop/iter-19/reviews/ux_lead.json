@@ -1,0 +1,22 @@
+{
+  "expert": "ux_lead",
+  "scores": {
+    "ux_clarity": {
+      "score": 8.0,
+      "evidence": "Fold names product, 90 +/- 1, Gundlav, quote. Quote only in header, footer, mobile bar. Remaining MT/barrel repeats across traits, spec, apps, FAQ.",
+      "strengths": [
+        "Fold names product, 90 +/- 1, Gundlav, Request a quote",
+        "Quote CTA is header, footer, and mobile bar only",
+        "Detergent tile names 700-800 MT and six states"
+      ],
+      "issues": [
+        {
+          "severity": "major",
+          "where": "traits / spec / apps / FAQ packing",
+          "problem": "Metric tonnes / barrel / no consumer stated five times.",
+          "fix": "Keep packing only in the spec table. Drop Industrial MT trait. Merge FAQ 1 and 3. Cut FAQ documents duplicate."
+        }
+      ]
+    }
+  }
+}

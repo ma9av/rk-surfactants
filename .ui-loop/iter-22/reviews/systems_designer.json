@@ -1,0 +1,37 @@
+{
+  "expert": "systems_designer",
+  "scores": {
+    "color": {
+      "score": 8.2,
+      "evidence": "paper/mist/deep split. Audit 0 contrast fails. Pagehead overlay is translucent. .apps mixes still read as one dusty panel.",
+      "strengths": [
+        "0 contrast fails",
+        "Blue as signature chrome"
+      ],
+      "issues": [
+        {
+          "severity": "minor",
+          "where": ".apps article fills",
+          "problem": "22/14/8/16 color-mix still reads as one pale slab.",
+          "fix": "Steepen mixes to 34/20/8/26."
+        }
+      ]
+    },
+    "spacing_rhythm": {
+      "score": 8.3,
+      "evidence": "Audit spacing_grid_adherence 99% desktop. Pack section padding s7/s8. Process stagger even +32px.",
+      "strengths": [
+        "99% 4px grid",
+        "One 4px photo radius; square buttons"
+      ],
+      "issues": [
+        {
+          "severity": "minor",
+          "where": ".apps at 1024",
+          "problem": "Grid stretch leaves empty fill under short copy.",
+          "fix": "align-items: start on .apps."
+        }
+      ]
+    }
+  }
+}

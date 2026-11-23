@@ -22,6 +22,10 @@ Fill from the brief and from measured references. Reviewers score against this f
   - contact.html: remove the checkbox, just keep the disclaimer, and instead of open in maps, show the map in the webpage
   - labsa-90.html: add more details about LABSA 90 using https://shreeshyamgroup.co/Home/Labsa as a reference and copywrite the same text, with our style, so it looks good, with our styling; keep the old elements of our page
   - use pasted Shree Shyam layout (tinted application tiles, staggered process cards, intro photo + arrow list) with RK navy/mist/paper; fix overlapping blue lines; fix cramped applications and FAQ text; avoid a lot of empty spaces
+  - a lot of unnecessary repeated text , with request a quote again and again it looks you are very scared, minimum possible text to convey maximum potential info, do not repeat information , and make it look good with breaking spaces between section and nicely use white spaces to make it look good
+  - the info is very less, i asked to remove unnecessary text, not good information, just remove the unnecesary subheading and request a quote again, retrieve the necessary info
+  - i want you to analyze the whole page and remove gundlav, repeated location wherever unnecessary, and wherever there is gundlav, add valsad, gujarat after it
+  - the animation of the images is good but instead of one type of animation where the blue color is opaque and fades away , instead i want different animations, which suits it, every animation is left to right , try different direction , styles which might suit the images, TRY TRANSLUCNENT INSTEAD OF OPAQUE
 
 ## References (one line each: file, what to take from it)
 - Vico Forge footer: dark band with a factory silhouette along the bottom. Take the idea only; do not copy logo, copy, crane artwork or colours.
@@ -55,7 +59,7 @@ Header glass: rgba(255,255,255,.86) with 14px blur. Pagehead overlay (one for ev
 - Max line length: 62ch body; hero h1 two lines via `<br>` after “supply”
 
 ### Space and shape
-- Spacing scale (4px base): 4 / 8 / 12 / 16 / 24 / 32 / 48 / 80
+- Spacing scale (4px base): 4 / 8 / 12 / 16 / 24 / 32 / 48 / 80. Product page (.pack) uses s7 (48px) section padding, s8 (80px) from 1024px, so bands breathe; process even cards offset by s6.
 - Radii (max 3 values): 0 on buttons and the menu control (user demand: no rounded edges); 4px on photographs; 0 on the hero carousel frame (diagonal 2rem bottom cut)
 - Shadows (max 3 elevations, or none): none (industrial, flat)
 - Borders: 1px --line for tables, header, fact strip; used to encode structure only
@@ -65,7 +69,7 @@ Header glass: rgba(255,255,255,.86) with 14px blur. Pagehead overlay (one for ev
 - Easing (ease-out family, no bounce): cubic-bezier(.2,.7,.2,1)
 - Signature entrance (one orchestrated moment): hero carousel settles 650ms; slides change by a slanted clip-path wipe (900ms) with a 7s Ken Burns settle and the caption rising after 450ms. Inner pageheads: title and lead settle 550ms.
 - Scroll (informational, not fade-up on every block): 2px read-progress on the sticky header; .place left rule draws; spec rows take a 3px blue inset when in view; uses ticks scale in; header densifies after 8px scroll.
-- Photo reveal: a navy curtain wipes off each `.ph` (900ms) while the image settles from 1.12 to 1 (1.4s); pagehead photos do a 16s Ken Burns settle.
+- Photo reveal: a translucent navy/blue wash (not opaque --deep) leaves each `.ph` in a direction that suits the picture — default right-to-left, tall tanks rise or drop, sample tube fills from the bottom, plant-team iris from centre, photo grids use a floor wipe vs a slanted clip, process hall a slanted peel. Image eases from a matching offset. Pagehead photos do a 16s Ken Burns settle. Reduced-motion skips the overlay.
 - Hover / micro: every text link shifts to --deep; plant photos scale to 1.04 and the tint lifts; nav underline; spec row mist; square matte buttons wipe fill from the left in 200ms (no gloss, no radius); inputs border to --blue.
 - Header bar: no plant phone (user demand). Quote is the only navbar action. Number stays in the footer and the mobile Call bar. Inner-page translucent photo banners stay (user demand: do not remove them).
 - UI changes 200ms: mobile menu fade/slide; form aria-invalid #a4260c; submit label becomes “Sending…” while aria-busy; disabled buttons ignore hover.
@@ -78,7 +82,8 @@ Header glass: rgba(255,255,255,.86) with 14px blur. Pagehead overlay (one for ev
 - Section order and why it serves the argument: claim → plant facts (ISO, storage, place) → barrel proof with yard photograph → spec numbers → plant proof (tanker, acid tank) → lab/ISO → named leadership + unnamed plant team → call/quote. Inner pages each use a different plant photo under the navy pagehead (sample tube, acid tank, lab, plant team, process tanks), each with a 1.5rem diagonal bottom edge matching the hero.
 
 ## Content rules
-- Headline claim (specific, real number or outcome): “LABSA 90%, direct from the maker.” with kicker “Surfactant manufacturer · Gujarat”. Do not lead with Gundlav in headings (user demand); keep it to the factory address. Support with 90 ± 1 active matter, ISO 9001:2015, 75 MT/day (~2,275 MT/month), 300 MT raw / 200 MT finished storage, own RKSPL VALSAD tanker, chairman’s 25 years in detergents and LABSA plants, incorporated 16 November 2019.
+- Headline claim (specific, real number or outcome): “LABSA 90%, direct from the maker.” with kicker “Surfactant manufacturer · Gujarat”. On labsa-90.html, name the place once as Gundlav, Valsad, Gujarat (hero) plus the legal factory line; do not repeat Gundlav or Plot 79/80 through body sections. Support with 90 ± 1 active matter, ISO 9001:2015, 75 MT/day (~2,275 MT/month), 300 MT raw / 200 MT finished storage, own RKSPL VALSAD tanker, chairman’s 25 years in detergents and LABSA plants, incorporated 16 November 2019.
+- LABSA 90% product page: keep plant facts (spec table, 75 MT/day, 700-800 MT to named states, process, FAQ). Remove kickers and in-page Request a quote (header, footer, mobile bar only). Section padding s7/s8 as designed breaks.
 - Real product/people/imagery to show: own tanks, RKSPL tanker, barrel yard, LABSA in a beaker, unnamed plant team, in-house lab, named directors, Plot 79/80 Gundlav, Silvassa registered office, company profile PDF.
 - Banned phrases: leading manufacturer, world-class, cutting-edge, transform your, unmatched quality, synergy, lorem, generic mission-speak without a plant fact. Do not invent packing kg. Do not name the seven workers.
 

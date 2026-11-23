@@ -1,0 +1,214 @@
+{
+  "iter": 20,
+  "final": 8.1,
+  "target": 9.0,
+  "weighted_mean": 8.1,
+  "weakest_dim_score": 7.4,
+  "blockers": [],
+  "incomplete": false,
+  "decision": "STOP_PLATEAU",
+  "dimensions": {
+    "hierarchy_composition": {
+      "status": "scored",
+      "score": 8.3,
+      "expert_score": 8.3,
+      "anchor": null,
+      "capped_by_audit": false,
+      "votes": [
+        [
+          "art_director",
+          8.3
+        ]
+      ]
+    },
+    "typography": {
+      "status": "scored",
+      "score": 8.0,
+      "expert_score": 8.0,
+      "anchor": 10.0,
+      "capped_by_audit": false,
+      "votes": [
+        [
+          "typographer",
+          8.0
+        ]
+      ]
+    },
+    "color": {
+      "status": "scored",
+      "score": 8.5,
+      "expert_score": 8.5,
+      "anchor": 10.0,
+      "capped_by_audit": false,
+      "votes": [
+        [
+          "systems_designer",
+          8.5
+        ]
+      ]
+    },
+    "spacing_rhythm": {
+      "status": "scored",
+      "score": 8.3,
+      "expert_score": 8.3,
+      "anchor": 10.0,
+      "capped_by_audit": false,
+      "votes": [
+        [
+          "systems_designer",
+          8.3
+        ]
+      ]
+    },
+    "distinctiveness": {
+      "status": "scored",
+      "score": 7.4,
+      "expert_score": 7.4,
+      "anchor": 10.0,
+      "capped_by_audit": false,
+      "votes": [
+        [
+          "skeptic",
+          7.4
+        ]
+      ]
+    },
+    "ux_clarity": {
+      "status": "scored",
+      "score": 7.5,
+      "expert_score": 7.5,
+      "anchor": null,
+      "capped_by_audit": false,
+      "votes": [
+        [
+          "ux_lead",
+          7.5
+        ]
+      ]
+    },
+    "reference_fidelity": {
+      "status": "scored",
+      "score": 8.5,
+      "expert_score": 8.5,
+      "anchor": null,
+      "capped_by_audit": false,
+      "votes": [
+        [
+          "art_director",
+          8.5
+        ]
+      ]
+    },
+    "interaction_motion": {
+      "status": "scored",
+      "score": 7.8,
+      "expert_score": 7.8,
+      "anchor": null,
+      "capped_by_audit": false,
+      "votes": [
+        [
+          "motion_designer",
+          7.8
+        ]
+      ]
+    },
+    "a11y_responsive": {
+      "status": "scored",
+      "score": 8.7,
+      "expert_score": 8.7,
+      "anchor": 10.0,
+      "capped_by_audit": false,
+      "votes": [
+        [
+          "a11y_qa",
+          8.7
+        ]
+      ]
+    }
+  },
+  "fix_queue": [
+    {
+      "priority": 62.4,
+      "severity": "major",
+      "dim": "distinctiveness",
+      "expert": "skeptic",
+      "where": "h2#sp Specification",
+      "problem": "Leftover catalog datasheet label.",
+      "fix": "Retitle to 90 +/- 1 as dispatched."
+    },
+    {
+      "priority": 62.4,
+      "severity": "major",
+      "dim": "distinctiveness",
+      "expert": "skeptic",
+      "where": "intro h2 vs packing repeats",
+      "problem": "Barrel-filled written four times.",
+      "fix": "Keep packing only in the spec row. Rename intro h2 to 75 MT a day at Gundlav."
+    },
+    {
+      "priority": 62.4,
+      "severity": "major",
+      "dim": "distinctiveness",
+      "expert": "skeptic",
+      "where": ".apps Textile Agriculture Leather",
+      "problem": "Three tiles only restate CoA numbers. Four tiles are a user demand so keep them but give each a plant constraint not already in the table.",
+      "fix": "Keep four tiles. Textile: dye baths when a mill switches a tanker from cake work. Agriculture: no 50 kg bags, quote drum size. Leather: hide dye at the same free-acid lot as cake."
+    },
+    {
+      "priority": 60.0,
+      "severity": "major",
+      "dim": "ux_clarity",
+      "expert": "ux_lead",
+      "where": "intro h2 / spec Packing / flow 04 / FAQ",
+      "problem": "Barrel/MT still stated five times. Intro h2 is Barrel-filled next to a tank photo.",
+      "fix": "Rename intro h2 to the 75 MT/day claim. Keep packing only in the spec table. Delete FAQ."
+    },
+    {
+      "priority": 56.0,
+      "severity": "major",
+      "dim": "typography",
+      "expert": "typographer",
+      "where": ".apps 4-col",
+      "problem": "Detergent still 4 ragged lines with Kerala widow.",
+      "fix": "Two lines: 700-800 MT cake and powder. Then GJ, MH, CG, MP, TN, KL."
+    },
+    {
+      "priority": 30.6,
+      "severity": "minor",
+      "dim": "hierarchy_composition",
+      "expert": "art_director",
+      "where": ".apps article:first-child",
+      "problem": "Detergent still wraps to four body lines.",
+      "fix": "Two lines: 700-800 MT cake and powder in Gujarat, MH, CG, MP, TN, Kerala."
+    },
+    {
+      "priority": 20.4,
+      "severity": "minor",
+      "dim": "spacing_rhythm",
+      "expert": "systems_designer",
+      "where": ".apps at 1024",
+      "problem": "Detergent tile taller than the other three.",
+      "fix": "Shorten Detergent copy so heights match."
+    },
+    {
+      "priority": 15.0,
+      "severity": "minor",
+      "dim": "reference_fidelity",
+      "expert": "art_director",
+      "where": ".apps fills",
+      "problem": "Four tints still collapse to one pale bar.",
+      "fix": "Steepen fills to 22/14/8/16 percent blue on mist."
+    }
+  ],
+  "warnings": [],
+  "waivers": {
+    "header_phone_removed": "user demand: remove the number from the header (stays in footer and mobile Call bar)",
+    "square_matte_buttons": "user demand: matte finish, no rounded edges, animated",
+    "keep_translucent_banners": "user demand: do not remove inner-page photo banners; navbar-only change",
+    "contact_disclaimer_no_checkbox": "user demand: remove the checkbox, keep the disclaimer as text",
+    "contact_inline_maps": "user demand: instead of Open in Maps links, show the map in the webpage",
+    "labsa_copy_from_reference": "user demand: use shreeshyamgroup.co/Home/Labsa as a content reference; rewrite in RK voice, keep our styling and existing page elements. Do not copy their visual system.",
+    "labsa_ref_layout": "user demand: use pasted reference images for layout (tinted cards, process steps, intro split) with our theme colors; fix overlapping blue lines and FAQ/apps text",
+    "labsa_lean_copy": "user demand: a lot of unnecessary repeated text, with request a quote again and again it looks you are very scared, minimum possible text to convey maximum potential info, do not repeat information, and make it look good with breaking spaces between section and nicely use white spaces to make it look good"
+  }
+}

@@ -1,6 +1,6 @@
 {
-  "target": 8.0,
-  "max_iterations": 18,
+  "target": 9.0,
+  "max_iterations": 28,
   "profile": "web",
   "has_reference": true,
   "waivers": {
@@ -10,7 +10,9 @@
     "contact_disclaimer_no_checkbox": "user demand: remove the checkbox, keep the disclaimer as text",
     "contact_inline_maps": "user demand: instead of Open in Maps links, show the map in the webpage",
     "labsa_copy_from_reference": "user demand: use shreeshyamgroup.co/Home/Labsa as a content reference; rewrite in RK voice, keep our styling and existing page elements. Do not copy their visual system.",
-    "labsa_ref_layout": "user demand: use pasted reference images for layout (tinted cards, process steps, intro split) with our theme colors; fix overlapping blue lines and FAQ/apps text; avoid empty space"
+    "labsa_ref_layout": "user demand: use pasted reference images for layout (tinted cards, process steps, intro split) with our theme colors; fix overlapping blue lines and FAQ/apps text",
+    "labsa_lean_copy": "user demand: remove unnecessary text and repeated Request a quote, not the good information; remove unnecessary subheadings; retrieve necessary plant facts; keep designed section breaks",
+    "photo_reveal_translucent_varied": "user demand: different image animations, not all left-to-right; translucent overlay instead of opaque"
   },
   "plateau_delta": 0.3,
   "plateau_window": 2,
@@ -29,7 +31,10 @@
     "contact.html: remove the checkbox, just keep the disclaimer, and instead of open in maps, show the map in the webpage",
     "labsa-90.html: add more details about LABSA 90 using https://shreeshyamgroup.co/Home/Labsa as a reference and copywrite the same text, with our style, so it looks good, with our styling; keep the old elements of our page",
     "these are images for reference, use this styling with our theme colors and styles, also blue lines are overlapping, text here in the section and FAQs please fix it",
-    "also please avoid a lot of empty spaces"
+    "also please avoid a lot of empty spaces",
+    "a lot of unnecessary repeated text , with request a quote again and again it looks you are very scared, minimum possible text to convey maximum potential info, do not repeat information , and make it look good with breaking spaces between section and nicely use white spaces to make it look good",
+    "the info is very less, i asked to remove unnecessary text, not good information, just remove the unnecesary subheading and request a quote again, retrieve the necessary info",
+    "the animation of the images is good but instead of one type of animation where the blue color is opaque and fades away , instead i want different animations, which suits it, every animation is left to right , try different direction , styles which might suit the images, TRY TRANSLUCNENT INSTEAD OF OPAQUE"
   ],
   "required_experts": [
     "art_director",

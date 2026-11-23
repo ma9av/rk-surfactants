@@ -1,0 +1,22 @@
+{
+  "expert": "a11y_qa",
+  "scores": {
+    "a11y_responsive": {
+      "score": 8.5,
+      "evidence": "0 blockers, 0/102 contrast, 0 invisible focus, 1 h1, 375 reflow. 1 tap under 44px.",
+      "strengths": [
+        "Skip, labelled nav, one h1, native FAQ details",
+        "0 contrast fails, 21/21 focus visible",
+        "375 and tablet reflow"
+      ],
+      "issues": [
+        {
+          "severity": "minor",
+          "where": "footer .foot nav a",
+          "problem": "About is under 44px wide.",
+          "fix": "min-width 44px and padding 0 12px on footer links."
+        }
+      ]
+    }
+  }
+}

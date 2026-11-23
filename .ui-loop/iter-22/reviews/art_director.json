@@ -1,0 +1,42 @@
+{
+  "expert": "art_director",
+  "scores": {
+    "hierarchy_composition": {
+      "score": 7.5,
+      "evidence": "desktop_fold.png squint: two competing masses, not one. White Archivo h1 LABSA 90% on a short navy pagehead and the large storage-tank photograph in the intro split. Hierarchy otherwise uses size+weight+colour together. Process zipper changes rhythm after the four-up.",
+      "strengths": [
+        "Intro split is a composed industrial spread.",
+        "Process zipper changes rhythm after the four-up."
+      ],
+      "issues": [
+        {
+          "severity": "major",
+          "where": "desktop_fold.png / .pagehead + intro figure.ph",
+          "problem": "Fold squint fails the one-focal test. Two similar industrial stills stacked.",
+          "fix": "Point .pagehead--beaker at the sample-tube still. Leave storage-tanks only on the intro figure."
+        },
+        {
+          "severity": "major",
+          "where": ".apps 4-up",
+          "problem": "Four equal tiles flatten the 700-800 MT detergent story.",
+          "fix": "Make the first article grid-column span 2. Keep four tiles."
+        }
+      ]
+    },
+    "reference_fidelity": {
+      "score": 8.0,
+      "evidence": "Shree Shyam layout signatures vs desktop_full: intro split, tinted tiles, staggered process. RK navy/mist/paper held. Inner pagehead is a plant photo under a translucent navy wash.",
+      "strengths": [
+        "Three Shree Shyam layout moves in RK navy/mist/paper."
+      ],
+      "issues": [
+        {
+          "severity": "minor",
+          "where": ".chem-row and .apps",
+          "problem": "Large unused mist around the molecule; three under-filled tiles.",
+          "fix": "Tighten chem-row padding. Span detergent 2 columns."
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "expert": "skeptic",
+  "scores": {
+    "distinctiveness": {
+      "score": 7.4,
+      "evidence": "Catalog H2s gone. Plant numbers hold. Specification leftover; packing restated; three app tiles restate spec. Four tiles are a user demand, not to be deleted.",
+      "strengths": [
+        "Headings Barrel-filled at Plot 79/80, Cake plants in six states, Four vessels at Plot 79/80",
+        "75 MT/day, RKSPL tanker, 700-800 MT to six states",
+        "Acid-not-salt on a plant sample tube"
+      ],
+      "issues": [
+        {
+          "severity": "major",
+          "where": "h2#sp Specification",
+          "problem": "Leftover catalog datasheet label.",
+          "fix": "Retitle to 90 +/- 1 as dispatched."
+        },
+        {
+          "severity": "major",
+          "where": "intro h2 vs packing repeats",
+          "problem": "Barrel-filled written four times.",
+          "fix": "Keep packing only in the spec row. Rename intro h2 to 75 MT a day at Gundlav."
+        },
+        {
+          "severity": "major",
+          "where": ".apps Textile Agriculture Leather",
+          "problem": "Three tiles only restate CoA numbers. Four tiles are a user demand so keep them but give each a plant constraint not already in the table.",
+          "fix": "Keep four tiles. Textile: dye baths when a mill switches a tanker from cake work. Agriculture: no 50 kg bags, quote drum size. Leather: hide dye at the same free-acid lot as cake."
+        }
+      ]
+    }
+  }
+}

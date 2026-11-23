@@ -1,0 +1,22 @@
+{
+  "expert": "typographer",
+  "scores": {
+    "typography": {
+      "score": 8.0,
+      "evidence": "Archivo vs Plex, body 16px, 0 long lines. Detergent 4 lines not 2.",
+      "strengths": [
+        "Archivo display vs IBM Plex Sans body",
+        "Body 16px at 1.65, 0 long lines",
+        "Mobile h1 two lines"
+      ],
+      "issues": [
+        {
+          "severity": "major",
+          "where": ".apps 4-col",
+          "problem": "Detergent still 4 ragged lines with Kerala widow.",
+          "fix": "Two lines: 700-800 MT cake and powder. Then GJ, MH, CG, MP, TN, KL."
+        }
+      ]
+    }
+  }
+}
