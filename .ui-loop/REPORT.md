@@ -26,29 +26,30 @@ Target: 9.0  |  Profile: web
 | 20 | 8.1 | 0 | STOP_PLATEAU |
 | 21 | 7.9 | 0 | STOP_PLATEAU |
 | 22 | 7.8 | 0 | STOP_PLATEAU |
+| 23 | 7.6 | 0 | STOP_PLATEAU |
 
 ## Final dimension scores
 
 | Dimension | Score | Note |
 |---|---|---|
-| hierarchy_composition | 7.5 |  |
-| typography | 8.0 |  |
-| color | 8.2 |  |
-| spacing_rhythm | 8.3 |  |
-| distinctiveness | 6.6 |  |
-| ux_clarity | 7.5 |  |
-| reference_fidelity | 8.0 |  |
-| interaction_motion | 8.0 |  |
-| a11y_responsive | 8.7 |  |
+| hierarchy_composition | 7.6 |  |
+| typography | 7.8 |  |
+| color | 8.0 |  |
+| spacing_rhythm | 7.5 |  |
+| distinctiveness | 6.4 |  |
+| ux_clarity | 7.4 |  |
+| reference_fidelity | 8.2 |  |
+| interaction_motion | 8.2 |  |
+| a11y_responsive | 8.4 |  |
 
 ## Still open
 
-- **hierarchy_composition** desktop_fold.png / .pagehead + intro figure.ph: Fold squint fails the one-focal test. Two similar industrial stills stacked. (fix: Point .pagehead--beaker at the sample-tube still. Leave storage-tanks only on the intro figure.)
-- **hierarchy_composition** .apps 4-up: Four equal tiles flatten the 700-800 MT detergent story. (fix: Make the first article grid-column span 2. Keep four tiles.)
-- **distinctiveness** pagehead h1 and lead: Headline is a category SKU. Gundlav, Valsad, Gujarat not in the hero. (fix: Lead: 90 +/- 1 from Gundlav, Valsad, Gujarat.)
-- **distinctiveness** .apps Textile Agriculture Leather: Openings are generic use-cases. (fix: Lead with plant constraints.)
-- **distinctiveness** intro spec flow FAQ: Same plant numbers restated. (fix: Keep packing in spec; FAQ tanker only.)
-- **ux_clarity** .pagehead p: Subhead says made at Plot 79/80. City and state not in the fold. (fix: Lead with Gundlav, Valsad, Gujarat. Plot only in the footer.)
+- **hierarchy_composition** #about + #intro: Two consecutive splits share the same skeleton. (fix: Leave #about as demanded. Rebuild #intro without ul.traits.)
+- **distinctiveness** #about ul.traits and #intro ul.traits: Same chevron grid for marketing traits and plant facts. (fix: Keep six intro strings. Restyle #about .traits without chevrons.)
+- **distinctiveness** .apps Textile Agriculture Leather: Encyclopedia openings. (fix: Lead with plant constraints.)
+- **distinctiveness** pagehead h1: Category SKU, no Gundlav, Valsad, Gujarat. (fix: Keep LABSA 90%. Name the place in the lead.)
+- **ux_clarity** .pagehead p: Plot 79/80 with no city; buyer sentence below the fold. (fix: Keep intro verbatim. Lead: Gundlav, Valsad, Gujarat.)
+- **spacing_rhythm** section#about .cols--media: Photo taller than the text stack. (fix: This figure 16/10 max-height 18rem.)
 
 ## Waived at the user's request
 
@@ -61,3 +62,4 @@ Target: 9.0  |  Profile: web
 - labsa_ref_layout: user demand: use pasted reference images for layout (tinted cards, process steps, intro split) with our theme colors; fix overlapping blue lines and FAQ/apps text
 - labsa_lean_copy: user demand: remove unnecessary text and repeated Request a quote, not the good information; remove unnecessary subheadings; retrieve necessary plant facts; keep designed section breaks
 - photo_reveal_translucent_varied: user demand: different image animations, not all left-to-right; translucent overlay instead of opaque
+- labsa_intro_exact_copy: user demand: add Introduction to LABSA 90% section with the supplied copy and an image beside it

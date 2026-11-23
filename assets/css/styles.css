@@ -198,6 +198,10 @@ table.spec td{font-weight:600}
 .pack section{padding-block:var(--s7)}
 .pack .cols{gap:var(--s6)}
 .pack h2{margin-bottom:var(--s4)}
+.pack section p+p{margin-top:var(--s4)}
+.pack .cols--media > .ph--beside img{aspect-ratio:16/10;max-height:18rem}
+.traits--plain li{font-weight:600;color:var(--deep)}
+.traits--plain li::before{width:14px;height:2px;margin-top:.7em;border:0;background:var(--blue);transform:none}
 .pack .docs{margin-top:var(--s5)}
 .pack .tbl{margin-top:var(--s5)!important}
 .pack .fig{margin-top:var(--s5)}
@@ -465,6 +469,9 @@ input:active,textarea:active{border-color:var(--deep)}
   html.motion .ph img{transform:scale(1.08) translateX(-4%)}
   html.motion .ph.is-in::before{transform:scaleX(0)}
   html.motion .ph.is-in img{transform:none}
+  html.motion .ph--from-floor::before{transform-origin:50% 100%;transform:none}
+  html.motion .ph--from-floor img{transform:scale(1.08) translateY(-5%)}
+  html.motion .ph--from-floor.is-in::before{transform:scaleY(0)}
   html.motion .ph--tall::before{transform-origin:50% 0;transform:none}
   html.motion .ph--tall img{transform:scale(1.08) translateY(6%)}
   html.motion .ph--tall.is-in::before{transform:scaleY(0)}

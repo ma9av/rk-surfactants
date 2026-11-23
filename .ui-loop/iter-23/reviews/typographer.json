@@ -1,0 +1,20 @@
+{
+  "expert": "typographer",
+  "scores": {
+    "typography": {
+      "score": 7.8,
+      "evidence": "Archivo vs IBM Plex. Body 16px/1.65. Fold h2 wraps so 90% sits alone.",
+      "strengths": [
+        "Two-family industrial system, 0 long lines."
+      ],
+      "issues": [
+        {
+          "severity": "minor",
+          "where": "h2#about",
+          "problem": "Line two is only 90%.",
+          "fix": "br after Introduction to so line two is LABSA 90%."
+        }
+      ]
+    }
+  }
+}

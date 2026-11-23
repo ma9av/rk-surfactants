@@ -1,0 +1,20 @@
+{
+  "expert": "a11y_qa",
+  "scores": {
+    "a11y_responsive": {
+      "score": 8.4,
+      "evidence": "Audit 0 blockers, 0 contrast, 0 overflow, 21/21 focus. Intro reflows copy then photo below 1024.",
+      "strengths": [
+        "Intro split reflows. Photo has specific alt."
+      ],
+      "issues": [
+        {
+          "severity": "minor",
+          "where": "ol.flow .flow-n",
+          "problem": "Step badges aria-hidden.",
+          "fix": "Remove aria-hidden from .flow-n."
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "expert": "motion_designer",
+  "scores": {
+    "interaction_motion": {
+      "score": 8.2,
+      "evidence": "Translucent RTL wash on tank-labsa. Overlay 700ms. Reduced-motion gated. Two consecutive .ph share the same wipe.",
+      "strengths": [
+        "Translucent RTL default on the new tanks photo."
+      ],
+      "issues": [
+        {
+          "severity": "minor",
+          "where": "#about .ph + #intro .ph",
+          "problem": "Two landscape stills use the same RTL wipe.",
+          "fix": "Give dispatch storage a floor wipe."
+        }
+      ]
+    }
+  }
+}

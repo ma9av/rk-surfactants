@@ -1,0 +1,216 @@
+{
+  "iter": 23,
+  "final": 7.6,
+  "target": 9.0,
+  "weighted_mean": 7.63,
+  "weakest_dim_score": 6.4,
+  "blockers": [],
+  "incomplete": false,
+  "decision": "STOP_PLATEAU",
+  "dimensions": {
+    "hierarchy_composition": {
+      "status": "scored",
+      "score": 7.6,
+      "expert_score": 7.6,
+      "anchor": null,
+      "capped_by_audit": false,
+      "votes": [
+        [
+          "art_director",
+          7.6
+        ]
+      ]
+    },
+    "typography": {
+      "status": "scored",
+      "score": 7.8,
+      "expert_score": 7.8,
+      "anchor": 10.0,
+      "capped_by_audit": false,
+      "votes": [
+        [
+          "typographer",
+          7.8
+        ]
+      ]
+    },
+    "color": {
+      "status": "scored",
+      "score": 8.0,
+      "expert_score": 8.0,
+      "anchor": 10.0,
+      "capped_by_audit": false,
+      "votes": [
+        [
+          "systems_designer",
+          8.0
+        ]
+      ]
+    },
+    "spacing_rhythm": {
+      "status": "scored",
+      "score": 7.5,
+      "expert_score": 7.5,
+      "anchor": 10.0,
+      "capped_by_audit": false,
+      "votes": [
+        [
+          "systems_designer",
+          7.5
+        ]
+      ]
+    },
+    "distinctiveness": {
+      "status": "scored",
+      "score": 6.4,
+      "expert_score": 6.4,
+      "anchor": 10.0,
+      "capped_by_audit": false,
+      "votes": [
+        [
+          "skeptic",
+          6.4
+        ]
+      ]
+    },
+    "ux_clarity": {
+      "status": "scored",
+      "score": 7.4,
+      "expert_score": 7.4,
+      "anchor": null,
+      "capped_by_audit": false,
+      "votes": [
+        [
+          "ux_lead",
+          7.4
+        ]
+      ]
+    },
+    "reference_fidelity": {
+      "status": "scored",
+      "score": 8.2,
+      "expert_score": 8.2,
+      "anchor": null,
+      "capped_by_audit": false,
+      "votes": [
+        [
+          "art_director",
+          8.2
+        ]
+      ]
+    },
+    "interaction_motion": {
+      "status": "scored",
+      "score": 8.2,
+      "expert_score": 8.2,
+      "anchor": null,
+      "capped_by_audit": false,
+      "votes": [
+        [
+          "motion_designer",
+          8.2
+        ]
+      ]
+    },
+    "a11y_responsive": {
+      "status": "scored",
+      "score": 8.4,
+      "expert_score": 8.4,
+      "anchor": 10.0,
+      "capped_by_audit": false,
+      "votes": [
+        [
+          "a11y_qa",
+          8.4
+        ]
+      ]
+    }
+  },
+  "fix_queue": [
+    {
+      "priority": 86.4,
+      "severity": "major",
+      "dim": "hierarchy_composition",
+      "expert": "art_director",
+      "where": "#about + #intro",
+      "problem": "Two consecutive splits share the same skeleton.",
+      "fix": "Leave #about as demanded. Rebuild #intro without ul.traits."
+    },
+    {
+      "priority": 86.4,
+      "severity": "major",
+      "dim": "distinctiveness",
+      "expert": "skeptic",
+      "where": "#about ul.traits and #intro ul.traits",
+      "problem": "Same chevron grid for marketing traits and plant facts.",
+      "fix": "Keep six intro strings. Restyle #about .traits without chevrons."
+    },
+    {
+      "priority": 86.4,
+      "severity": "major",
+      "dim": "distinctiveness",
+      "expert": "skeptic",
+      "where": ".apps Textile Agriculture Leather",
+      "problem": "Encyclopedia openings.",
+      "fix": "Lead with plant constraints."
+    },
+    {
+      "priority": 86.4,
+      "severity": "major",
+      "dim": "distinctiveness",
+      "expert": "skeptic",
+      "where": "pagehead h1",
+      "problem": "Category SKU, no Gundlav, Valsad, Gujarat.",
+      "fix": "Keep LABSA 90%. Name the place in the lead."
+    },
+    {
+      "priority": 62.4,
+      "severity": "major",
+      "dim": "ux_clarity",
+      "expert": "ux_lead",
+      "where": ".pagehead p",
+      "problem": "Plot 79/80 with no city; buyer sentence below the fold.",
+      "fix": "Keep intro verbatim. Lead: Gundlav, Valsad, Gujarat."
+    },
+    {
+      "priority": 60.0,
+      "severity": "major",
+      "dim": "spacing_rhythm",
+      "expert": "systems_designer",
+      "where": "section#about .cols--media",
+      "problem": "Photo taller than the text stack.",
+      "fix": "This figure 16/10 max-height 18rem."
+    },
+    {
+      "priority": 30.8,
+      "severity": "minor",
+      "dim": "typography",
+      "expert": "typographer",
+      "where": "h2#about",
+      "problem": "Line two is only 90%.",
+      "fix": "br after Introduction to so line two is LABSA 90%."
+    },
+    {
+      "priority": 20.0,
+      "severity": "minor",
+      "dim": "color",
+      "expert": "systems_designer",
+      "where": ".apps Agriculture",
+      "problem": "8% mix barely reads as a card.",
+      "fix": "Do not go below 12% blue into mist."
+    }
+  ],
+  "warnings": [],
+  "waivers": {
+    "header_phone_removed": "user demand: remove the number from the header (stays in footer and mobile Call bar)",
+    "square_matte_buttons": "user demand: matte finish, no rounded edges, animated",
+    "keep_translucent_banners": "user demand: do not remove inner-page photo banners; navbar-only change",
+    "contact_disclaimer_no_checkbox": "user demand: remove the checkbox, keep the disclaimer as text",
+    "contact_inline_maps": "user demand: instead of Open in Maps links, show the map in the webpage",
+    "labsa_copy_from_reference": "user demand: use shreeshyamgroup.co/Home/Labsa as a content reference; rewrite in RK voice, keep our styling and existing page elements. Do not copy their visual system.",
+    "labsa_ref_layout": "user demand: use pasted reference images for layout (tinted cards, process steps, intro split) with our theme colors; fix overlapping blue lines and FAQ/apps text",
+    "labsa_lean_copy": "user demand: remove unnecessary text and repeated Request a quote, not the good information; remove unnecessary subheadings; retrieve necessary plant facts; keep designed section breaks",
+    "photo_reveal_translucent_varied": "user demand: different image animations, not all left-to-right; translucent overlay instead of opaque",
+    "labsa_intro_exact_copy": "user demand: add Introduction to LABSA 90% section with the supplied copy and an image beside it"
+  }
+}

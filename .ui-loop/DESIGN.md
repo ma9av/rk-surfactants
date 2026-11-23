@@ -26,6 +26,7 @@ Fill from the brief and from measured references. Reviewers score against this f
   - the info is very less, i asked to remove unnecessary text, not good information, just remove the unnecesary subheading and request a quote again, retrieve the necessary info
   - i want you to analyze the whole page and remove gundlav, repeated location wherever unnecessary, and wherever there is gundlav, add valsad, gujarat after it
   - the animation of the images is good but instead of one type of animation where the blue color is opaque and fades away , instead i want different animations, which suits it, every animation is left to right , try different direction , styles which might suit the images, TRY TRANSLUCNENT INSTEAD OF OPAQUE
+  - labsa-90.html add one more section with this exact content: Introduction to LABSA 90%; Industrial LABSA 90% or Linear Alkyl Benzene Sulfonic Acid…; High Active Matter (90%); Excellent Cleaning Agent; Cost Effective; Used in Detergents; Industrial Applications; Strong Emulsifier; image beside the section
 
 ## References (one line each: file, what to take from it)
 - Vico Forge footer: dark band with a factory silhouette along the bottom. Take the idea only; do not copy logo, copy, crane artwork or colours.

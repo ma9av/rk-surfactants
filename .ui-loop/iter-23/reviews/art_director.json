@@ -1,0 +1,35 @@
+{
+  "expert": "art_director",
+  "scores": {
+    "hierarchy_composition": {
+      "score": 7.6,
+      "evidence": "desktop_fold.png: one chromatic mass T-01/T-02/T-03. Pagehead is a quiet navy label. Two majors: equal app tiles; #about and #intro share heading+lede+traits+photo skeleton.",
+      "strengths": [
+        "Fold has a single chromatic focal: the labelled tanks."
+      ],
+      "issues": [
+        {
+          "severity": "major",
+          "where": "#about + #intro",
+          "problem": "Two consecutive splits share the same skeleton.",
+          "fix": "Leave #about as demanded. Rebuild #intro without ul.traits."
+        }
+      ]
+    },
+    "reference_fidelity": {
+      "score": 8.2,
+      "evidence": "Intro split copy left, tanks right, chevron list. Tinted tiles and staggered process intact. RK navy/mist/paper.",
+      "strengths": [
+        "Intro split with T-01 tanks is the reference layout move."
+      ],
+      "issues": [
+        {
+          "severity": "minor",
+          "where": ".apps",
+          "problem": "Three tiles sit half-empty.",
+          "fix": "Span detergent full width."
+        }
+      ]
+    }
+  }
+}

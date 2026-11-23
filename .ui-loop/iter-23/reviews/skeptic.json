@@ -1,0 +1,32 @@
+{
+  "expert": "skeptic",
+  "scores": {
+    "distinctiveness": {
+      "score": 6.4,
+      "evidence": "Fold is SKU plus demanded blog intro. Two matching chevron lists. Mid-page plant facts are real. Intro copy not listed as delete.",
+      "strengths": [
+        "Acid-not-salt. 75 MT/day. 700-800 MT."
+      ],
+      "issues": [
+        {
+          "severity": "major",
+          "where": "#about ul.traits and #intro ul.traits",
+          "problem": "Same chevron grid for marketing traits and plant facts.",
+          "fix": "Keep six intro strings. Restyle #about .traits without chevrons."
+        },
+        {
+          "severity": "major",
+          "where": ".apps Textile Agriculture Leather",
+          "problem": "Encyclopedia openings.",
+          "fix": "Lead with plant constraints."
+        },
+        {
+          "severity": "major",
+          "where": "pagehead h1",
+          "problem": "Category SKU, no Gundlav, Valsad, Gujarat.",
+          "fix": "Keep LABSA 90%. Name the place in the lead."
+        }
+      ]
+    }
+  }
+}

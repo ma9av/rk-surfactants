@@ -1,0 +1,20 @@
+{
+  "expert": "ux_lead",
+  "scores": {
+    "ux_clarity": {
+      "score": 7.4,
+      "evidence": "Fold names LABSA 90% and Request a quote. Intro copy kept. Buyer line sits below the fold.",
+      "strengths": [
+        "Quote chrome-only. Intro wording not cut."
+      ],
+      "issues": [
+        {
+          "severity": "major",
+          "where": ".pagehead p",
+          "problem": "Plot 79/80 with no city; buyer sentence below the fold.",
+          "fix": "Keep intro verbatim. Lead: Gundlav, Valsad, Gujarat."
+        }
+      ]
+    }
+  }
+}

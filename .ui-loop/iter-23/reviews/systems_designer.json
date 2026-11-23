@@ -1,0 +1,35 @@
+{
+  "expert": "systems_designer",
+  "scores": {
+    "color": {
+      "score": 8.0,
+      "evidence": "Intro on mist. Audit 0 contrast fails of 117. Paper/mist/deep bands.",
+      "strengths": [
+        "Intro sits on mist beside the tank photo."
+      ],
+      "issues": [
+        {
+          "severity": "minor",
+          "where": ".apps Agriculture",
+          "problem": "8% mix barely reads as a card.",
+          "fix": "Do not go below 12% blue into mist."
+        }
+      ]
+    },
+    "spacing_rhythm": {
+      "score": 7.5,
+      "evidence": "99.1% grid. Intro copy shorter than 4:3 photo, mist void under traits.",
+      "strengths": [
+        "80px section padding on the 4px scale."
+      ],
+      "issues": [
+        {
+          "severity": "major",
+          "where": "section#about .cols--media",
+          "problem": "Photo taller than the text stack.",
+          "fix": "This figure 16/10 max-height 18rem."
+        }
+      ]
+    }
+  }
+}
